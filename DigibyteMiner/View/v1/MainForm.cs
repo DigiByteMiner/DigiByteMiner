@@ -100,15 +100,15 @@ namespace DigibyteMiner
                 }
                 else
                 {
-                    foreach (Control item in pnlMiner.Controls)
+                    foreach (Control item in pnlMainInfo.Controls)
                     {
-                        MinerView minerView = item as MinerView;
-                        if (minerView != null)
+                        Home home = item as Home;
+                        if (home != null)
                         {
-                            minerView.UpdateState();
+                            home.UpdateState();
                         }
                         //Todo: this seems to be a duplicate call as timer invokes this separately. analyze
-                        MinerInfo.UpdateState();
+                        //MinerInfo.UpdateState();
                     }
                 }
                 
@@ -187,6 +187,7 @@ namespace DigibyteMiner
             ShowMiningInfo(view.Miner);
 
         }
+        /*
         public void ChangeMiningView(MinerView view)
         {
             foreach (MinerView item in pnlMiner.Controls)
@@ -209,31 +210,21 @@ namespace DigibyteMiner
                     item.DeActivateView();
             }
         }
+         *         */
         public void UpdateMinerList()
         {
-            List<IMiner> miners = Factory.Instance.CoreObject.Miners;
-            pnlMiner.Controls.Clear();
+            IMiner miner = null;
+            //miner = Factory.Instance.CoreObject.Miners;
 
-            foreach (IMiner item in miners)
-            {
+            Home view = new Home(miner,this);
+            view.TopLevel = false;
+            pnlMainInfo.Controls.Add(view);
+            view.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            view.UpdateState();
+            view.Show();
 
-                MinerView view = new MinerView(item, this);
-                view.TopLevel = false;
-                pnlMiner.Controls.Add(view);
-                view.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                view.UpdateState();
-                //view.Dock = DockStyle.Fill;
-                view.Show();
-                if (Factory.Instance.CoreObject.SelectedMiner == item)
-                {
-                    view.ActivateView();//makes it default. the tick mark
 
-                    //view.SelectView();//marks it as selected
-                    //ShowMiningInfo(item);
-                    //this.MinerView = view;
-                    SelectMiningView(view);
-                }
-            }
+
             ShowSettingsCarausal();
         }
 

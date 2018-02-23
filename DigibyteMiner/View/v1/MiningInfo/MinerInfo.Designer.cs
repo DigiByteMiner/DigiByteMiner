@@ -42,7 +42,6 @@
             this.lnlMainCoinPool = new System.Windows.Forms.LinkLabel();
             this.lnDualCoinPool = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lnkKnowMore = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbTemplate)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -212,28 +211,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Visit Pool Account";
             // 
-            // lnkKnowMore
-            // 
-            this.lnkKnowMore.AutoSize = true;
-            this.lnkKnowMore.LinkArea = new System.Windows.Forms.LinkArea(0, 15);
-            this.lnkKnowMore.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkKnowMore.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.lnkKnowMore.Location = new System.Drawing.Point(12, 166);
-            this.lnkKnowMore.Name = "lnkKnowMore";
-            this.lnkKnowMore.Size = new System.Drawing.Size(62, 17);
-            this.lnkKnowMore.TabIndex = 22;
-            this.lnkKnowMore.TabStop = true;
-            this.lnkKnowMore.Text = "Learn More";
-            this.lnkKnowMore.UseCompatibleTextRendering = true;
-            this.lnkKnowMore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkKnowMore_LinkClicked);
-            // 
             // MinerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1132, 346);
-            this.Controls.Add(this.lnkKnowMore);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblMinerState);
             this.Controls.Add(this.btnStartMining);
@@ -273,6 +256,5 @@
         private System.Windows.Forms.LinkLabel lnlMainCoinPool;
         private System.Windows.Forms.LinkLabel lnDualCoinPool;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.LinkLabel lnkKnowMore;
     }
 }

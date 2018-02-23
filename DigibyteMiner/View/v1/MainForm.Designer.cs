@@ -36,14 +36,13 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddMiner = new System.Windows.Forms.Button();
             this.pnlMinerInfo = new System.Windows.Forms.Panel();
-            this.pnlMiner = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlCarousal = new System.Windows.Forms.Panel();
             this.oneMinerNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.taskbarMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlMainInfo = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.taskbarMenu.SuspendLayout();
             this.SuspendLayout();
@@ -98,20 +97,6 @@
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
-            // btnAddMiner
-            // 
-            this.btnAddMiner.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAddMiner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddMiner.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMiner.ForeColor = System.Drawing.Color.White;
-            this.btnAddMiner.Location = new System.Drawing.Point(15, 27);
-            this.btnAddMiner.Name = "btnAddMiner";
-            this.btnAddMiner.Size = new System.Drawing.Size(75, 23);
-            this.btnAddMiner.TabIndex = 2;
-            this.btnAddMiner.Text = "Add Miner";
-            this.btnAddMiner.UseVisualStyleBackColor = false;
-            this.btnAddMiner.Click += new System.EventHandler(this.btnAddMiner_Click);
-            // 
             // pnlMinerInfo
             // 
             this.pnlMinerInfo.BackColor = System.Drawing.Color.White;
@@ -122,21 +107,12 @@
             this.pnlMinerInfo.TabIndex = 2;
             this.pnlMinerInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMinerInfo_Paint);
             // 
-            // pnlMiner
-            // 
-            this.pnlMiner.AutoScroll = true;
-            this.pnlMiner.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMiner.Location = new System.Drawing.Point(15, 56);
-            this.pnlMiner.Name = "pnlMiner";
-            this.pnlMiner.Size = new System.Drawing.Size(796, 264);
-            this.pnlMiner.TabIndex = 3;
-            // 
             // pnlCarousal
             // 
             this.pnlCarousal.BackColor = System.Drawing.Color.White;
-            this.pnlCarousal.Location = new System.Drawing.Point(817, 56);
+            this.pnlCarousal.Location = new System.Drawing.Point(769, 36);
             this.pnlCarousal.Name = "pnlCarousal";
-            this.pnlCarousal.Size = new System.Drawing.Size(312, 264);
+            this.pnlCarousal.Size = new System.Drawing.Size(360, 264);
             this.pnlCarousal.TabIndex = 0;
             // 
             // oneMinerNotifyIcon
@@ -167,6 +143,14 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // pnlMainInfo
+            // 
+            this.pnlMainInfo.BackColor = System.Drawing.Color.White;
+            this.pnlMainInfo.Location = new System.Drawing.Point(12, 36);
+            this.pnlMainInfo.Name = "pnlMainInfo";
+            this.pnlMainInfo.Size = new System.Drawing.Size(742, 264);
+            this.pnlMainInfo.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,10 +158,9 @@
             this.BackgroundImage = global::DigibyteMiner.Properties.Resources.digibyte_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1141, 696);
+            this.Controls.Add(this.pnlMainInfo);
             this.Controls.Add(this.pnlCarousal);
-            this.Controls.Add(this.pnlMiner);
             this.Controls.Add(this.pnlMinerInfo);
-            this.Controls.Add(this.btnAddMiner);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -202,15 +185,14 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
-        private System.Windows.Forms.Button btnAddMiner;
         private System.Windows.Forms.Panel pnlMinerInfo;
-        private System.Windows.Forms.FlowLayoutPanel pnlMiner;
         private System.Windows.Forms.Panel pnlCarousal;
         private System.Windows.Forms.NotifyIcon oneMinerNotifyIcon;
         private System.Windows.Forms.ContextMenuStrip taskbarMenu;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modeToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlMainInfo;
     }
 }
 
