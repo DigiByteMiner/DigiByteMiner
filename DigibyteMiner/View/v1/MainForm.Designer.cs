@@ -31,13 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.miningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profitabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.donateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddMiner = new System.Windows.Forms.Button();
             this.pnlMinerInfo = new System.Windows.Forms.Panel();
             this.pnlMiner = new System.Windows.Forms.FlowLayoutPanel();
@@ -54,29 +52,14 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miningToolStripMenuItem,
-            this.profitabilityToolStripMenuItem,
             this.advancedToolStripMenuItem,
             this.aboutToolStripMenuItem,
-            this.donateToolStripMenuItem1});
+            this.aboutToolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1141, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // miningToolStripMenuItem
-            // 
-            this.miningToolStripMenuItem.Name = "miningToolStripMenuItem";
-            this.miningToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.miningToolStripMenuItem.Text = "Mining";
-            // 
-            // profitabilityToolStripMenuItem
-            // 
-            this.profitabilityToolStripMenuItem.Name = "profitabilityToolStripMenuItem";
-            this.profitabilityToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.profitabilityToolStripMenuItem.Text = "Profitability";
-            this.profitabilityToolStripMenuItem.Click += new System.EventHandler(this.profitabilityToolStripMenuItem_Click);
             // 
             // advancedToolStripMenuItem
             // 
@@ -108,12 +91,11 @@
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
-            // donateToolStripMenuItem1
+            // aboutToolStripMenuItem2
             // 
-            this.donateToolStripMenuItem1.Name = "donateToolStripMenuItem1";
-            this.donateToolStripMenuItem1.Size = new System.Drawing.Size(57, 20);
-            this.donateToolStripMenuItem1.Text = "Donate";
-            this.donateToolStripMenuItem1.Click += new System.EventHandler(this.donateToolStripMenuItem1_Click);
+            this.aboutToolStripMenuItem2.Name = "aboutToolStripMenuItem2";
+            this.aboutToolStripMenuItem2.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem2.Text = "About";
             // 
             // btnAddMiner
             // 
@@ -188,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.digibyte;
+            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.digibyte_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1141, 696);
             this.Controls.Add(this.pnlCarousal);
@@ -196,6 +178,7 @@
             this.Controls.Add(this.pnlMinerInfo);
             this.Controls.Add(this.btnAddMiner);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -214,21 +197,19 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem profitabilityToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem advancedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem miningToolStripMenuItem;
         private System.Windows.Forms.Button btnAddMiner;
         private System.Windows.Forms.Panel pnlMinerInfo;
         private System.Windows.Forms.FlowLayoutPanel pnlMiner;
-        private System.Windows.Forms.ToolStripMenuItem donateToolStripMenuItem1;
         private System.Windows.Forms.Panel pnlCarousal;
         private System.Windows.Forms.NotifyIcon oneMinerNotifyIcon;
         private System.Windows.Forms.ContextMenuStrip taskbarMenu;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem2;
     }
 }
 

@@ -5,7 +5,6 @@ using DigibyteMiner.View;
 using DigibyteMiner.View.v1;
 using DigibyteMiner.View.v1.Corousal;
 using DigibyteMiner.View.v1.ExtraScreens;
-using DigibyteMiner.View.v1.Profitability;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -284,11 +283,6 @@ namespace DigibyteMiner
             WindowState = FormWindowState.Normal;
         }
 
-        private void profitabilityToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Profitability profit = new Profitability();
-            profit.ShowDialog();
-        }
 
         private void donateToolStripMenuItem_Click(object sender, EventArgs e)
         {

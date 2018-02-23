@@ -218,12 +218,6 @@
     <Compile Include="View\v1\MiningInfo\MinerInfoSummary.Designer.cs">
       <DependentUpon>MinerInfoSummary.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\v1\Profitability\Profitability.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\v1\Profitability\Profitability.Designer.cs">
-      <DependentUpon>Profitability.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\v1\UiStateUtil.cs" />
     <Compile Include="View\v1\V1View.cs">
       <SubType>Component</SubType>
@@ -292,9 +286,6 @@
     <EmbeddedResource Include="View\v1\MiningInfo\MinerInfoSummary.resx">
       <DependentUpon>MinerInfoSummary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\v1\Profitability\Profitability.resx">
-      <DependentUpon>Profitability.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -325,6 +316,7 @@
     <None Include="View\v1\Images\selected.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="View\v1\Images\ethereum.png" />
     <None Include="View\v1\Images\digibyte_bg.png" />
     <None Include="Coins\EthHash\Images\digibyte.png" />
     <Content Include="DigibyteMiner.ico" />
