@@ -39,9 +39,7 @@ namespace OneMiner.Core
             Model = new Config();
             CoreObject = new OneMiner();
             m_algoHash[AlgoEnums.EthHash] = new EthHash.EthHash();
-            m_algoHash[AlgoEnums.Equihash] = new Equihash.Equihash();
             m_algorithms.Add(m_algoHash[AlgoEnums.EthHash] as IHashAlgorithm);
-            m_algorithms.Add(m_algoHash[AlgoEnums.Equihash] as IHashAlgorithm);
             StartTime = DateTime.Now;
 	    }
         private void Init()

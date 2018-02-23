@@ -35,7 +35,7 @@ namespace OneMiner.EthHash
 
         public Bitmap Logo
         {
-            get { return DigibyteMiner.Properties.Resources.ethereum; }
+            get { return DigibyteMiner.Properties.Resources.digibyte; }
             
         }
 

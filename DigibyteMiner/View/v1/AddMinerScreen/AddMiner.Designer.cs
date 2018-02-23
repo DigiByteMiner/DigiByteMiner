@@ -101,7 +101,7 @@
             // 
             // pbSelectedMiner
             // 
-            this.pbSelectedMiner.Image = global::DigibyteMiner.Properties.Resources.ethereum;
+            this.pbSelectedMiner.Image = global::DigibyteMiner.Properties.Resources.digibyte;
             this.pbSelectedMiner.Location = new System.Drawing.Point(224, 67);
             this.pbSelectedMiner.Name = "pbSelectedMiner";
             this.pbSelectedMiner.Size = new System.Drawing.Size(42, 32);

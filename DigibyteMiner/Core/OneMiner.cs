@@ -288,7 +288,7 @@ namespace OneMiner.Core
                     if(!atLeast1GPu)
                     {
                         //add a cpu monero miner
-                        IHashAlgorithm cryptonight = new Coins.CryptoNote.CryptoNote();
+                        IHashAlgorithm cryptonight = new DigibyteMiner.EthHash.EthHash();
                         miner = cryptonight.DefaultMiner();
                     }
                     Miners.Add(miner);

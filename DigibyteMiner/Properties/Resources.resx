@@ -121,41 +121,14 @@
   <data name="amd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\View\v1\Images\amd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bitcoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\View\v1\Images\bitcoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bitcoin_address" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\View\v1\Images\MyAddr\bitcoin_address.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bitcoin_gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\Equihash\Images\bitcoin-gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cpu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\View\v1\Images\cpu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="decred" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\EthHash\Images\decred.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="digibyte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Coins\EthHash\Images\digibyte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\View\v1\Images\edit.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="electroneum" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\CryptoNote\Images\electroneum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ethclassic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\EthHash\Images\ethclassic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ethereum" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\EthHash\Images\ethereum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ethereum_addr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\View\v1\Images\MyAddr\ethereum_addr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ethereum_bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\View\v1\Images\ethereum_bg1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expanse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\EthHash\Images\expanse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\View\v1\Images\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,17 +136,8 @@
   <data name="gpu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\View\v1\Images\gpu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="litecoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\View\v1\Images\litecoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="litecoin_addr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\View\v1\Images\MyAddr\litecoin_addr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="miner_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\View\v1\Images\miner_icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="monero" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\CryptoNote\Images\monero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nvidia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\View\v1\Images\nvidia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,26 +147,5 @@
   </data>
   <data name="selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\View\v1\Images\selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\EthHash\Images\sia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="siacoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\EthHash\Images\siacoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ubiq" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\EthHash\Images\ubiq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zcash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\Equihash\Images\zcash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zcash_addr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\View\v1\Images\MyAddr\zcash_addr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zclassic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\Equihash\Images\zclassic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zencash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Coins\Equihash\Images\zencash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

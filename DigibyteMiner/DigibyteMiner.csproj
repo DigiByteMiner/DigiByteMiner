@@ -69,30 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coins\CryptoNote\ClaymoreCNAmd.cs" />
-    <Compile Include="Coins\CryptoNote\ClaymoreCNCpu.cs" />
-    <Compile Include="Coins\CryptoNote\CryptoNote.cs" />
-    <Compile Include="Coins\CryptoNote\CCMiner.cs" />
-    <Compile Include="Coins\CryptoNote\Electroneum.cs" />
-    <Compile Include="Coins\CryptoNote\Monero.cs" />
-    <Compile Include="Coins\CryptoNote\CryptoNoteMiner.cs" />
-    <Compile Include="Coins\Equihash\BitcoinGold.cs" />
-    <Compile Include="Coins\Equihash\ClaymoreMinerZcash.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Coins\Equihash\Equihash.cs" />
-    <Compile Include="Coins\Equihash\EWBFMiner.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Coins\Equihash\Zcash.cs" />
-    <Compile Include="Coins\Equihash\ZCashMiner.cs" />
-    <Compile Include="Coins\Equihash\ZClassic.cs" />
-    <Compile Include="Coins\Equihash\ZenCash.cs" />
     <Compile Include="Coins\EthHash\ClaymoreMiner.cs" />
-    <Compile Include="Coins\EthHash\EtherClassic.cs" />
-    <Compile Include="Coins\EthHash\Expanse.cs" />
-    <Compile Include="Coins\EthHash\Sia.cs" />
-    <Compile Include="Coins\EthHash\Ubiq.cs" />
     <Compile Include="Coins\MinerBase.cs" />
     <Compile Include="Coins\MinerProgramBase.cs" />
     <Compile Include="Coins\OutputReaderBase.cs" />
@@ -107,7 +84,6 @@
     <Compile Include="Core\Interfaces\IMinerData.cs" />
     <Compile Include="Core\Interfaces\IMinerProgram.cs" />
     <Compile Include="Core\Interfaces\IOutputReader.cs" />
-    <Compile Include="Coins\EthHash\Decred.cs" />
     <Compile Include="Coins\EthHash\Ethereum.cs" />
     <Compile Include="Coins\EthHash\EthereumMiner.cs" />
     <Compile Include="Coins\EthHash\EthHash.cs" />
@@ -189,24 +165,6 @@
     </Compile>
     <Compile Include="View\v1\AddMinerScreen\ConfigureMiner.Designer.cs">
       <DependentUpon>ConfigureMiner.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\v1\ExtraScreens\Donate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\v1\ExtraScreens\Donate.Designer.cs">
-      <DependentUpon>Donate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\v1\ExtraScreens\Help.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\v1\ExtraScreens\Help.Designer.cs">
-      <DependentUpon>Help.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\v1\ExtraScreens\KnowMore.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\v1\ExtraScreens\KnowMore.Designer.cs">
-      <DependentUpon>KnowMore.cs</DependentUpon>
     </Compile>
     <Compile Include="View\v1\ExtraScreens\Settings.cs">
       <SubType>Form</SubType>
@@ -300,15 +258,6 @@
     <EmbeddedResource Include="View\v1\AddMinerScreen\ConfigureMiner.resx">
       <DependentUpon>ConfigureMiner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\v1\ExtraScreens\Donate.resx">
-      <DependentUpon>Donate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\v1\ExtraScreens\Help.resx">
-      <DependentUpon>Help.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\v1\ExtraScreens\KnowMore.resx">
-      <DependentUpon>KnowMore.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\v1\ExtraScreens\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,31 +316,7 @@
     <None Include="Coins\EthHash\Images\ethereum.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="View\v1\Images\ethereum_bg1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="View\v1\Images\miner_icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="View\v1\Images\litecoin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="View\v1\Images\zcash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="View\v1\Images\bitcoin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="View\v1\Images\MyAddr\bitcoin_address.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="View\v1\Images\MyAddr\ethereum_addr.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="View\v1\Images\MyAddr\litecoin_addr.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="View\v1\Images\MyAddr\zcash_addr.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="View\v1\Images\edit.ico" />
@@ -400,18 +325,13 @@
     <None Include="View\v1\Images\selected.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Coins\Equihash\Images\bitcoin-gold.png" />
-    <None Include="Coins\Equihash\Images\zclassic.png" />
-    <None Include="Coins\Equihash\Images\zencash.png" />
-    <Content Include="Coins\CryptoNote\Images\electroneum.png" />
-    <Content Include="Coins\CryptoNote\Images\monero.png" />
+    <None Include="Coins\EthHash\Images\digibyte.png" />
     <Content Include="DigibyteMiner.ico" />
     <None Include="View\v1\Images\github.png" />
     <None Include="View\v1\Images\remove.png" />
     <None Include="Coins\EthHash\Images\expanse.png" />
     <None Include="Coins\EthHash\Images\siacoin.png" />
     <None Include="Coins\EthHash\Images\ubiq.png" />
-    <None Include="Coins\Equihash\Images\zcash.png" />
     <None Include="Coins\EthHash\Images\sia.png" />
     <Content Include="miner_icon.ico" />
     <None Include="View\v1\Images\gpu.png" />

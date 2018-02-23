@@ -109,7 +109,7 @@
             // 
             // pbTemplate
             // 
-            this.pbTemplate.Image = global::DigibyteMiner.Properties.Resources.ethereum;
+            this.pbTemplate.Image = global::DigibyteMiner.Properties.Resources.digibyte;
             this.pbTemplate.Location = new System.Drawing.Point(12, 24);
             this.pbTemplate.Name = "pbTemplate";
             this.pbTemplate.Size = new System.Drawing.Size(65, 63);

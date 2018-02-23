@@ -202,8 +202,7 @@ namespace OneMiner.View.v1
 
         private void lnkKnowMore_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            KnowMore k = new KnowMore(Miner.MainCoin);
-            k.ShowDialog();
+
         }
     }
 }

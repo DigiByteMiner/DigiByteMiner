@@ -47,8 +47,7 @@ namespace OneMiner.View
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Donate d = new Donate();
-            d.ShowDialog();
+
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
