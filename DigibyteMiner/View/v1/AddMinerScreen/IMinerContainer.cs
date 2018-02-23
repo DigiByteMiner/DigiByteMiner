@@ -1,10 +1,10 @@
-﻿using OneMiner.Core.Interfaces;
+﻿using DigibyteMiner.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.View.v1.AddMinerScreen
+namespace DigibyteMiner.View.v1.AddMinerScreen
 {
     public interface IMinerContainer
     {

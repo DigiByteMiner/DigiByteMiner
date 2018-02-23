@@ -1,4 +1,4 @@
-﻿namespace OneMiner.View.v1.AddMinerScreen
+﻿namespace DigibyteMiner.View.v1.AddMinerScreen
 {
     partial class DefaultMinerMessage
     {

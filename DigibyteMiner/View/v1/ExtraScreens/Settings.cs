@@ -1,5 +1,5 @@
-﻿using OneMiner.Core;
-using OneMiner.Model.Config;
+﻿using DigibyteMiner.Core;
+using DigibyteMiner.Model.Config;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OneMiner.View.v1.ExtraScreens
+namespace DigibyteMiner.View.v1.ExtraScreens
 {
     public partial class Settings : Form
     {

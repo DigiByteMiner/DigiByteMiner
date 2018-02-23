@@ -5,7 +5,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Model.UnZip
+namespace DigibyteMiner.Model.UnZip
 {
     class UnZipGZipStream : UnZipBase
     {

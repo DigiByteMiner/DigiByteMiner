@@ -1,4 +1,4 @@
-﻿namespace OneMiner.View.v1.MiningInfo
+﻿namespace DigibyteMiner.View.v1.MiningInfo
 {
     partial class GpuView
     {

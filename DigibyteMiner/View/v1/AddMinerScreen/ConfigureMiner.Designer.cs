@@ -1,4 +1,4 @@
-﻿namespace OneMiner.View.v1
+﻿namespace DigibyteMiner.View.v1
 {
     partial class ConfigureMiner
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Model.UnZip
+namespace DigibyteMiner.Model.UnZip
 {
     interface  IUnzip
     {

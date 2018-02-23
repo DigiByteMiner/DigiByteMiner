@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Model.UnZip
+namespace DigibyteMiner.Model.UnZip
 {
     class UnZipRarLocal : UnZipBase
     {

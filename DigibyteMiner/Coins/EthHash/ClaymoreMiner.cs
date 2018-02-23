@@ -1,7 +1,7 @@
-﻿using OneMiner.Core;
-using OneMiner.Core.Interfaces;
-using OneMiner.Model;
-using OneMiner.Model.Config;
+﻿using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Model;
+using DigibyteMiner.Model.Config;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
-namespace OneMiner.Coins.EthHash
+namespace DigibyteMiner.Coins.EthHash
 {
     /// <summary>
     /// this class does not represent a miner program. coz this contains specif info like batfilepath etc

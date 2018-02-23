@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OneMiner.View.v1.AddMinerScreen
+namespace DigibyteMiner.View.v1.AddMinerScreen
 {
     public partial class DefaultMinerMessage : Form
     {

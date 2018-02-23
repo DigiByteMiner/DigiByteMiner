@@ -1,4 +1,4 @@
-﻿namespace OneMiner.View.v1.ExtraScreens
+﻿namespace DigibyteMiner.View.v1.ExtraScreens
 {
     partial class Settings
     {

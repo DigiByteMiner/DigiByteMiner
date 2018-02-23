@@ -1,4 +1,4 @@
-﻿namespace OneMiner
+﻿namespace DigibyteMiner
 {
     partial class MainForm
     {
@@ -159,7 +159,7 @@
             // oneMinerNotifyIcon
             // 
             this.oneMinerNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("oneMinerNotifyIcon.Icon")));
-            this.oneMinerNotifyIcon.Text = "OneMiner";
+            this.oneMinerNotifyIcon.Text = "DigibyteMiner";
             this.oneMinerNotifyIcon.Visible = true;
             // 
             // taskbarMenu
@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.ethereum_bg1;
+            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.digibyte;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1141, 696);
             this.Controls.Add(this.pnlCarousal);
@@ -201,7 +201,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "OneMiner - 1 Click Miner for Ethereum, ZCash";
+            this.Text = "1 Click Digibyte Miner";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

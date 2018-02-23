@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace OneMiner.Core.Interfaces
+namespace DigibyteMiner.Core.Interfaces
 {
     public enum CardMake
     {

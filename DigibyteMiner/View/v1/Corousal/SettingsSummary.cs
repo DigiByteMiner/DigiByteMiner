@@ -1,7 +1,7 @@
-﻿using OneMiner.Core;
-using OneMiner.Core.Interfaces;
-using OneMiner.Model.Config;
-using OneMiner.View.v1.ExtraScreens;
+﻿using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Model.Config;
+using DigibyteMiner.View.v1.ExtraScreens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OneMiner.View.v1.Corousal
+namespace DigibyteMiner.View.v1.Corousal
 {
     public partial class SettingsSummary : Form
     {

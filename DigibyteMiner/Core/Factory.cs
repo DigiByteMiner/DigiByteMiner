@@ -1,14 +1,14 @@
-﻿using OneMiner.Core.Interfaces;
-using OneMiner.Model.Config;
-using OneMiner.View;
-using OneMiner.View.v1;
+﻿using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Model.Config;
+using DigibyteMiner.View;
+using DigibyteMiner.View.v1;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Core
+namespace DigibyteMiner.Core
 {
     class Factory
     {
@@ -23,7 +23,7 @@ namespace OneMiner.Core
         private List<IHashAlgorithm> m_algorithms = new List<IHashAlgorithm>();
         Hashtable m_algoHash = new Hashtable();
 
-        public OneMiner CoreObject { get; set; }
+        public DigibyteMiner CoreObject { get; set; }
         public Config Model { get; set; }
         public IView ViewObject { get; set; }
         public ILogger Logger { get; set; }
@@ -37,7 +37,7 @@ namespace OneMiner.Core
 
             ViewObject = new V1View();
             Model = new Config();
-            CoreObject = new OneMiner();
+            CoreObject = new DigibyteMiner();
             m_algoHash[AlgoEnums.EthHash] = new EthHash.EthHash();
             m_algorithms.Add(m_algoHash[AlgoEnums.EthHash] as IHashAlgorithm);
             StartTime = DateTime.Now;
@@ -55,12 +55,6 @@ namespace OneMiner.Core
             {
                 case "Ethhash":
                     algo = new EthHash.EthHash();
-                    break;
-                case "Equihash":
-                    algo = new Equihash.Equihash();
-                    break;
-                case "CryptoNote":
-                    algo = new Coins.CryptoNote.CryptoNote();
                     break;
 
             }
@@ -86,8 +80,6 @@ namespace OneMiner.Core
             {
                 List<IHashAlgorithm> algos = new List<IHashAlgorithm>();
                 algos.Add(new EthHash.EthHash());
-                algos.Add(new Equihash.Equihash());
-                algos.Add(new Coins.CryptoNote.CryptoNote());
                 return algos;
             }
         }

@@ -1,5 +1,5 @@
-﻿using OneMiner.Core.Interfaces;
-using OneMiner.EthHash;
+﻿using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.EthHash;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace OneMiner.Model.Config
+namespace DigibyteMiner.Model.Config
 {
     /// <summary>
     /// structitr of the data is as follows

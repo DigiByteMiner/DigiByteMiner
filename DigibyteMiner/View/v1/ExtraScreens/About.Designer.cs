@@ -1,4 +1,4 @@
-﻿namespace OneMiner.View
+﻿namespace DigibyteMiner.View
 {
     partial class About
     {
@@ -57,7 +57,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "OneMiner";
+            this.label3.Text = "DigibyteMiner";
             // 
             // label4
             // 

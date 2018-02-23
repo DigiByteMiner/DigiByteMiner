@@ -1,6 +1,6 @@
-﻿using OneMiner.Core.Interfaces;
-using OneMiner.View.v1.ExtraScreens;
-using OneMiner.View.v1.MiningInfo;
+﻿using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.View.v1.ExtraScreens;
+using DigibyteMiner.View.v1.MiningInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OneMiner.View.v1
+namespace DigibyteMiner.View.v1
 {
     public partial class MinerInfo : Form
     {

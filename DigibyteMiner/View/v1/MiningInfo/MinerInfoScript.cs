@@ -1,4 +1,4 @@
-﻿using OneMiner.Core.Interfaces;
+﻿using DigibyteMiner.Core.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OneMiner.View.v1.MiningInfo
+namespace DigibyteMiner.View.v1.MiningInfo
 {
     public partial class MinerInfoScript : Form,IMinerInfoTab
     {

@@ -1,4 +1,4 @@
-﻿using OneMiner.Core.Interfaces;
+﻿using DigibyteMiner.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace OneMiner.Core
+namespace DigibyteMiner.Core
 {
     /// <summary>
     /// Thread safe logger

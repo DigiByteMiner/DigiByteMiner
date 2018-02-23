@@ -1,7 +1,7 @@
 ﻿using Microsoft.Win32;
-using OneMiner.Core;
-using OneMiner.Core.Interfaces;
-using OneMiner.Model.FileIO;
+using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Model.FileIO;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +12,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 
-namespace OneMiner.Model
+namespace DigibyteMiner.Model
 {
     class MinerDownloader
     {
@@ -36,10 +36,10 @@ namespace OneMiner.Model
         {
             IFileIO fileio = null;
 
-            fileio = new AppData("OneMiner", "sample");
+            fileio = new AppData("DigibyteMiner", "sample");
             if (fileio.Verify())
                 return fileio;
-            fileio = new LocalFolder("OneMiner", "sample");
+            fileio = new LocalFolder("DigibyteMiner", "sample");
             if (fileio.Verify())
                 return fileio;
 

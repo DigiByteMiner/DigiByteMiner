@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
-using OneMiner.Core;
-using OneMiner.Core.Interfaces;
+using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
-namespace OneMiner.Model.Config
+namespace DigibyteMiner.Model.Config
 {
     class Config
     {
@@ -181,7 +181,7 @@ namespace OneMiner.Model.Config
         {
             try
             {
-                string regKeystr = "OneMiner";
+                string regKeystr = "DigibyteMiner";
                 RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
                 if(set)
                 {

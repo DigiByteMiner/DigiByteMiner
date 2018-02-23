@@ -1,10 +1,10 @@
-﻿using OneMiner.Model.Config;
+﻿using DigibyteMiner.Model.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Core.Interfaces
+namespace DigibyteMiner.Core.Interfaces
 {
     public interface IMinerScript
     {

@@ -1,4 +1,4 @@
-﻿namespace OneMiner.View.v1
+﻿namespace DigibyteMiner.View.v1
 {
     partial class AddMinerFinish
     {
@@ -131,7 +131,7 @@
             // 
             // pbDualCoin
             // 
-            this.pbDualCoin.Image = global::DigibyteMiner.Properties.Resources.ethereum;
+            this.pbDualCoin.Image = global::DigibyteMiner.Properties.Resources.digibyte;
             this.pbDualCoin.Location = new System.Drawing.Point(237, 213);
             this.pbDualCoin.Name = "pbDualCoin";
             this.pbDualCoin.Size = new System.Drawing.Size(42, 32);

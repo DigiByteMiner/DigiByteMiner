@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OneMiner.Core.Interfaces
+namespace DigibyteMiner.Core.Interfaces
 {
     public class Pool
     {

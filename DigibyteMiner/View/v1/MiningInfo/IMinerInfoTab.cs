@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.View.v1.MiningInfo
+namespace DigibyteMiner.View.v1.MiningInfo
 {
     public interface IMinerInfoTab
     {

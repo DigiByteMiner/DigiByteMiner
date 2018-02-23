@@ -325,6 +325,7 @@
     <None Include="View\v1\Images\selected.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="View\v1\Images\digibyte_bg.png" />
     <None Include="Coins\EthHash\Images\digibyte.png" />
     <Content Include="DigibyteMiner.ico" />
     <None Include="View\v1\Images\github.png" />

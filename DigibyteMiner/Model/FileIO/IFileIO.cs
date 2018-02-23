@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Model.FileIO
+namespace DigibyteMiner.Model.FileIO
 {
     interface IFileIO
     {

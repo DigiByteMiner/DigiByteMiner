@@ -1,11 +1,11 @@
-﻿using OneMiner.Core.Interfaces;
+﻿using DigibyteMiner.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace OneMiner.Core
+namespace DigibyteMiner.Core
 {
     public class Alarm
     {

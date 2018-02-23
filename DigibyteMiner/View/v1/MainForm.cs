@@ -1,11 +1,11 @@
-﻿using OneMiner.Core;
-using OneMiner.Core.Interfaces;
-using OneMiner.Model.Config;
-using OneMiner.View;
-using OneMiner.View.v1;
-using OneMiner.View.v1.Corousal;
-using OneMiner.View.v1.ExtraScreens;
-using OneMiner.View.v1.Profitability;
+﻿using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Model.Config;
+using DigibyteMiner.View;
+using DigibyteMiner.View.v1;
+using DigibyteMiner.View.v1.Corousal;
+using DigibyteMiner.View.v1.ExtraScreens;
+using DigibyteMiner.View.v1.Profitability;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace OneMiner
+namespace DigibyteMiner
 {
     public partial class MainForm : Form
     {
@@ -261,8 +261,6 @@ namespace OneMiner
 
         private void donateToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Donate donate = new Donate();
-            donate.ShowDialog();
         }
 
         private void pnlMinerInfo_Paint(object sender, PaintEventArgs e)
@@ -294,8 +292,6 @@ namespace OneMiner
 
         private void donateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OneMiner.View.v1.ExtraScreens.Help h = new View.v1.ExtraScreens.Help();
-            h.ShowDialog();
         }
         public void ShowHardwareMissingError()
         {

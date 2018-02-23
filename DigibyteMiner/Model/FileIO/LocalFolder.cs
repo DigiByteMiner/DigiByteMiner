@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Model.FileIO
+namespace DigibyteMiner.Model.FileIO
 {
     class LocalFolder:IFileIO
     {

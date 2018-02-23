@@ -1,4 +1,4 @@
-﻿namespace OneMiner.View.v1.Profitability
+﻿namespace DigibyteMiner.View.v1.Profitability
 {
     partial class Profitability
     {

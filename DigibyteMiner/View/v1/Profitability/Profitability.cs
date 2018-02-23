@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OneMiner.View.v1.Profitability
+namespace DigibyteMiner.View.v1.Profitability
 {
     public partial class Profitability : Form
     {

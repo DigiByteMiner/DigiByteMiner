@@ -1,5 +1,5 @@
-﻿using OneMiner.Core;
-using OneMiner.View;
+﻿using DigibyteMiner.Core;
+using DigibyteMiner.View;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace OneMiner
+namespace DigibyteMiner
 {
     static public class WinApi
     {
@@ -39,7 +39,7 @@ namespace OneMiner
                 mutex = new Mutex(true, "UniqueApplicationName", out onlyInstance);
                 if (!onlyInstance)
                 {
-                    IntPtr handle = WinApi.FindWindow(null, "OneMiner - 1 Click Miner for Ethereum, ZCash");
+                    IntPtr handle = WinApi.FindWindow(null, "DigibyteMiner - 1 Click Miner for Ethereum, ZCash");
                     if (handle != IntPtr.Zero)
                         WinApi.PostMessage(handle, 3000, IntPtr.Zero, IntPtr.Zero);
                     return;

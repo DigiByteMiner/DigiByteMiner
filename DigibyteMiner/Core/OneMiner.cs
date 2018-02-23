@@ -1,6 +1,6 @@
-﻿using OneMiner.Coins;
-using OneMiner.Core.Interfaces;
-using OneMiner.Model.Config;
+﻿using DigibyteMiner.Coins;
+using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Model.Config;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace OneMiner.Core
+namespace DigibyteMiner.Core
 {
-    class OneMiner
+    class DigibyteMiner
     {
         public List<IMiner> Miners = new List<IMiner>();
         public IMiner ActiveMiner = null;//the current mining miner, if no miners are mining activeminer wud be null
@@ -53,7 +53,7 @@ namespace OneMiner.Core
                 return m_ThreadCount;
             }
         }
-        public OneMiner()
+        public DigibyteMiner()
         {
             MiningQueue = new TSQueue<IMinerProgram>();
             DownloadingQueue = new TSQueue<IMinerProgram>();
@@ -288,8 +288,8 @@ namespace OneMiner.Core
                     if(!atLeast1GPu)
                     {
                         //add a cpu monero miner
-                        IHashAlgorithm cryptonight = new DigibyteMiner.EthHash.EthHash();
-                        miner = cryptonight.DefaultMiner();
+                        //IHashAlgorithm cryptonight = new DigibyteMiner
+                        //miner = cryptonight.DefaultMiner();
                     }
                     Miners.Add(miner);
                     SelectedMiner = miner;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OneMiner.Model.UnZip
+namespace DigibyteMiner.Model.UnZip
 {
     class UnZipZipFile : UnZipBase
     {

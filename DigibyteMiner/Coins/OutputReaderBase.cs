@@ -1,6 +1,6 @@
-﻿using OneMiner.Core;
-using OneMiner.Core.Interfaces;
-using OneMiner.View.v1;
+﻿using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.View.v1;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using System.Threading;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
-namespace OneMiner.Coins
+namespace DigibyteMiner.Coins
 {
     /// <summary>
     /// reads data for  miner

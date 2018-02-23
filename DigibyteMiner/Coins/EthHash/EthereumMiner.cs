@@ -1,8 +1,8 @@
-﻿using OneMiner.Coins;
-using OneMiner.Coins.EthHash;
-using OneMiner.Core;
-using OneMiner.Core.Interfaces;
-using OneMiner.Model.Config;
+﻿using DigibyteMiner.Coins;
+using DigibyteMiner.Coins.EthHash;
+using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Model.Config;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Management;
 using System.Text;
 
-namespace OneMiner.EthHash
+namespace DigibyteMiner.EthHash
 {
     public class EthereumMiner: MinerBase
     {

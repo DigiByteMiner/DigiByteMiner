@@ -1,4 +1,4 @@
-﻿namespace OneMiner.View.v1.Corousal
+﻿namespace DigibyteMiner.View.v1.Corousal
 {
     partial class ProfitabilitySummary
     {

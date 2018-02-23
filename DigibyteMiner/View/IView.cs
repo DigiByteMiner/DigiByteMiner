@@ -1,11 +1,11 @@
-﻿using OneMiner.Core.Interfaces;
-using OneMiner.View.v1;
+﻿using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.View.v1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.View
+namespace DigibyteMiner.View
 {
 
     interface IView

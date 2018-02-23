@@ -1,11 +1,11 @@
-﻿using OneMiner.Model.FileIO;
+﻿using DigibyteMiner.Model.FileIO;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Model
+namespace DigibyteMiner.Model
 {
     /// <summary>
     /// Todo:
@@ -35,10 +35,10 @@ namespace OneMiner.Model
         private IFileIO GetFileIOObject()
         {
             IFileIO fileio = null;
-            fileio = new AppData("OneMiner", minerfileName);
+            fileio = new AppData("DigibyteMiner", minerfileName);
             if (fileio.Verify())
                 return fileio;
-            fileio = new LocalFolder("OneMiner", minerfileName);
+            fileio = new LocalFolder("DigibyteMiner", minerfileName);
             if (fileio.Verify())
                 return fileio;
          

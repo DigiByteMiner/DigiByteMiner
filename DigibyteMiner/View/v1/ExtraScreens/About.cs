@@ -1,4 +1,4 @@
-﻿using OneMiner.View.v1;
+﻿using DigibyteMiner.View.v1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OneMiner.View
+namespace DigibyteMiner.View
 {
     public partial class About : Form
     {
@@ -22,7 +22,7 @@ namespace OneMiner.View
         {
             try
             {
-                Process.Start("https://arunsatyarth.github.io/OneMiner/");
+                Process.Start("https://arunsatyarth.github.io/DigibyteMiner/");
             }
             catch (Exception se)
             {
@@ -33,7 +33,7 @@ namespace OneMiner.View
         {
             try
             {
-                Process.Start("https://github.com/arunsatyarth/OneMiner");
+                Process.Start("https://github.com/arunsatyarth/DigibyteMiner");
             }
             catch (Exception se)
             {

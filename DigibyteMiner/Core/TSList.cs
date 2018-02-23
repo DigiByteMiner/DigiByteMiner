@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Core
+namespace DigibyteMiner.Core
 {
     class TSList<T>
     {

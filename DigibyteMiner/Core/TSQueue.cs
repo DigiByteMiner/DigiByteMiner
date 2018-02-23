@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Core.Interfaces
+namespace DigibyteMiner.Core.Interfaces
 {
     //thread safe abstraction of miner and downloading queues as .Net queue is not thread safe
     public class TSQueue<T>

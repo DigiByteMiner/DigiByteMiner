@@ -1,7 +1,7 @@
-﻿using OneMiner.Coins.EthHash;
-using OneMiner.Core;
-using OneMiner.Core.Interfaces;
-using OneMiner.Model.Config;
+﻿using DigibyteMiner.Coins.EthHash;
+using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Model.Config;
 using System;
 using System.Collections;
 using System.Collections.Generic;

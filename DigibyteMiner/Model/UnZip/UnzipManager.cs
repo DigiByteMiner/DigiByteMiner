@@ -1,12 +1,12 @@
 ﻿using Microsoft.Win32;
-using OneMiner.Model.UnZip;
+using DigibyteMiner.Model.UnZip;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace OneMiner.Model.FileIO
+namespace DigibyteMiner.Model.FileIO
 {
     class UnzipManager
     {
