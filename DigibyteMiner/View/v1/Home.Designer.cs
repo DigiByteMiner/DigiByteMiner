@@ -44,6 +44,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lblAlgorithm = new System.Windows.Forms.Label();
+            this.lblPool = new System.Windows.Forms.Label();
+            this.lblWallet = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbTemplate)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,20 +54,20 @@
             // 
             this.lblMinerState.AutoSize = true;
             this.lblMinerState.BackColor = System.Drawing.Color.White;
-            this.lblMinerState.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinerState.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinerState.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblMinerState.Location = new System.Drawing.Point(44, 161);
+            this.lblMinerState.Location = new System.Drawing.Point(32, 156);
             this.lblMinerState.Name = "lblMinerState";
-            this.lblMinerState.Size = new System.Drawing.Size(54, 15);
+            this.lblMinerState.Size = new System.Drawing.Size(67, 20);
             this.lblMinerState.TabIndex = 33;
             this.lblMinerState.Text = "Stopped";
             // 
             // btnStartMining
             // 
             this.btnStartMining.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartMining.Location = new System.Drawing.Point(530, 202);
+            this.btnStartMining.Location = new System.Drawing.Point(504, 189);
             this.btnStartMining.Name = "btnStartMining";
-            this.btnStartMining.Size = new System.Drawing.Size(53, 25);
+            this.btnStartMining.Size = new System.Drawing.Size(79, 38);
             this.btnStartMining.TabIndex = 32;
             this.btnStartMining.Text = "Start";
             this.btnStartMining.UseVisualStyleBackColor = true;
@@ -115,21 +118,21 @@
             this.lnlMainCoinPool.LinkArea = new System.Windows.Forms.LinkArea(0, 15);
             this.lnlMainCoinPool.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnlMainCoinPool.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.lnlMainCoinPool.Location = new System.Drawing.Point(403, 210);
+            this.lnlMainCoinPool.Location = new System.Drawing.Point(397, 202);
             this.lnlMainCoinPool.Name = "lnlMainCoinPool";
-            this.lnlMainCoinPool.Size = new System.Drawing.Size(55, 17);
+            this.lnlMainCoinPool.Size = new System.Drawing.Size(71, 17);
             this.lnlMainCoinPool.TabIndex = 19;
             this.lnlMainCoinPool.TabStop = true;
-            this.lnlMainCoinPool.Text = "Main Pool";
+            this.lnlMainCoinPool.Text = "Pool Account";
             this.lnlMainCoinPool.UseCompatibleTextRendering = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(160, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 35;
             this.label1.Text = "Algorithm";
             // 
@@ -146,50 +149,50 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(160, 161);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(160, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 37;
-            this.label3.Text = "Algorithm";
+            this.label3.Text = "Wallet";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(160, 141);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(160, 143);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 38;
-            this.label4.Text = "Algorithm";
+            this.label4.Text = "Pool";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(244, 121);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 20);
+            this.label5.Size = new System.Drawing.Size(12, 20);
             this.label5.TabIndex = 39;
             this.label5.Text = ":";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(244, 161);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(244, 165);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 20);
+            this.label6.Size = new System.Drawing.Size(12, 20);
             this.label6.TabIndex = 40;
             this.label6.Text = ":";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(244, 141);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(244, 143);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 20);
+            this.label7.Size = new System.Drawing.Size(12, 20);
             this.label7.TabIndex = 41;
             this.label7.Text = ":";
             // 
@@ -197,11 +200,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(151, 90);
+            this.label8.Location = new System.Drawing.Point(145, 90);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 20);
+            this.label8.Size = new System.Drawing.Size(54, 20);
             this.label8.TabIndex = 42;
-            this.label8.Text = "Algorithm";
+            this.label8.Text = "Profile";
             // 
             // label9
             // 
@@ -213,12 +216,45 @@
             this.label9.TabIndex = 43;
             this.label9.Text = ":";
             // 
+            // lblAlgorithm
+            // 
+            this.lblAlgorithm.AutoSize = true;
+            this.lblAlgorithm.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlgorithm.Location = new System.Drawing.Point(263, 121);
+            this.lblAlgorithm.Name = "lblAlgorithm";
+            this.lblAlgorithm.Size = new System.Drawing.Size(95, 20);
+            this.lblAlgorithm.TabIndex = 44;
+            this.lblAlgorithm.Text = "Defaultname";
+            // 
+            // lblPool
+            // 
+            this.lblPool.AutoSize = true;
+            this.lblPool.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPool.Location = new System.Drawing.Point(263, 143);
+            this.lblPool.Name = "lblPool";
+            this.lblPool.Size = new System.Drawing.Size(95, 20);
+            this.lblPool.TabIndex = 45;
+            this.lblPool.Text = "Defaultname";
+            // 
+            // lblWallet
+            // 
+            this.lblWallet.AutoSize = true;
+            this.lblWallet.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWallet.Location = new System.Drawing.Point(263, 165);
+            this.lblWallet.Name = "lblWallet";
+            this.lblWallet.Size = new System.Drawing.Size(95, 20);
+            this.lblWallet.TabIndex = 46;
+            this.lblWallet.Text = "Defaultname";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1129, 465);
+            this.Controls.Add(this.lblWallet);
+            this.Controls.Add(this.lblPool);
+            this.Controls.Add(this.lblAlgorithm);
             this.Controls.Add(this.lnlMainCoinPool);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -262,5 +298,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblAlgorithm;
+        private System.Windows.Forms.Label lblPool;
+        private System.Windows.Forms.Label lblWallet;
     }
 }

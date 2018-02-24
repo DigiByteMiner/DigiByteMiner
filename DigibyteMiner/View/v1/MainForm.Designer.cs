@@ -63,8 +63,8 @@
             // modeToolStripMenuItem
             // 
             this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
-            this.modeToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.modeToolStripMenuItem.Text = "Mode";
+            this.modeToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.modeToolStripMenuItem.Text = "Profiles";
             this.modeToolStripMenuItem.Click += new System.EventHandler(this.modeToolStripMenuItem_Click);
             // 
             // advancedToolStripMenuItem
