@@ -180,11 +180,9 @@ namespace DigibyteMiner
         {
             return null;
         }
-        public void SelectMiningView(MinerView view)
+        public void SelectMiningView(IMiner miner)
         {
-            view.SelectView();
-            this.MinerView = view;
-            ShowMiningInfo(view.Miner);
+            ShowMiningInfo(miner);
 
         }
         /*
@@ -224,6 +222,7 @@ namespace DigibyteMiner
             view.Show();
 
 
+            SelectMiningView(Factory.Instance.DefaultAlgorithm.DefaultMiner());
 
             ShowSettingsCarausal();
         }

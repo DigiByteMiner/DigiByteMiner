@@ -36,10 +36,10 @@ namespace DigibyteMiner
             {
                 //Bring only a single instance
                 bool onlyInstance = false;
-                mutex = new Mutex(true, "UniqueApplicationName", out onlyInstance);
+                mutex = new Mutex(true, "DigibyteMiner1Click", out onlyInstance);
                 if (!onlyInstance)
                 {
-                    IntPtr handle = WinApi.FindWindow(null, "DigibyteMiner - 1 Click Miner for Ethereum, ZCash");
+                    IntPtr handle = WinApi.FindWindow(null, "Digibyte 1 Click Miner");
                     if (handle != IntPtr.Zero)
                         WinApi.PostMessage(handle, 3000, IntPtr.Zero, IntPtr.Zero);
                     return;

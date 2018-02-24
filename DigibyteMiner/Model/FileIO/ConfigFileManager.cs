@@ -27,7 +27,7 @@ namespace DigibyteMiner.Model
     /// </summary>
     class ConfigFileManager
     {
-        const string minerfileName = "oneminer.json";
+        const string minerfileName = "digibyteminer.json";
         string m_filepath = "";
         private IFileIO m_fileio = null;//object whic cretes the config. usually appdata
         //private string m_data = "";
