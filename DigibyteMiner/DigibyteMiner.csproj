@@ -224,6 +224,12 @@
     <Compile Include="View\v1\MiningInfo\MinerInfoSummary.Designer.cs">
       <DependentUpon>MinerInfoSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\v1\Profiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\Profiles.Designer.cs">
+      <DependentUpon>Profiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\v1\UiStateUtil.cs" />
     <Compile Include="View\v1\V1View.cs">
       <SubType>Component</SubType>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\v1\MiningInfo\MinerInfoSummary.resx">
       <DependentUpon>MinerInfoSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\Profiles.resx">
+      <DependentUpon>Profiles.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
