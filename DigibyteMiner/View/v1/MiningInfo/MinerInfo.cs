@@ -59,12 +59,7 @@ namespace DigibyteMiner.View.v1
 
         private void MinerInfo_Load(object sender, EventArgs e)
         {
-            pbTemplate.Image = Miner.MainCoin.Logo;
 
-            lblMinerType.Text = Miner.MainCoin.Name;
-            if (Miner.DualMining)
-                lblMinerType.Text = lblMinerType.Text + " + " + Miner.DualCoin.Name;
-            lblMinername.Text = Miner.Name;
 
             m_tabButtons.Add(btntabInfo);
             m_tabButtons.Add(btntabLogs);
@@ -91,10 +86,6 @@ namespace DigibyteMiner.View.v1
         {
             //Enable this if we want to keep back hashrate etc at minerinfo
             //UiStateUtil.UpdateState(Miner, lblMinerState, btnStartMining, null);
-            if(Miner.DualMining)
-            {
-                lnDualCoinPool.Visible = true;
-            }
         }
        
         public void UpdateUI()

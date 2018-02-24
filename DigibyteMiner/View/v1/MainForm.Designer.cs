@@ -56,7 +56,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1141, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1072, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -103,16 +103,16 @@
             this.pnlMinerInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMinerInfo.Location = new System.Drawing.Point(12, 326);
             this.pnlMinerInfo.Name = "pnlMinerInfo";
-            this.pnlMinerInfo.Size = new System.Drawing.Size(1117, 358);
+            this.pnlMinerInfo.Size = new System.Drawing.Size(1045, 358);
             this.pnlMinerInfo.TabIndex = 2;
             this.pnlMinerInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMinerInfo_Paint);
             // 
             // pnlCarousal
             // 
             this.pnlCarousal.BackColor = System.Drawing.Color.White;
-            this.pnlCarousal.Location = new System.Drawing.Point(769, 36);
+            this.pnlCarousal.Location = new System.Drawing.Point(755, 36);
             this.pnlCarousal.Name = "pnlCarousal";
-            this.pnlCarousal.Size = new System.Drawing.Size(360, 264);
+            this.pnlCarousal.Size = new System.Drawing.Size(302, 264);
             this.pnlCarousal.TabIndex = 0;
             // 
             // oneMinerNotifyIcon
@@ -148,7 +148,7 @@
             this.pnlMainInfo.BackColor = System.Drawing.Color.White;
             this.pnlMainInfo.Location = new System.Drawing.Point(12, 36);
             this.pnlMainInfo.Name = "pnlMainInfo";
-            this.pnlMainInfo.Size = new System.Drawing.Size(742, 264);
+            this.pnlMainInfo.Size = new System.Drawing.Size(724, 264);
             this.pnlMainInfo.TabIndex = 1;
             // 
             // MainForm
@@ -157,7 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DigibyteMiner.Properties.Resources.digibyte_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1141, 696);
+            this.ClientSize = new System.Drawing.Size(1072, 696);
             this.Controls.Add(this.pnlMainInfo);
             this.Controls.Add(this.pnlCarousal);
             this.Controls.Add(this.pnlMinerInfo);

@@ -56,7 +56,6 @@ namespace DigibyteMiner.View.v1.Corousal
                 IMiner miner = Factory.Instance.CoreObject.SelectedMiner;
                 if (miner != null)
                 {
-                    pbSelectedMiner.Image = miner.MainCoin.Logo;
                     lblActiveMiner.Text = miner.Name;
                 }
                 LoadData();

@@ -45,8 +45,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pbSelectedMiner = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedMiner)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRunningTime
@@ -76,7 +74,7 @@
             this.lblActiveMiner.AutoSize = true;
             this.lblActiveMiner.BackColor = System.Drawing.Color.White;
             this.lblActiveMiner.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveMiner.Location = new System.Drawing.Point(186, 56);
+            this.lblActiveMiner.Location = new System.Drawing.Point(149, 59);
             this.lblActiveMiner.MaximumSize = new System.Drawing.Size(140, 0);
             this.lblActiveMiner.Name = "lblActiveMiner";
             this.lblActiveMiner.Size = new System.Drawing.Size(118, 34);
@@ -147,9 +145,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 17);
+            this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Default Miner";
+            this.label3.Text = "Profile";
             // 
             // label2
             // 
@@ -239,23 +237,12 @@
             this.label13.TabIndex = 39;
             this.label13.Text = "Mine on Launch";
             // 
-            // pbSelectedMiner
-            // 
-            this.pbSelectedMiner.Image = global::DigibyteMiner.Properties.Resources.digibyte;
-            this.pbSelectedMiner.Location = new System.Drawing.Point(145, 54);
-            this.pbSelectedMiner.Name = "pbSelectedMiner";
-            this.pbSelectedMiner.Size = new System.Drawing.Size(35, 32);
-            this.pbSelectedMiner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSelectedMiner.TabIndex = 41;
-            this.pbSelectedMiner.TabStop = false;
-            // 
             // SettingsSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(390, 267);
-            this.Controls.Add(this.pbSelectedMiner);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblShowMinerUi);
@@ -277,7 +264,6 @@
             this.Name = "SettingsSummary";
             this.Text = "SettingsSummary";
             this.Load += new System.EventHandler(this.SettingsSummary_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedMiner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,6 +288,5 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pbSelectedMiner;
     }
 }

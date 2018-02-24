@@ -57,12 +57,12 @@
             this.txtScriptArea.Multiline = true;
             this.txtScriptArea.Name = "txtScriptArea";
             this.txtScriptArea.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtScriptArea.Size = new System.Drawing.Size(742, 196);
+            this.txtScriptArea.Size = new System.Drawing.Size(813, 196);
             this.txtScriptArea.TabIndex = 12;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(763, 80);
+            this.btnSave.Location = new System.Drawing.Point(858, 113);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(59, 23);
             this.btnSave.TabIndex = 14;
@@ -75,7 +75,7 @@
             this.lnkEdit.AutoSize = true;
             this.lnkEdit.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkEdit.LinkColor = System.Drawing.Color.SteelBlue;
-            this.lnkEdit.Location = new System.Drawing.Point(760, 53);
+            this.lnkEdit.Location = new System.Drawing.Point(855, 86);
             this.lnkEdit.Name = "lnkEdit";
             this.lnkEdit.Size = new System.Drawing.Size(25, 13);
             this.lnkEdit.TabIndex = 22;
@@ -85,7 +85,7 @@
             // 
             // btnDefault
             // 
-            this.btnDefault.Location = new System.Drawing.Point(763, 125);
+            this.btnDefault.Location = new System.Drawing.Point(858, 158);
             this.btnDefault.Name = "btnDefault";
             this.btnDefault.Size = new System.Drawing.Size(59, 23);
             this.btnDefault.TabIndex = 23;
@@ -118,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(927, 344);
+            this.ClientSize = new System.Drawing.Size(1137, 344);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkTemplate);
             this.Controls.Add(this.btnDefault);
