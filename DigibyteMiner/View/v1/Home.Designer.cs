@@ -56,7 +56,7 @@
             this.lblMinerState.BackColor = System.Drawing.Color.White;
             this.lblMinerState.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinerState.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblMinerState.Location = new System.Drawing.Point(32, 156);
+            this.lblMinerState.Location = new System.Drawing.Point(554, 141);
             this.lblMinerState.Name = "lblMinerState";
             this.lblMinerState.Size = new System.Drawing.Size(67, 20);
             this.lblMinerState.TabIndex = 33;
@@ -64,10 +64,10 @@
             // 
             // btnStartMining
             // 
-            this.btnStartMining.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartMining.Location = new System.Drawing.Point(504, 189);
+            this.btnStartMining.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartMining.Location = new System.Drawing.Point(547, 201);
             this.btnStartMining.Name = "btnStartMining";
-            this.btnStartMining.Size = new System.Drawing.Size(79, 38);
+            this.btnStartMining.Size = new System.Drawing.Size(79, 28);
             this.btnStartMining.TabIndex = 32;
             this.btnStartMining.Text = "Start";
             this.btnStartMining.UseVisualStyleBackColor = true;
@@ -77,7 +77,7 @@
             // 
             this.lblShares.AutoSize = true;
             this.lblShares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShares.Location = new System.Drawing.Point(502, 98);
+            this.lblShares.Location = new System.Drawing.Point(542, 97);
             this.lblShares.Name = "lblShares";
             this.lblShares.Size = new System.Drawing.Size(84, 13);
             this.lblShares.TabIndex = 31;
@@ -87,7 +87,7 @@
             // 
             this.lblTotalHashrate.AutoSize = true;
             this.lblTotalHashrate.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalHashrate.Location = new System.Drawing.Point(486, 51);
+            this.lblTotalHashrate.Location = new System.Drawing.Point(535, 55);
             this.lblTotalHashrate.Name = "lblTotalHashrate";
             this.lblTotalHashrate.Size = new System.Drawing.Size(116, 32);
             this.lblTotalHashrate.TabIndex = 30;

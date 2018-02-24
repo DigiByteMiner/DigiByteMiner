@@ -86,7 +86,10 @@ namespace DigibyteMiner.Coins.Skein
 
                 string command = EXENAME + " --algo=skein -o " + MainCoinConfigurer.Pool;
                 command += " -u " + MainCoinConfigurer.Wallet;
-                command += " -p " + MainCoinConfigurer.Password;
+                string pwd = MainCoinConfigurer.Password.Trim();
+                if (pwd.Length == 0)
+                    pwd = " x ";
+                command += " -p " + pwd;
 
                 command += " --api-bind " + STATSLINK2;
 
