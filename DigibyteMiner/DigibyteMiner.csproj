@@ -69,10 +69,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coins\Skein\ClaymoreMiner.cs" />
+    <Compile Include="Coins\Skein\CCMiner.cs" />
     <Compile Include="Coins\MinerBase.cs" />
     <Compile Include="Coins\MinerProgramBase.cs" />
     <Compile Include="Coins\OutputReaderBase.cs" />
+    <Compile Include="Coins\Skein\CGMiner.cs" />
     <Compile Include="Core\Alarm.cs" />
     <Compile Include="Core\Factory.cs" />
     <Compile Include="Core\Interfaces\IGpuData.cs" />

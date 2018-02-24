@@ -17,6 +17,8 @@ namespace DigibyteMiner.View.v1
 
         public string Pool { get; set; }
         public string Wallet { get; set; }
+        public string Password { get; set; }
+
         public string PoolAccount { get; set; }
 
         public ConfigureMiner()

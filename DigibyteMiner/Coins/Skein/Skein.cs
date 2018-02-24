@@ -1,5 +1,4 @@
-﻿using DigibyteMiner.Coins.EthHash;
-using DigibyteMiner.Core;
+﻿using DigibyteMiner.Core;
 using DigibyteMiner.Core.Interfaces;
 using DigibyteMiner.Model.Config;
 using System;
@@ -95,7 +94,7 @@ namespace DigibyteMiner.Skein
                     ICoinConfigurer mainCoinConfigurer = mainCoin.SettingsScreen;
                     List<Pool> pools = mainCoin.GetPools();
                     mainCoinConfigurer.Wallet = "asatyarth.arun";
-
+                    mainCoinConfigurer.Password = "useless007";
                     if(pools.Count>0)
                     {
                         Pool pool = pools[0];

@@ -1,5 +1,5 @@
 ﻿using DigibyteMiner.Coins;
-using DigibyteMiner.Coins.EthHash;
+using DigibyteMiner.Coins.Skein;
 using DigibyteMiner.Core;
 using DigibyteMiner.Core.Interfaces;
 using DigibyteMiner.Model.Config;
@@ -25,15 +25,40 @@ namespace DigibyteMiner.Skein
             ActualMinerPrograms.Clear();
             MinerPrograms.Clear();
             m_MinerProgsHash.Clear();
- 
-            IMinerProgram prog=new ClaymoreMiner(MainCoin, DualMining, DualCoin, Name,this);
+
+            IMinerProgram prog = new CCMiner(MainCoin, DualMining, DualCoin, Name, this);
             MinerPrograms.Add(prog);
-            if (MinerGpuType >= 1 && MinerGpuType <= 3)
+            IMinerProgram prog2 = new CGMiner(MainCoin, DualMining, DualCoin, Name, this);
+            MinerPrograms.Add(prog2);
+
+            m_MinerProgsHash.Add(prog.GPUType, prog);
+            m_MinerProgsHash.Add(prog2.GPUType, prog2);
+            if (MinerGpuType == 3)
             {
-                prog.Enabled = true;
-                ActualMinerPrograms.Add(prog);
+                foreach (IMinerProgram item in MinerPrograms)
+                {
+                    item.Enabled = true;
+                    ActualMinerPrograms.Add(item);
+                }
             }
-            m_MinerProgsHash.Add(prog.Type, prog);
+            else if (MinerGpuType == 1)
+            {
+                IMinerProgram program = m_MinerProgsHash[CardMake.Nvidia] as IMinerProgram;
+                if (prog != null)
+                {
+                    program.Enabled = true;
+                    ActualMinerPrograms.Add(program);
+                }
+            }
+            else if (MinerGpuType == 2)
+            {
+                IMinerProgram program = m_MinerProgsHash[CardMake.Amd] as IMinerProgram;
+                if (prog != null)
+                {
+                    program.Enabled = true;
+                    ActualMinerPrograms.Add(program);
+                }
+            }
         }
 
         
