@@ -30,8 +30,16 @@ namespace DigibyteMiner.View.v1
             lblMinername.Text = Miner.Name;
             */
         }
+        public void Setlabels()
+        {
+            lblMinername.Text = Miner.Name;
+            lblAlgorithm.Text = Miner.MainCoin.Algorithm.Name;
+            lblPool.Text = Miner.MainCoin.SettingsScreen.Pool;
+            lblWallet.Text = Miner.MainCoin.SettingsScreen.Wallet;
+        }
         private void Home_Load(object sender, EventArgs e)
         {
+            Setlabels();
             /*
             this.ContextMenuStrip = optionsMenu;
             pbTemplate.Click += FormFocus_handler_Click;
@@ -50,6 +58,7 @@ namespace DigibyteMiner.View.v1
         public void UpdateState()
         {
             CalculateTotalHashrate();
+            Setlabels();
 
             UiStateUtil.UpdateState(Miner,lblMinerState, btnStartMining,null);
         }
