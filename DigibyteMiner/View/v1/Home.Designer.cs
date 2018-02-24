@@ -47,7 +47,9 @@
             this.lblAlgorithm = new System.Windows.Forms.Label();
             this.lblPool = new System.Windows.Forms.Label();
             this.lblWallet = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMinerState
@@ -86,10 +88,10 @@
             // lblTotalHashrate
             // 
             this.lblTotalHashrate.AutoSize = true;
-            this.lblTotalHashrate.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalHashrate.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalHashrate.Location = new System.Drawing.Point(535, 55);
             this.lblTotalHashrate.Name = "lblTotalHashrate";
-            this.lblTotalHashrate.Size = new System.Drawing.Size(116, 32);
+            this.lblTotalHashrate.Size = new System.Drawing.Size(154, 45);
             this.lblTotalHashrate.TabIndex = 30;
             this.lblTotalHashrate.Text = "Hashrate";
             // 
@@ -116,12 +118,13 @@
             // lnlMainCoinPool
             // 
             this.lnlMainCoinPool.AutoSize = true;
+            this.lnlMainCoinPool.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnlMainCoinPool.LinkArea = new System.Windows.Forms.LinkArea(0, 15);
             this.lnlMainCoinPool.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnlMainCoinPool.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.lnlMainCoinPool.Location = new System.Drawing.Point(397, 212);
+            this.lnlMainCoinPool.Location = new System.Drawing.Point(382, 207);
             this.lnlMainCoinPool.Name = "lnlMainCoinPool";
-            this.lnlMainCoinPool.Size = new System.Drawing.Size(71, 17);
+            this.lnlMainCoinPool.Size = new System.Drawing.Size(84, 20);
             this.lnlMainCoinPool.TabIndex = 19;
             this.lnlMainCoinPool.TabStop = true;
             this.lnlMainCoinPool.Text = "Pool Account";
@@ -247,12 +250,24 @@
             this.lblWallet.TabIndex = 46;
             this.lblWallet.Text = "Defaultname";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DigibyteMiner.Properties.Resources.download;
+            this.pictureBox1.InitialImage = global::DigibyteMiner.Properties.Resources.download;
+            this.pictureBox1.Location = new System.Drawing.Point(356, 201);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1129, 465);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWallet);
             this.Controls.Add(this.lblPool);
             this.Controls.Add(this.lblAlgorithm);
@@ -276,6 +291,7 @@
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,5 +318,6 @@
         private System.Windows.Forms.Label lblAlgorithm;
         private System.Windows.Forms.Label lblPool;
         private System.Windows.Forms.Label lblWallet;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
