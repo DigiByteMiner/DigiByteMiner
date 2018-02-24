@@ -8,40 +8,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DigibyteMiner.EthHash
+namespace DigibyteMiner.Skein
 {
-    public class EthHash : IHashAlgorithm
+    public class Skein : IHashAlgorithm
     {
-        enum EthHashCoins{
-            Ethereum=0,
-            EtherClassic,
-            Ubiq,
-            Expanse,
+        enum SkeinCoins{
+            Digibyte=0,
             End
         }
-        enum EthHashDualCoins
-        {
-            Siacoin=0,
-            Decred,
-            End
-        }
+
         List<ICoin> m_SupportedDualCoins = new List<ICoin>();
         List<ICoin> m_SupportedCoins = new List<ICoin>();
         Hashtable m_CoinsHash = new Hashtable();
 
-        public EthHash()
+        public Skein()
         {
-            m_CoinsHash[EthHashCoins.Ethereum] = new Ethereum(this);
+            m_CoinsHash[SkeinCoins.Digibyte] = new Digibyte(this);
 
             //Now add it to the lists
-            m_SupportedCoins.Add(m_CoinsHash[EthHashCoins.Ethereum] as ICoin);
+            m_SupportedCoins.Add(m_CoinsHash[SkeinCoins.Digibyte] as ICoin);
 
         }
         public string Name
         {
             get
             {
-                return "Ethhash";
+                return "Skein";
             }
            
         }
@@ -56,7 +48,7 @@ namespace DigibyteMiner.EthHash
 
         public bool SupportsDualMining
         {
-            get { return true; }
+            get { return false; }
         }
 
         public List<ICoin> SupportedDualCoins
@@ -71,7 +63,7 @@ namespace DigibyteMiner.EthHash
         {
             get
             {
-                return m_CoinsHash[EthHashCoins.Ethereum] as ICoin;
+                return m_CoinsHash[SkeinCoins.Digibyte] as ICoin;
             }
 
         }
@@ -80,7 +72,7 @@ namespace DigibyteMiner.EthHash
         {
             get
             {
-                return m_CoinsHash[EthHashDualCoins.Decred] as ICoin;
+                return null;
             }
 
         }
@@ -102,7 +94,7 @@ namespace DigibyteMiner.EthHash
                 {
                     ICoinConfigurer mainCoinConfigurer = mainCoin.SettingsScreen;
                     List<Pool> pools = mainCoin.GetPools();
-                    mainCoinConfigurer.Wallet = "0x033ff6918d434cef3887d8e529c14d1bcb91ca8b";
+                    mainCoinConfigurer.Wallet = "asatyarth.arun";
 
                     if(pools.Count>0)
                     {
@@ -111,9 +103,9 @@ namespace DigibyteMiner.EthHash
                         mainCoinConfigurer.PoolAccount = pool.GetAccountLink(mainCoinConfigurer.Wallet);
                     }
                     else
-                        mainCoinConfigurer.Pool = "eu1.ethermine.org:4444";
+                        mainCoinConfigurer.Pool = "stratum+tcp://us.miningfield.com:3397";
                 }
-                miner = CreateMiner(GenerateUniqueID(), mainCoin, false, null, "Default Ethereum Miner",null);
+                miner = CreateMiner(GenerateUniqueID(), mainCoin, false, null, "Default Miner",null);
                 miner.DefaultMiner = true;
 
             }
@@ -136,24 +128,8 @@ namespace DigibyteMiner.EthHash
             ICoin coin = null;
             switch (name)
             {
-                case "Ethereum":
-                    coin = m_CoinsHash[EthHashCoins.Ethereum] as ICoin;
-                    break;
-                case "Ethereum Classic":
-                    coin = m_CoinsHash[EthHashCoins.EtherClassic] as ICoin;
-                    break;
-                case "Expanse":
-                    coin = m_CoinsHash[EthHashCoins.Expanse] as ICoin;
-                    break;
-                case "Ubiq":
-                    coin = m_CoinsHash[EthHashCoins.Ubiq] as ICoin;
-                    break;
-
-                case "Decred":
-                    coin = m_CoinsHash[EthHashDualCoins.Decred] as ICoin;
-                    break;
-                case "SiaCoin":
-                    coin = m_CoinsHash[EthHashDualCoins.Siacoin] as ICoin;
+                case "Digibyte":
+                    coin = m_CoinsHash[SkeinCoins.Digibyte] as ICoin;
                     break;
             }
             return coin;
@@ -200,7 +176,7 @@ namespace DigibyteMiner.EthHash
         private  IMiner CreateMiner(string id,ICoin mainCoin, bool dualMining, ICoin dualCoin, string minerName,IMinerData data)
         {
 
-            IMiner miner = new EthereumMiner(id, mainCoin, dualMining, dualCoin, minerName, data);
+            IMiner miner = new DgbMiner(id, mainCoin, dualMining, dualCoin, minerName, data);
             return miner;
         }
 

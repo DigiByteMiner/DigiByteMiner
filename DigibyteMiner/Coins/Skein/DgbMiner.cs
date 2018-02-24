@@ -10,11 +10,11 @@ using System.Linq;
 using System.Management;
 using System.Text;
 
-namespace DigibyteMiner.EthHash
+namespace DigibyteMiner.Skein
 {
-    public class EthereumMiner: MinerBase
+    public class DgbMiner: MinerBase
     {
-        public EthereumMiner(string id, ICoin mainCoin, bool dualMining, ICoin dualCoin, string minerName, IMinerData minerData):
+        public DgbMiner(string id, ICoin mainCoin, bool dualMining, ICoin dualCoin, string minerName, IMinerData minerData) :
             base( id,  mainCoin,  dualMining,  dualCoin,  minerName,  minerData)
         {
 

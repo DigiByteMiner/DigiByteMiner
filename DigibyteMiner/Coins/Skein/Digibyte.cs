@@ -7,30 +7,30 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace DigibyteMiner.EthHash
+namespace DigibyteMiner.Skein
 {
     /// <summary>
     /// These classes dont store user data. They are to drive the UI
     /// </summary>
-    class Ethereum : ICoin
+    class Digibyte : ICoin
     {
         public IHashAlgorithm Algorithm { get; set; }
 
         ICoinConfigurer Configurer;
 
         public string DefaultAddress { get; set; }
-        
-        public Ethereum(IHashAlgorithm algo)
+
+        public Digibyte(IHashAlgorithm algo)
         {
             Algorithm = algo;
 
             //This is only used in Debug mode for quick testing of the miner
-            DefaultAddress = "0x033ff6918d434cef3887d8e529c14d1bcb91ca8b";
+            DefaultAddress = "asatyarth.arun";
 
         }
         public  string Name
         {
-            get { return "Ethereum"; }
+            get { return "Digibyte"; }
         }
 
         public Bitmap Logo

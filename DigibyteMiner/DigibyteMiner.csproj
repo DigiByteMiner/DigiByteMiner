@@ -69,7 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coins\EthHash\ClaymoreMiner.cs" />
+    <Compile Include="Coins\Skein\ClaymoreMiner.cs" />
     <Compile Include="Coins\MinerBase.cs" />
     <Compile Include="Coins\MinerProgramBase.cs" />
     <Compile Include="Coins\OutputReaderBase.cs" />
@@ -84,9 +84,9 @@
     <Compile Include="Core\Interfaces\IMinerData.cs" />
     <Compile Include="Core\Interfaces\IMinerProgram.cs" />
     <Compile Include="Core\Interfaces\IOutputReader.cs" />
-    <Compile Include="Coins\EthHash\Ethereum.cs" />
-    <Compile Include="Coins\EthHash\EthereumMiner.cs" />
-    <Compile Include="Coins\EthHash\EthHash.cs" />
+    <Compile Include="Coins\Skein\Digibyte.cs" />
+    <Compile Include="Coins\Skein\DgbMiner.cs" />
+    <Compile Include="Coins\Skein\Skein.cs" />
     <Compile Include="Core\TSList.cs" />
     <Compile Include="Core\TSQueue.cs" />
     <Compile Include="Core\Logger.cs" />
@@ -316,15 +316,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Coins\EthHash\Images\decred.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Coins\EthHash\Images\ethclassic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Coins\EthHash\Images\ethereum.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="View\v1\Images\miner_icon.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -336,14 +327,10 @@
   <ItemGroup>
     <None Include="View\v1\Images\ethereum.png" />
     <None Include="View\v1\Images\digibyte_bg.png" />
-    <None Include="Coins\EthHash\Images\digibyte.png" />
+    <None Include="Coins\Skein\Images\digibyte.png" />
     <Content Include="DigibyteMiner.ico" />
     <None Include="View\v1\Images\github.png" />
     <None Include="View\v1\Images\remove.png" />
-    <None Include="Coins\EthHash\Images\expanse.png" />
-    <None Include="Coins\EthHash\Images\siacoin.png" />
-    <None Include="Coins\EthHash\Images\ubiq.png" />
-    <None Include="Coins\EthHash\Images\sia.png" />
     <Content Include="miner_icon.ico" />
     <None Include="View\v1\Images\gpu.png" />
     <None Include="View\v1\Images\cpu.png" />
