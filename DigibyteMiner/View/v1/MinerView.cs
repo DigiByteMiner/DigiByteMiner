@@ -50,7 +50,8 @@ namespace DigibyteMiner.View.v1
         }
         public void UpdateState()
         {
-            UiStateUtil.UpdateState(Miner,lblMinerState, btnStartMining, optionsMenu);
+            //we dont use minerview for hashrate etc 
+            //UiStateUtil.UpdateState(Miner,lblMinerState, btnStartMining, optionsMenu);
         }
 
         public void ActivateView()

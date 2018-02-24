@@ -63,6 +63,7 @@ namespace DigibyteMiner.View.v1
                     break;
             }
         }
+        //this is now called only from Home
         public static void UpdateState(IMiner Miner, Label lblMinerState, Button btnStartMining, ContextMenuStrip optionsMenu)
         {
             string labelName = "";

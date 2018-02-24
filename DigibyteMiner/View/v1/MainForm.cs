@@ -212,7 +212,7 @@ namespace DigibyteMiner
         public void UpdateMinerList()
         {
             IMiner miner = null;
-            //miner = Factory.Instance.CoreObject.Miners;
+            miner = Factory.Instance.CoreObject.SelectedMiner;
 
             Home view = new Home(miner,this);
             view.TopLevel = false;

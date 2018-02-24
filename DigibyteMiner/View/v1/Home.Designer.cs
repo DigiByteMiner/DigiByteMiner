@@ -71,12 +71,13 @@
             this.btnStartMining.TabIndex = 32;
             this.btnStartMining.Text = "Start";
             this.btnStartMining.UseVisualStyleBackColor = true;
+            this.btnStartMining.Click += new System.EventHandler(this.btnStartMining_Click_1);
             // 
             // lblShares
             // 
             this.lblShares.AutoSize = true;
             this.lblShares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShares.Location = new System.Drawing.Point(499, 106);
+            this.lblShares.Location = new System.Drawing.Point(502, 98);
             this.lblShares.Name = "lblShares";
             this.lblShares.Size = new System.Drawing.Size(84, 13);
             this.lblShares.TabIndex = 31;
@@ -85,10 +86,10 @@
             // lblTotalHashrate
             // 
             this.lblTotalHashrate.AutoSize = true;
-            this.lblTotalHashrate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalHashrate.Location = new System.Drawing.Point(492, 52);
+            this.lblTotalHashrate.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalHashrate.Location = new System.Drawing.Point(486, 51);
             this.lblTotalHashrate.Name = "lblTotalHashrate";
-            this.lblTotalHashrate.Size = new System.Drawing.Size(91, 25);
+            this.lblTotalHashrate.Size = new System.Drawing.Size(116, 32);
             this.lblTotalHashrate.TabIndex = 30;
             this.lblTotalHashrate.Text = "Hashrate";
             // 
@@ -118,7 +119,7 @@
             this.lnlMainCoinPool.LinkArea = new System.Windows.Forms.LinkArea(0, 15);
             this.lnlMainCoinPool.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnlMainCoinPool.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.lnlMainCoinPool.Location = new System.Drawing.Point(397, 202);
+            this.lnlMainCoinPool.Location = new System.Drawing.Point(397, 212);
             this.lnlMainCoinPool.Name = "lnlMainCoinPool";
             this.lnlMainCoinPool.Size = new System.Drawing.Size(71, 17);
             this.lnlMainCoinPool.TabIndex = 19;

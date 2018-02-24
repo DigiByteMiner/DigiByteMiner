@@ -36,7 +36,6 @@ namespace DigibyteMiner.View.v1
             m_Script = new MinerInfoScript(Miner, this);
             m_Logs = new MinerInfoLogs(Miner, this);
             InitializeComponent();
-            CalculateTotalHashrate();
         }
         public void SelectView(Button btn)
         {
@@ -90,59 +89,16 @@ namespace DigibyteMiner.View.v1
 
         public void UpdateState()
         {
-            UiStateUtil.UpdateState(Miner, lblMinerState, btnStartMining, null);
+            //Enable this if we want to keep back hashrate etc at minerinfo
+            //UiStateUtil.UpdateState(Miner, lblMinerState, btnStartMining, null);
             if(Miner.DualMining)
             {
                 lnDualCoinPool.Visible = true;
             }
         }
-        public void CalculateTotalHashrate()
-        {
-            try
-            {
-                string hashrate = "",shares="Shares: ";
-                if (Miner.MinerState == MinerProgramState.Running)
-                {
-                    int totalHashrate = 0;
-                    int totalShares = 0;
-                    int totalSharesRejected = 0;
-                    List<IMinerProgram> programs = Miner.MinerPrograms;
-                    foreach (IMinerProgram item in programs)
-                    {
-                        MinerDataResult result = item.OutputReader.MinerResult;
-                        totalHashrate += result.TotalHashrate;
-                        totalShares += result.TotalShares;
-                        totalSharesRejected += result.Rejected;
-                    }
-                    if (totalHashrate > 10*1024)
-                    {
-                        float conversion = totalHashrate / 1000;// 1024;
-                        hashrate = conversion.ToString()+ " MH/s";
-                
-                    }
-                    else
-                    {
-                        hashrate = totalHashrate.ToString() + " H/s";
-                    }
-                    shares +=  " A: "+totalShares.ToString()+ "   R: "+ totalSharesRejected.ToString();
-                    lblShares.Text = shares;
-                    lblTotalHashrate.Text = hashrate;
-
-                }
-                else
-                {
-                    lblShares.Text = "";
-                    lblTotalHashrate.Text = "";
-                }
-            }
-            catch (Exception e)
-            {
-            }
-            
-        }
+       
         public void UpdateUI()
         {
-            CalculateTotalHashrate();
             if(CurrentTab!=null)
             {
                 CurrentTab.UpdateUI();

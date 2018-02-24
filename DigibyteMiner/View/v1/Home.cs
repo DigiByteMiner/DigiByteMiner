@@ -49,40 +49,63 @@ namespace DigibyteMiner.View.v1
         }
         public void UpdateState()
         {
-            //UiStateUtil.UpdateState(Miner,lblMinerState, btnStartMining, optionsMenu);
+            CalculateTotalHashrate();
+
+            UiStateUtil.UpdateState(Miner,lblMinerState, btnStartMining,null);
         }
-
-
-
-
-        private void btnStartMining_Click(object sender, EventArgs e)
+        public void CalculateTotalHashrate()
         {
-            UiStateUtil.MiningStartAction(Miner);
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-        }
-
-        private void selectToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //MinerView view = sender as MinerView;
-            var menuItem = sender as ToolStripMenuItem;
-            var contextMenu = menuItem.GetCurrentParent() as ContextMenuStrip;
-            MinerView view = contextMenu.SourceControl as MinerView;
-            if (view != null)
+            try
             {
-                Factory.Instance.CoreObject.SelectMiner(view.Miner);
+                string hashrate = "", shares = "Shares: ";
+                if (Miner.MinerState == MinerProgramState.Running)
+                {
+                    int totalHashrate = 0;
+                    int totalShares = 0;
+                    int totalSharesRejected = 0;
+                    List<IMinerProgram> programs = Miner.MinerPrograms;
+                    foreach (IMinerProgram item in programs)
+                    {
+                        MinerDataResult result = item.OutputReader.MinerResult;
+                        totalHashrate += result.TotalHashrate;
+                        totalShares += result.TotalShares;
+                        totalSharesRejected += result.Rejected;
+                    }
+                    if (totalHashrate > 10 * 1024)
+                    {
+                        float conversion = totalHashrate / 1000;// 1024;
+                        hashrate = conversion.ToString() + " MH/s";
+
+                    }
+                    else
+                    {
+                        hashrate = totalHashrate.ToString() + " H/s";
+                    }
+                    shares += " A: " + totalShares.ToString() + "   R: " + totalSharesRejected.ToString();
+                    lblShares.Text = shares;
+                    lblTotalHashrate.Text = hashrate;
+
+                }
+                else
+                {
+                    lblShares.Text = "";
+                    lblTotalHashrate.Text = "0 MH/s";
+                }
+            }
+            catch (Exception e)
+            {
             }
 
-
         }
 
-        private void startMiningToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void btnStartMining_Click_1(object sender, EventArgs e)
         {
-            btnStartMining_Click(sender, e);
+            UiStateUtil.MiningStartAction(Miner);
+
         }
+
+
 
 
 
