@@ -18,6 +18,7 @@ namespace DigibyteMiner.Core.Interfaces
         string Pool {get;set;}
 
         string Wallet { get; set; }
+        string Password { get; set; }
         string PoolAccount { get; set; }
 
     }

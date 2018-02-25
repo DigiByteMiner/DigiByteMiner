@@ -295,7 +295,7 @@ namespace DigibyteMiner.View.v1.AddMinerScreen
 
         private void EditMinerContainer_Load(object sender, EventArgs e)
         {
-            m_currentState = 1;
+            m_currentState = 0;
             ShowStage();
             ChangeUIState();
             this.CenterToScreen();

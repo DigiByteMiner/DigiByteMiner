@@ -14,9 +14,8 @@ namespace DigibyteMiner.Core
     {
         enum AlgoEnums
         {
-            EthHash = 0,
+            Skein = 0,
             Equihash,
-            Cryptonyte,
             End
         }
         private static Factory s_obj=null;
@@ -38,8 +37,8 @@ namespace DigibyteMiner.Core
             ViewObject = new V1View();
             Model = new Config();
             CoreObject = new DigibyteMiner();
-            m_algoHash[AlgoEnums.EthHash] = new EthHash.EthHash();
-            m_algorithms.Add(m_algoHash[AlgoEnums.EthHash] as IHashAlgorithm);
+            m_algoHash[AlgoEnums.Skein] = new Skein.Skein();
+            m_algorithms.Add(m_algoHash[AlgoEnums.Skein] as IHashAlgorithm);
             StartTime = DateTime.Now;
 	    }
         private void Init()
@@ -53,8 +52,8 @@ namespace DigibyteMiner.Core
             IHashAlgorithm algo = null;
             switch(name)
             {
-                case "Ethhash":
-                    algo = new EthHash.EthHash();
+                case "Skein":
+                    algo = new Skein.Skein();
                     break;
 
             }
@@ -79,7 +78,7 @@ namespace DigibyteMiner.Core
             get
             {
                 List<IHashAlgorithm> algos = new List<IHashAlgorithm>();
-                algos.Add(new EthHash.EthHash());
+                algos.Add(new Skein.Skein());
                 return algos;
             }
         }
@@ -92,7 +91,7 @@ namespace DigibyteMiner.Core
             {
                 //Todo: maybe this shud be created w=everytime addminer is clicked. that way we wont be reusing ojects
                 //return m_algoHash[AlgoEnums.EthHash] as IHashAlgorithm;
-                return new EthHash.EthHash();
+                return new Skein.Skein();
             }
         }
 

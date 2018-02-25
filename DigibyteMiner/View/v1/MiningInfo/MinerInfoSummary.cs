@@ -55,13 +55,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 if(Miner.MinerState==MinerProgramState.Running)
                 {
                     List<IMinerProgram> miners = Miner.ActualMinerPrograms;
-                    while (pnlGpus.Controls.Count > 0)
-                    {
-                        Control oKill = pnlGpus.Controls[0];
-                        pnlGpus.Controls.RemoveAt(0);
-                        if (oKill != null)
-                            oKill.Dispose();
-                    }  
+                    pnlGpus.Controls.Clear();                    
                     lblGpuInfoStatic.Visible = false;
 
                     foreach (IMinerProgram item in miners)

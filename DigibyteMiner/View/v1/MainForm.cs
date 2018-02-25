@@ -222,7 +222,7 @@ namespace DigibyteMiner
             view.Show();
 
 
-            SelectMiningView(Factory.Instance.DefaultAlgorithm.DefaultMiner());
+            SelectMiningView(Factory.Instance.CoreObject.SelectedMiner);
 
             ShowSettingsCarausal();
         }

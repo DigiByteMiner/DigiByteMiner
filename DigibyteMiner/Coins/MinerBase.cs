@@ -1,5 +1,4 @@
-﻿using DigibyteMiner.Coins.EthHash;
-using DigibyteMiner.Core;
+﻿using DigibyteMiner.Core;
 using DigibyteMiner.Core.Interfaces;
 using DigibyteMiner.Model.Config;
 using System;

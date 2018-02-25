@@ -1,5 +1,4 @@
 ﻿using DigibyteMiner.Core.Interfaces;
-using DigibyteMiner.EthHash;
 using System;
 using System.Collections;
 using System.Collections.Generic;
