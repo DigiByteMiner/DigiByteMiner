@@ -37,7 +37,7 @@
             this.pnlGpus.BackColor = System.Drawing.Color.White;
             this.pnlGpus.Location = new System.Drawing.Point(12, 0);
             this.pnlGpus.Name = "pnlGpus";
-            this.pnlGpus.Size = new System.Drawing.Size(825, 302);
+            this.pnlGpus.Size = new System.Drawing.Size(912, 302);
             this.pnlGpus.TabIndex = 19;
             // 
             // lblGpuInfoStatic
@@ -56,7 +56,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(849, 314);
+            this.ClientSize = new System.Drawing.Size(967, 314);
             this.Controls.Add(this.lblGpuInfoStatic);
             this.Controls.Add(this.pnlGpus);
             this.Name = "MinerInfoSummary";

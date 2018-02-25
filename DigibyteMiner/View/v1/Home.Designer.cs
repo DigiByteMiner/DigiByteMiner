@@ -59,7 +59,7 @@
             this.lblMinerState.BackColor = System.Drawing.Color.White;
             this.lblMinerState.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinerState.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblMinerState.Location = new System.Drawing.Point(554, 141);
+            this.lblMinerState.Location = new System.Drawing.Point(544, 124);
             this.lblMinerState.Name = "lblMinerState";
             this.lblMinerState.Size = new System.Drawing.Size(67, 20);
             this.lblMinerState.TabIndex = 33;
@@ -68,7 +68,7 @@
             // btnStartMining
             // 
             this.btnStartMining.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartMining.Location = new System.Drawing.Point(547, 201);
+            this.btnStartMining.Location = new System.Drawing.Point(541, 201);
             this.btnStartMining.Name = "btnStartMining";
             this.btnStartMining.Size = new System.Drawing.Size(79, 28);
             this.btnStartMining.TabIndex = 32;
@@ -80,7 +80,7 @@
             // 
             this.lblShares.AutoSize = true;
             this.lblShares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShares.Location = new System.Drawing.Point(547, 106);
+            this.lblShares.Location = new System.Drawing.Point(546, 99);
             this.lblShares.Name = "lblShares";
             this.lblShares.Size = new System.Drawing.Size(84, 13);
             this.lblShares.TabIndex = 31;
@@ -90,7 +90,7 @@
             // 
             this.lblTotalHashrate.AutoSize = true;
             this.lblTotalHashrate.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalHashrate.Location = new System.Drawing.Point(535, 55);
+            this.lblTotalHashrate.Location = new System.Drawing.Point(534, 47);
             this.lblTotalHashrate.Name = "lblTotalHashrate";
             this.lblTotalHashrate.Size = new System.Drawing.Size(154, 45);
             this.lblTotalHashrate.TabIndex = 30;
