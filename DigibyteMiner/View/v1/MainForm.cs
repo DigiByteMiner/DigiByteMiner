@@ -213,13 +213,26 @@ namespace DigibyteMiner
         {
             IMiner miner = null;
             miner = Factory.Instance.CoreObject.SelectedMiner;
+            Home view =null;
+            if (pnlMainInfo.Controls.Count>0)
+            {
+                view = pnlMainInfo.Controls[0] as Home;
+                view.Miner = miner;
+                if(view!=null)
+                {
+                    view.UpdateState();
+                }
+            }
+            else
+            {
+                view = new Home(miner, this);
+                view.TopLevel = false;
+                pnlMainInfo.Controls.Add(view);
+                view.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                view.UpdateState();
+                view.Show();
+            }
 
-            Home view = new Home(miner,this);
-            view.TopLevel = false;
-            pnlMainInfo.Controls.Add(view);
-            view.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            view.UpdateState();
-            view.Show();
 
 
             SelectMiningView(Factory.Instance.CoreObject.SelectedMiner);
