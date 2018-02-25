@@ -332,6 +332,7 @@
     <None Include="View\v1\Images\ethereum.png" />
     <None Include="View\v1\Images\digibyte_bg.png" />
     <None Include="Coins\Skein\Images\digibyte.png" />
+    <None Include="dgb_ico.ico" />
     <Content Include="DigibyteMiner.ico" />
     <None Include="View\v1\Images\github.png" />
     <None Include="View\v1\Images\remove.png" />

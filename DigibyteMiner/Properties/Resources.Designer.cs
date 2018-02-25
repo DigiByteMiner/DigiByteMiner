@@ -81,6 +81,16 @@ namespace DigibyteMiner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon dgb_ico {
+            get {
+                object obj = ResourceManager.GetObject("dgb_ico", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap digibyte {
@@ -157,16 +167,6 @@ namespace DigibyteMiner.Properties {
             get {
                 object obj = ResourceManager.GetObject("gpu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon miner_icon {
-            get {
-                object obj = ResourceManager.GetObject("miner_icon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
             }
         }
         
