@@ -74,6 +74,7 @@
     <Compile Include="Coins\MinerProgramBase.cs" />
     <Compile Include="Coins\OutputReaderBase.cs" />
     <Compile Include="Coins\Skein\CGMiner.cs" />
+    <Compile Include="Coins\Skein\TcpReaderUtil.cs" />
     <Compile Include="Core\Alarm.cs" />
     <Compile Include="Core\Factory.cs" />
     <Compile Include="Core\Interfaces\IGpuData.cs" />

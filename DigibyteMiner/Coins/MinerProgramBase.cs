@@ -47,6 +47,14 @@ namespace DigibyteMiner.Coins
                 throw new NotImplementedException();
             }
         }
+        public virtual string STATS_LINK_PORT
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public virtual string STATS_LINK_HTML
         {
             get

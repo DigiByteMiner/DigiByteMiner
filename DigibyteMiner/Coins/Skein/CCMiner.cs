@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
@@ -24,7 +25,7 @@ namespace DigibyteMiner.Coins.Skein
     class CCMiner : MinerProgramBase
     {
 
-        public const string STATSLINK2 = "127.0.0.1:4068";
+        public const string STATSLINK2 = "127.0.0.1";
         public const string STATSLINK3 = "";
         public override string MINERURL
         {
@@ -51,7 +52,7 @@ namespace DigibyteMiner.Coins.Skein
         {
             get
             {
-                return "http://" + STATSLINK2 + STATSLINK3;
+                return  STATSLINK2 ;
             }
         }
         public override string STATS_LINK_HTML
@@ -59,6 +60,13 @@ namespace DigibyteMiner.Coins.Skein
             get
             {
                 return "http://" + STATSLINK2;
+            }
+        }
+        public override string STATS_LINK_PORT
+        {
+            get
+            {
+                return "4068";
             }
         }
 
@@ -76,7 +84,7 @@ namespace DigibyteMiner.Coins.Skein
         {
             Type = "Nvidia";
             GPUType = CardMake.Nvidia;
-            OutputReader = new CCReader(STATS_LINK);
+            OutputReader = new CCReader(STATS_LINK, STATS_LINK_PORT);
         }
 
         public override string GenerateScript()
@@ -91,7 +99,7 @@ namespace DigibyteMiner.Coins.Skein
                     pwd = " x ";
                 command += " -p " + pwd;
 
-                command += " --api-bind " + STATSLINK2;
+                command += " --api-bind " + STATS_LINK+":"+STATS_LINK_PORT;
 
 
                 Script = SCRIPT1 + command;
@@ -114,8 +122,8 @@ namespace DigibyteMiner.Coins.Skein
         /// </summary>
         public class CCReader : OutputReaderBase
         {
-            public CCReader(string link)
-                : base(link)
+            public CCReader(string link, string port)
+                : base(link,port)
             {
             }
             CCMinerData GetResultsSection(string innerText)
@@ -130,17 +138,43 @@ namespace DigibyteMiner.Coins.Skein
                 }
                 return null;
             }
+           
+            public override  void Read()
+            {
+                try
+                {
+                    CCMinerCommandOutputs output = new CCMinerCommandOutputs();
+                    string result = "";
+                    TcpReaderUtil util = new TcpReaderUtil(StatsLink, StatsPort);
+                    result = util.GetData("summary");
+                    output.Summary = result;
+
+                    result = util.GetData("threads");
+                    output.Threads = result;
+
+                    string str = new JavaScriptSerializer().Serialize(output);
+
+
+                    NextLog = str;
+                }
+                catch (Exception e)
+                {
+                    ReadWithBrowser();
+                    throw;
+                }
+
+            }
             public override void Parse()
             {
                 CCMinerData ewbfData = GetResultsSection(LastLog);
-                if (ewbfData.Parse(new EWBFReaderResultParser(LastLog, ReReadGpuNames)))
+                if (ewbfData.Parse(new CcMinerResultParser(LastLog, ReReadGpuNames)))
                 {
                     MinerResult = ewbfData.MinerDataResult;
                 }
                 ReReadGpuNames = false;
             }
 
-            public class EWBFReaderResultParser : IMinerResultParser
+            public class CcMinerResultParser : IMinerResultParser
             {
                 MinerDataResult m_MinerResult = null;
                 CCMinerData m_EwbfData = null;
@@ -148,7 +182,7 @@ namespace DigibyteMiner.Coins.Skein
                 static Hashtable m_Gpus = new Hashtable();// we only need t read gpu info once as it dosent change with more logs comining in
 
                 string m_fullLog = "";
-                public EWBFReaderResultParser(string fullLog, bool reReadGpunames)
+                public CcMinerResultParser(string fullLog, bool reReadGpunames)
                 {
                     m_fullLog = fullLog;
                 }
@@ -240,6 +274,13 @@ namespace DigibyteMiner.Coins.Skein
             {
                 return parser.Parse(this);
             }
+        }
+        public class CCMinerCommandOutputs
+        {
+            public string Summary { get; set; }
+            public string Threads { get; set; }
+
+
         }
 
     }

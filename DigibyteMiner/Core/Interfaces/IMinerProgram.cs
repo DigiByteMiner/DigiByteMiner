@@ -46,6 +46,8 @@ namespace DigibyteMiner.Core.Interfaces
         string PROCESSNAME { get; }
         string STATS_LINK { get; }//the one from which u extract data. cud be json
         string STATS_LINK_HTML { get; }//the one where u can navigate to
+        string STATS_LINK_PORT { get; }//the one where u can navigate to
+
 
 
 
