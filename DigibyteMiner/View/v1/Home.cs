@@ -1,5 +1,6 @@
 ﻿using DigibyteMiner.Core;
 using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.View.v1.AddMinerScreen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -124,6 +125,14 @@ namespace DigibyteMiner.View.v1
             catch (Exception se)
             {
             }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            IMiner miner = Factory.Instance.CoreObject.SelectedMiner;
+            EditMinerContainer editMiner = new EditMinerContainer();
+            editMiner.LoadInfo(miner);
+            editMiner.ShowDialog();
         }
 
 

@@ -56,8 +56,8 @@ namespace DigibyteMiner.Skein
             List<Pool> pools = new List<Pool>();
             try
             {
-                Pool pool1 = new Ethermine("Ethermine", "us1.ethermine.org:4444");
-                Pool pool2 = new Nanopool("Nanopool", "eth-us-west1.nanopool.org:9999");
+                Pool pool1 = new MiningField("MiningField", "stratum+tcp://us.miningfield.com:3397");
+                Pool pool2 = new DigiHash("DigiHash", "stratum+tcp://digihash.co:3009");
                 pools.Add(pool1);
                 pools.Add(pool2);
 
@@ -73,9 +73,9 @@ namespace DigibyteMiner.Skein
             return script;
         }
 
-        class Ethermine : Pool
+        class MiningField : Pool
         {
-            public Ethermine(string name, string url)
+            public MiningField(string name, string url)
                 : base(name, url)
             {
 
@@ -85,7 +85,7 @@ namespace DigibyteMiner.Skein
                 string acc = "";
                 try
                 {
-                    acc = "https://ethermine.org/miners/" + wallet;
+                    acc = "https://dgbskein.miningfield.com/index.php?page=dashboard";
                     
                 }
                 catch (Exception)
@@ -94,9 +94,9 @@ namespace DigibyteMiner.Skein
                 return acc;
             }
         }
-        class Nanopool : Pool
+        class DigiHash : Pool
         {
-            public Nanopool(string name, string url)
+            public DigiHash(string name, string url)
                 : base(name, url)
             {
 
@@ -106,7 +106,7 @@ namespace DigibyteMiner.Skein
                 string acc = "";
                 try
                 {
-                    acc = "https://eth.nanopool.org/account/" + wallet;
+                    acc = "http://digihash.co/workers/" + wallet;
 
                 }
                 catch (Exception)
