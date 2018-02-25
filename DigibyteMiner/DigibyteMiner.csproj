@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00D90EEB-67AD-4698-9969-E6A4928F040A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigibyteMiner</RootNamespace>
+    <AssemblyName>DigibyteMiner</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>DigibyteMiner.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coins\Skein\CCMiner.cs" />
+    <Compile Include="Coins\MinerBase.cs" />
+    <Compile Include="Coins\MinerProgramBase.cs" />
+    <Compile Include="Coins\OutputReaderBase.cs" />
+    <Compile Include="Coins\Skein\CGMiner.cs" />
+    <Compile Include="Core\Alarm.cs" />
+    <Compile Include="Core\Factory.cs" />
+    <Compile Include="Core\Interfaces\IGpuData.cs" />
+    <Compile Include="Core\Interfaces\ILogger.cs" />
+    <Compile Include="Core\Interfaces\IMiner.cs" />
+    <Compile Include="Core\Interfaces\ICoin.cs" />
+    <Compile Include="Core\Interfaces\ICoinConfigurer.cs" />
+    <Compile Include="Core\Interfaces\IHashAlgorithm.cs" />
+    <Compile Include="Core\Interfaces\IMinerData.cs" />
+    <Compile Include="Core\Interfaces\IMinerProgram.cs" />
+    <Compile Include="Core\Interfaces\IOutputReader.cs" />
+    <Compile Include="Coins\Skein\Digibyte.cs" />
+    <Compile Include="Coins\Skein\DgbMiner.cs" />
+    <Compile Include="Coins\Skein\Skein.cs" />
+    <Compile Include="Core\TSList.cs" />
+    <Compile Include="Core\TSQueue.cs" />
+    <Compile Include="Core\Logger.cs" />
+    <Compile Include="Core\OneMiner.cs" />
+    <Compile Include="Model\FileIO\AppData.cs" />
+    <Compile Include="Model\FileIO\ConfigFileManager.cs" />
+    <Compile Include="Model\Config\JsonValues.cs" />
+    <Compile Include="Model\FileIO\IFileIO.cs" />
+    <Compile Include="Model\FileIO\LocalFolder.cs" />
+    <Compile Include="Model\UnZip\IUnzip.cs" />
+    <Compile Include="Model\UnZip\UnZipBase.cs" />
+    <Compile Include="Model\UnZip\UnZipGZipStream.cs" />
+    <Compile Include="Model\UnZip\UnzipManager.cs" />
+    <Compile Include="Model\MinerDownloader.cs" />
+    <Compile Include="Model\UnZip\UnZipRarLocal.cs" />
+    <Compile Include="Model\UnZip\UnZipRarSystem.cs" />
+    <Compile Include="Model\UnZip\UnZipZipFile.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\v1\AddMinerScreen\DefaultMinerMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\DefaultMinerMessage.Designer.cs">
+      <DependentUpon>DefaultMinerMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\EditMinerContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\EditMinerContainer.Designer.cs">
+      <DependentUpon>EditMinerContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\IMinerContainer.cs" />
+    <Compile Include="View\v1\Corousal\ProfitabilitySummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\Corousal\ProfitabilitySummary.Designer.cs">
+      <DependentUpon>ProfitabilitySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\Corousal\SettingsSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\Corousal\SettingsSummary.Designer.cs">
+      <DependentUpon>SettingsSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\ExtraScreens\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\ExtraScreens\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\AddDualMiner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\AddDualMiner.Designer.cs">
+      <DependentUpon>AddDualMiner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\AddMiner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\AddMiner.Designer.cs">
+      <DependentUpon>AddMiner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\AddMinerContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\AddMinerContainer.Designer.cs">
+      <DependentUpon>AddMinerContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\AddMinerFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\AddMinerFinish.Designer.cs">
+      <DependentUpon>AddMinerFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\ConfigureMiner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\AddMinerScreen\ConfigureMiner.Designer.cs">
+      <DependentUpon>ConfigureMiner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\ExtraScreens\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\ExtraScreens\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Config\Config.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\v1\MiningInfo\GpuView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\GpuView.Designer.cs">
+      <DependentUpon>GpuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\IMinerInfoTab.cs" />
+    <Compile Include="View\v1\MiningInfo\MinerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\MinerInfo.Designer.cs">
+      <DependentUpon>MinerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\MinerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\MinerView.Designer.cs">
+      <DependentUpon>MinerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\MinerInfoLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\MinerInfoLogs.Designer.cs">
+      <DependentUpon>MinerInfoLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\MinerInfoScript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\MinerInfoScript.Designer.cs">
+      <DependentUpon>MinerInfoScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\MinerInfoSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\MiningInfo\MinerInfoSummary.Designer.cs">
+      <DependentUpon>MinerInfoSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\Profiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\Profiles.Designer.cs">
+      <DependentUpon>Profiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\UiStateUtil.cs" />
+    <Compile Include="View\v1\V1View.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="View\v1\AddMinerScreen\DefaultMinerMessage.resx">
+      <DependentUpon>DefaultMinerMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\AddMinerScreen\EditMinerContainer.resx">
+      <DependentUpon>EditMinerContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\Corousal\ProfitabilitySummary.resx">
+      <DependentUpon>ProfitabilitySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\Corousal\SettingsSummary.resx">
+      <DependentUpon>SettingsSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\ExtraScreens\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\AddMinerScreen\AddDualMiner.resx">
+      <DependentUpon>AddDualMiner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\AddMinerScreen\AddMiner.resx">
+      <DependentUpon>AddMiner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\AddMinerScreen\AddMinerContainer.resx">
+      <DependentUpon>AddMinerContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\AddMinerScreen\AddMinerFinish.resx">
+      <DependentUpon>AddMinerFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\AddMinerScreen\ConfigureMiner.resx">
+      <DependentUpon>ConfigureMiner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\ExtraScreens\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\v1\MiningInfo\GpuView.resx">
+      <DependentUpon>GpuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\MiningInfo\MinerInfo.resx">
+      <DependentUpon>MinerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\MinerView.resx">
+      <DependentUpon>MinerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\MiningInfo\MinerInfoLogs.resx">
+      <DependentUpon>MinerInfoLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\MiningInfo\MinerInfoScript.resx">
+      <DependentUpon>MinerInfoScript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\MiningInfo\MinerInfoSummary.resx">
+      <DependentUpon>MinerInfoSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\Profiles.resx">
+      <DependentUpon>Profiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="View\v1\Images\miner_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="View\v1\Images\edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="View\v1\Images\selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="View\v1\Images\edit2.png" />
+    <None Include="View\v1\Images\edit.png" />
+    <None Include="View\v1\Images\download.jpg" />
+    <None Include="View\v1\Images\ethereum.png" />
+    <None Include="View\v1\Images\digibyte_bg.png" />
+    <None Include="Coins\Skein\Images\digibyte.png" />
+    <Content Include="DigibyteMiner.ico" />
+    <None Include="View\v1\Images\github.png" />
+    <None Include="View\v1\Images\remove.png" />
+    <Content Include="miner_icon.ico" />
+    <None Include="View\v1\Images\gpu.png" />
+    <None Include="View\v1\Images\cpu.png" />
+    <None Include="View\v1\Images\nvidia.png" />
+    <None Include="View\v1\Images\amd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
