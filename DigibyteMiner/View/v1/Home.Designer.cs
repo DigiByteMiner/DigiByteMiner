@@ -48,6 +48,7 @@
             this.lblPool = new System.Windows.Forms.Label();
             this.lblWallet = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +80,7 @@
             // 
             this.lblShares.AutoSize = true;
             this.lblShares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShares.Location = new System.Drawing.Point(542, 97);
+            this.lblShares.Location = new System.Drawing.Point(547, 106);
             this.lblShares.Name = "lblShares";
             this.lblShares.Size = new System.Drawing.Size(84, 13);
             this.lblShares.TabIndex = 31;
@@ -129,6 +130,7 @@
             this.lnlMainCoinPool.TabStop = true;
             this.lnlMainCoinPool.Text = "Pool Account";
             this.lnlMainCoinPool.UseCompatibleTextRendering = true;
+            this.lnlMainCoinPool.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnlMainCoinPool_LinkClicked);
             // 
             // label1
             // 
@@ -204,7 +206,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(145, 90);
+            this.label8.Location = new System.Drawing.Point(150, 90);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 20);
             this.label8.TabIndex = 42;
@@ -256,10 +258,22 @@
             this.pictureBox1.InitialImage = global::DigibyteMiner.Properties.Resources.download;
             this.pictureBox1.Location = new System.Drawing.Point(356, 201);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(21, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel2.LinkColor = System.Drawing.Color.SteelBlue;
+            this.linkLabel2.Location = new System.Drawing.Point(264, 75);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(25, 13);
+            this.linkLabel2.TabIndex = 49;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Edit";
             // 
             // Home
             // 
@@ -267,6 +281,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1129, 465);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWallet);
             this.Controls.Add(this.lblPool);
@@ -319,5 +334,6 @@
         private System.Windows.Forms.Label lblPool;
         private System.Windows.Forms.Label lblWallet;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

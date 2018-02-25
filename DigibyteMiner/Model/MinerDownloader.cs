@@ -90,6 +90,8 @@ namespace DigibyteMiner.Model
                 {
                     using (var client = new WebClient())
                     {
+                        //ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
+                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                         stilldownloading = true;
                         client.DownloadProgressChanged += client_DownloadProgressChanged;
                         client.DownloadFileCompleted += client_DownloadFileCompleted;

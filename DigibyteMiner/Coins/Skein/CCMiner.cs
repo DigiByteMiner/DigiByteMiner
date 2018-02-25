@@ -30,7 +30,7 @@ namespace DigibyteMiner.Coins.Skein
         {
             get
             {
-                return "https://github.com/arunsatyarth/MinerRepos/blob/master/ccminer-alexis.zip";
+                return "https://github.com/arunsatyarth/MinerRepos/releases/download/v0.2/ccminer-alexis.zip";
             }
         }
         public override string EXENAME
