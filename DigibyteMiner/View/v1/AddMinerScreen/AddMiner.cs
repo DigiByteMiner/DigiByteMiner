@@ -67,7 +67,7 @@ namespace DigibyteMiner.View.v1
             if (DefaultCoin != null)
             {
                 m_parent.MakeSelectedCoin(DefaultCoin);
-                lblSelectedCoin.Text = DefaultCoin.Name;
+                lblSelectedCoin.Text = DefaultAlgorithm.Name+ " > "+ DefaultCoin.Name;
                 pbSelectedMiner.Image = DefaultCoin.Logo;
             }
             else
