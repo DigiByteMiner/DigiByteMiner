@@ -121,6 +121,7 @@ namespace DigibyteMiner.Model.Config
         public string MainCoin { get; set; }
         public string MainCoinPool { get; set; }
         public string MainCoinWallet { get; set; }
+        public string MainCoinPassword { get; set; }
         public string MainCoinPoolAccount { get; set; }
 
 
@@ -140,7 +141,8 @@ namespace DigibyteMiner.Model.Config
             //BATFileName ="";
             MainCoin ="";
             MainCoinPool ="";
-            MainCoinWallet ="";
+            MainCoinWallet = "";
+            MainCoinPassword = "";
             DualMining =false;
             DualCoin ="";
             DualCoinPool ="";
@@ -290,6 +292,7 @@ namespace DigibyteMiner.Model.Config
             newMiner.MainCoin=miner.MainCoin.Name;
             newMiner.MainCoinPool =mainCoinConfigurer.Pool;
             newMiner.MainCoinWallet = mainCoinConfigurer.Wallet;
+            newMiner.MainCoinPassword = mainCoinConfigurer.Password;
             newMiner.MainCoinPoolAccount = mainCoinConfigurer.PoolAccount;
             newMiner.DualMining =miner.DualMining;
             newMiner.MinerGpuType = miner.MinerGpuType;

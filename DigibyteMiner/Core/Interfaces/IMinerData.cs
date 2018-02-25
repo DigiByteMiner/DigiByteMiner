@@ -22,6 +22,7 @@ namespace DigibyteMiner.Core.Interfaces
         string MainCoin { get; set; }
         string MainCoinPool { get; set; }
         string MainCoinWallet { get; set; }
+        string MainCoinPassword { get; set; }
         string MainCoinPoolAccount { get; set; }
         bool DualMining { get; set; }
         string DualCoin { get; set; }
