@@ -39,6 +39,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnFillDefaultAddress = new System.Windows.Forms.Button();
+            this.pbSelectedMiner = new System.Windows.Forms.PictureBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedMiner)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +87,7 @@
             // 
             this.lblCoinName.AutoSize = true;
             this.lblCoinName.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoinName.Location = new System.Drawing.Point(84, 24);
+            this.lblCoinName.Location = new System.Drawing.Point(142, 28);
             this.lblCoinName.Name = "lblCoinName";
             this.lblCoinName.Size = new System.Drawing.Size(81, 20);
             this.lblCoinName.TabIndex = 4;
@@ -112,7 +116,7 @@
             // txtPoolAccount
             // 
             this.txtPoolAccount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPoolAccount.Location = new System.Drawing.Point(197, 172);
+            this.txtPoolAccount.Location = new System.Drawing.Point(197, 215);
             this.txtPoolAccount.Name = "txtPoolAccount";
             this.txtPoolAccount.Size = new System.Drawing.Size(285, 23);
             this.txtPoolAccount.TabIndex = 8;
@@ -122,7 +126,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(84, 179);
+            this.label4.Location = new System.Drawing.Point(84, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 15);
             this.label4.TabIndex = 7;
@@ -132,7 +136,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(517, 173);
+            this.label5.Location = new System.Drawing.Point(517, 216);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 9;
@@ -149,12 +153,44 @@
             this.btnFillDefaultAddress.Visible = false;
             this.btnFillDefaultAddress.Click += new System.EventHandler(this.btnFillDefaultAddress_Click);
             // 
+            // pbSelectedMiner
+            // 
+            this.pbSelectedMiner.Image = global::DigibyteMiner.Properties.Resources.digibyte;
+            this.pbSelectedMiner.Location = new System.Drawing.Point(87, 24);
+            this.pbSelectedMiner.Name = "pbSelectedMiner";
+            this.pbSelectedMiner.Size = new System.Drawing.Size(42, 32);
+            this.pbSelectedMiner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSelectedMiner.TabIndex = 14;
+            this.pbSelectedMiner.TabStop = false;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(197, 172);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(285, 23);
+            this.txtPassword.TabIndex = 16;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(84, 179);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 15);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Password";
+            // 
             // ConfigureMiner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(708, 394);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pbSelectedMiner);
             this.Controls.Add(this.btnFillDefaultAddress);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPoolAccount);
@@ -169,6 +205,7 @@
             this.Name = "ConfigureMiner";
             this.Text = "ConfigureMiner";
             this.Load += new System.EventHandler(this.ConfigureMiner_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedMiner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +224,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnFillDefaultAddress;
+        private System.Windows.Forms.PictureBox pbSelectedMiner;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -45,9 +45,11 @@ namespace DigibyteMiner.View.v1
 
             if (m_selected_coin != null)
             {
-                lblCoinName.Text = m_selected_coin.Name;
+                pbSelectedMiner.Image = m_selected_coin.Logo;
+                lblCoinName.Text = m_selected_coin.Algorithm.Name+ " > "+ m_selected_coin.Name;
                 txtPool.Text = Pool;
                 txtWallet.Text = Wallet;
+                txtPassword.Text = Password;
                 txtPoolAccount.Text = PoolAccount;
 
                 cmbPoolList.SelectedIndexChanged += cmbPoolList_SelectedIndexChanged;
@@ -134,6 +136,12 @@ namespace DigibyteMiner.View.v1
         private void btnFillDefaultAddress_Click(object sender, EventArgs e)
         {
             txtWallet.Text=m_selected_coin.DefaultAddress;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            Password = txtPassword.Text;//trim not needed for password
+
         }
     }
 }

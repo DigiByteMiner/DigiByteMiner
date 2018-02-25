@@ -146,6 +146,7 @@ namespace DigibyteMiner.Skein
                     ICoinConfigurer mainCoinConfigurer = mainCoin.SettingsScreen;
                     mainCoinConfigurer.Pool = minerData.MainCoinPool;
                     mainCoinConfigurer.Wallet = minerData.MainCoinWallet;
+                    mainCoinConfigurer.Password = minerData.MainCoinPassword;
                     mainCoinConfigurer.PoolAccount = minerData.MainCoinPoolAccount;
                     if (minerData.DualMining)
                     {

@@ -22,7 +22,7 @@ namespace DigibyteMiner.View
         {
             try
             {
-                Process.Start("https://arunsatyarth.github.io/DigibyteMiner/");
+                Process.Start("https://github.com/DigiByteMiner/DigiByteMiner");
             }
             catch (Exception se)
             {
@@ -33,7 +33,7 @@ namespace DigibyteMiner.View
         {
             try
             {
-                Process.Start("https://github.com/arunsatyarth/DigibyteMiner");
+                Process.Start("https://github.com/DigiByteMiner/DigiByteMiner");
             }
             catch (Exception se)
             {

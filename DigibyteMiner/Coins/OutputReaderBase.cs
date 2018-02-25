@@ -25,6 +25,7 @@ namespace DigibyteMiner.Coins
         private object s_accesssynch = new object();
         private object s_resultSynch = new object();
         public string StatsLink { get; set; }
+        public string StatsPort { get; set; }
         private string m_Lastlog = "";
         //if true, next time we parse outputs, we will try to read the gpu names again. will reset when new object is made and miner is started
         public bool ReReadGpuNames { get; set; }
@@ -135,9 +136,10 @@ namespace DigibyteMiner.Coins
             }
         }
 
-        public OutputReaderBase(string link)
+        public OutputReaderBase(string link,string port)
         {
             StatsLink = link;
+            StatsPort = port;
             ReReadGpuNames = true;
 
         }
@@ -159,7 +161,7 @@ namespace DigibyteMiner.Coins
         }
 
 
-        public void Read()
+        public virtual void Read()
         {
             try
             {

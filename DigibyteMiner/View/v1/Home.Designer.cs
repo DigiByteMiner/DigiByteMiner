@@ -268,12 +268,13 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.SteelBlue;
-            this.linkLabel2.Location = new System.Drawing.Point(264, 75);
+            this.linkLabel2.Location = new System.Drawing.Point(264, 73);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(25, 13);
             this.linkLabel2.TabIndex = 49;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Edit";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // Home
             // 
