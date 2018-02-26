@@ -44,15 +44,15 @@ namespace DigibyteMiner.View.v1.MiningInfo
                     else
                         pbCardType.Image = DigibyteMiner.Properties.Resources.gpu;
                     double totalHashrate = double.Parse(GpuData.Hashrate);
-                    if (totalHashrate > 1)
+                    if (totalHashrate > 10 * 1024)
                     {
-                        hashrate += totalHashrate.ToString("F1") + " MH/s";
+                        double conversion = totalHashrate / 1000;// 1024;
+                        hashrate += conversion.ToString("F1") + " MH/s";
 
                     }
                     else
                     {
-                        double conversion = totalHashrate * 1024;
-                        hashrate += conversion.ToString() + " KH/s";
+                        hashrate += totalHashrate.ToString("F1") + " KH/s";
                     }
                     if (showRunningData)
                     {
