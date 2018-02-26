@@ -83,7 +83,7 @@ namespace DigibyteMiner.Coins.Skein
         {
             Type = "AMD";
             GPUType = CardMake.Amd;
-            OutputReader = new CCReader(STATS_LINK, STATS_LINK_PORT);
+            OutputReader = new CGReader(STATS_LINK, STATS_LINK_PORT);
         }
 
         public override string GenerateScript()
@@ -123,24 +123,13 @@ setx GPU_USE_SYNC_OBJECTS 1
         /// <summary>
         /// reads data for claymore miner
         /// </summary>
-        public class CCReader : OutputReaderBase
+        public class CGReader : OutputReaderBase
         {
-            public CCReader(string link,string port)
+            public CGReader(string link, string port)
                 : base(link,port)
             {
             }
-            CGMinerCommandOutputs GetResultsSection(string innerText)
-            {
-                try
-                {
-                    CGMinerCommandOutputs minerResult = (CGMinerCommandOutputs)new JavaScriptSerializer().Deserialize(innerText, typeof(CGMinerCommandOutputs));
-                    return minerResult;
-                }
-                catch (Exception e)
-                {
-                }
-                return null;
-            }
+
             public override void Read()
             {
                 try
