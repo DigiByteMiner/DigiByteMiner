@@ -80,7 +80,7 @@
             // 
             this.lblShares.AutoSize = true;
             this.lblShares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShares.Location = new System.Drawing.Point(546, 99);
+            this.lblShares.Location = new System.Drawing.Point(543, 99);
             this.lblShares.Name = "lblShares";
             this.lblShares.Size = new System.Drawing.Size(84, 13);
             this.lblShares.TabIndex = 31;

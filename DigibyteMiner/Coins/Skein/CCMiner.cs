@@ -206,7 +206,7 @@ namespace DigibyteMiner.Coins.Skein
                                     string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
                                     string kh = values[1];
                                     double kh_d = double.Parse(kh);
-                                    kh_d /= 1024;
+                                    //kh_d /= 1024;
                                     m_MinerResult.TotalHashrate = (int)kh_d;
 
                                 }
@@ -267,7 +267,7 @@ namespace DigibyteMiner.Coins.Skein
                                         string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
                                         string kh = values[1];
                                         double kh_d = double.Parse(kh);
-                                        kh_d /= 1024;
+                                        //kh_d /= 1024;
                                         gpu.Hashrate = kh_d.ToString();
                                         add = true;
                                     }

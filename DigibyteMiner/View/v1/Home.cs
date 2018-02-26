@@ -90,7 +90,7 @@ namespace DigibyteMiner.View.v1
                     }
                     else
                     {
-                        hashrate = totalHashrate.ToString() + " H/s";
+                        hashrate = totalHashrate.ToString() + " KH/s";
                     }
                     shares += " A: " + totalShares.ToString() + "   R: " + totalSharesRejected.ToString();
                     lblShares.Text = shares;

@@ -205,6 +205,7 @@ setx GPU_USE_SYNC_OBJECTS 1
                             content = content.Substring(0, content.Length - 1);
                             SummaryRoot minerResult = (SummaryRoot)new JavaScriptSerializer().Deserialize(content, typeof(SummaryRoot));
                             m_MinerResult.TotalHashrate = (int)minerResult.SUMMARY[0].MHS5s;
+                            m_MinerResult.TotalHashrate *= 1000;
                             m_MinerResult.TotalShares = (int)minerResult.SUMMARY[0].Accepted;
                             m_MinerResult.Rejected = (int)minerResult.SUMMARY[0].Rejected;
 
@@ -223,7 +224,7 @@ setx GPU_USE_SYNC_OBJECTS 1
 	                        {
                                 GpuData gpu = new GpuData("AMD GPU "+item.GPU.ToString());//Todo: finfing the name has proven difficult
                                 gpu.Make = CardMake.Amd;
-                                gpu.Hashrate = item.MHS5s.ToString();
+                                gpu.Hashrate = (item.MHS5s*1000).ToString();//convert to Khs
                                 gpu.Temperature = item.Temperature.ToString()+"C";
                                 m_MinerResult.GPUs.Add(gpu);
 
