@@ -135,6 +135,17 @@ namespace DigibyteMiner.View.v1
             editMiner.ShowDialog();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(Miner.MainCoin.SettingsScreen.PoolAccount);
+            }
+            catch (Exception se)
+            {
+            }
+        }
+
 
 
 
