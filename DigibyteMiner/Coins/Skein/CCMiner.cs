@@ -52,7 +52,7 @@ namespace DigibyteMiner.Coins.Skein
         {
             get
             {
-                return  STATSLINK2 ;
+                return STATSLINK2;
             }
         }
         public override string STATS_LINK_HTML
@@ -99,7 +99,7 @@ namespace DigibyteMiner.Coins.Skein
                     pwd = " x ";
                 command += " -p " + pwd;
 
-                command += " --api-bind " + STATS_LINK+":"+STATS_LINK_PORT;
+                command += " --api-bind " + STATS_LINK + ":" + STATS_LINK_PORT;
 
 
                 Script = SCRIPT1 + command;
@@ -123,23 +123,12 @@ namespace DigibyteMiner.Coins.Skein
         public class CCReader : OutputReaderBase
         {
             public CCReader(string link, string port)
-                : base(link,port)
+                : base(link, port)
             {
             }
-            CCMinerData GetResultsSection(string innerText)
-            {
-                try
-                {
-                    CCMinerData minerResult = (CCMinerData)new JavaScriptSerializer().Deserialize(innerText, typeof(CCMinerData));
-                    return minerResult;
-                }
-                catch (Exception e)
-                {
-                }
-                return null;
-            }
-           
-            public override  void Read()
+
+
+            public override void Read()
             {
                 try
                 {
@@ -166,10 +155,19 @@ namespace DigibyteMiner.Coins.Skein
             }
             public override void Parse()
             {
-                CCMinerData ewbfData = GetResultsSection(LastLog);
-                if (ewbfData.Parse(new CcMinerResultParser(LastLog, ReReadGpuNames)))
+                try
                 {
-                    MinerResult = ewbfData.MinerDataResult;
+                    CCMinerCommandOutputs minerResult = (CCMinerCommandOutputs)new JavaScriptSerializer().Deserialize(LastLog, typeof(CCMinerCommandOutputs));
+                    if (minerResult != null)
+                    {
+                        if (minerResult.Parse(new CcMinerResultParser(LastLog, ReReadGpuNames)))
+                        {
+                            MinerResult = minerResult.MinerDataResult;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
                 }
                 ReReadGpuNames = false;
             }
@@ -177,7 +175,7 @@ namespace DigibyteMiner.Coins.Skein
             public class CcMinerResultParser : IMinerResultParser
             {
                 MinerDataResult m_MinerResult = null;
-                CCMinerData m_EwbfData = null;
+                CCMinerCommandOutputs m_CCMinerData = null;
                 public bool Succeeded { get; set; }//if parsing succeeded without errors
                 static Hashtable m_Gpus = new Hashtable();// we only need t read gpu info once as it dosent change with more logs comining in
 
@@ -190,14 +188,99 @@ namespace DigibyteMiner.Coins.Skein
                 public bool Parse(object obj)
                 {
                     Succeeded = false;
-
-                    m_EwbfData = obj as CCMinerData;
+                    m_CCMinerData = obj as CCMinerCommandOutputs;
                     try
                     {
-                        if (m_EwbfData == null)
+                        if (m_CCMinerData == null)
                             return false;
+                        m_MinerResult = new MinerDataResult();
+                        m_MinerResult.GPUs = new List<GpuData>();
+                        try
+                        {
+                            string content = m_CCMinerData.Summary;
+                            string[] a = content.Split(new string[] { ";" }, StringSplitOptions.None);
+                            foreach (string item in a)
+                            {
+                                if (item.Contains("KHS"))
+                                {
+                                    string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
+                                    string kh = values[1];
+                                    double kh_d = double.Parse(kh);
+                                    //kh_d /= 1024;
+                                    m_MinerResult.TotalHashrate = (int)kh_d;
 
-                        ComputeGPUData();
+                                }
+                                else if (item.Contains("ACC"))
+                                {
+                                    string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
+                                    string acc = values[1];
+                                    int acc_i = int.Parse(acc);
+                                    m_MinerResult.TotalShares = acc_i;
+
+                                }
+                                else if (item.Contains("REJ"))
+                                {
+                                    string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
+                                    string rej = values[1];
+                                    int rej_i = int.Parse(rej);
+                                    m_MinerResult.Rejected = rej_i;
+                                }
+
+                            }
+
+                        }
+                        catch (Exception e)
+                        {
+                        }
+                        //now read gpus from dev
+                        try
+                        {
+                            string content = m_CCMinerData.Threads;
+                            string[] b = content.Split(new string[] { "|" }, StringSplitOptions.None);
+
+                            foreach (var ice in b)
+                            {
+                                bool add = false;
+                                GpuData gpu = new GpuData("");//Todo: finfing the name has proven difficult
+                                gpu.Make = CardMake.Nvidia;
+                                //m_MinerResult.GPUs.Add(gpu);
+                                string[] a = ice.Split(new string[] { ";" }, StringSplitOptions.None);
+                                foreach (string item in a)
+                                {
+                                    if (item.Contains("CARD"))
+                                    {
+                                        string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
+                                        gpu.GPUName = values[1];
+                                    }
+                                    if (item.Contains("FAN"))
+                                    {
+                                        string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
+                                        gpu.FanSpeed = values[1];
+                                    }
+                                    if (item.Contains("TEMP"))
+                                    {
+                                        string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
+                                        gpu.Temperature = values[1];
+                                    }
+                                    if (item.Contains("KHS"))
+                                    {
+                                        string[] values = item.Split(new string[] { "=" }, StringSplitOptions.None);
+                                        string kh = values[1];
+                                        double kh_d = double.Parse(kh);
+                                        //kh_d /= 1024;
+                                        gpu.Hashrate = kh_d.ToString();
+                                        add = true;
+                                    }
+                                }
+                                if (add)
+                                    m_MinerResult.GPUs.Add(gpu);
+
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                        }
+                        m_CCMinerData.MinerDataResult = m_MinerResult;
                         return true;
                     }
                     catch (Exception e)
@@ -208,40 +291,8 @@ namespace DigibyteMiner.Coins.Skein
 
                 }
 
-                public void ComputeGPUData()
-                {
-                    try
-                    {
-                        m_MinerResult = new MinerDataResult();
-                        m_MinerResult.GPUs = new List<GpuData>();
 
-                        int totalHashrate = 0, totalShares = 0, rejected = 0;
-                        foreach (Result item in m_EwbfData.result)
-                        {
-                            GpuData gpu = new GpuData(item.name);
-                            gpu.IdentifyMake();
 
-                            gpu.Hashrate = item.speed_sps.ToString();
-                            gpu.Temperature = item.temperature + "C";
-                            m_MinerResult.GPUs.Add(gpu);
-                            totalHashrate += item.speed_sps;
-                            totalShares += item.accepted_shares;
-                            rejected += item.rejected_shares;
-                        }
-
-                        m_MinerResult.TotalHashrate = totalHashrate;
-                        m_MinerResult.TotalShares = totalShares;
-                        m_MinerResult.Rejected = rejected;
-
-                        m_EwbfData.MinerDataResult = m_MinerResult;
-
-                    }
-                    catch (Exception)
-                    {
-                        Succeeded = false;
-                        throw;
-                    }
-                }
             }
         }
         public class Result
@@ -279,7 +330,13 @@ namespace DigibyteMiner.Coins.Skein
         {
             public string Summary { get; set; }
             public string Threads { get; set; }
+            //following onjects are used later
+            public MinerDataResult MinerDataResult { get; set; }
 
+            public bool Parse(IMinerResultParser parser)
+            {
+                return parser.Parse(this);
+            }
 
         }
 

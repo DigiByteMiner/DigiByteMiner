@@ -83,7 +83,7 @@ namespace DigibyteMiner.Coins.Skein
         {
             Type = "AMD";
             GPUType = CardMake.Amd;
-            OutputReader = new CCReader(STATS_LINK, STATS_LINK_PORT);
+            OutputReader = new CGReader(STATS_LINK, STATS_LINK_PORT);
         }
 
         public override string GenerateScript()
@@ -123,24 +123,13 @@ setx GPU_USE_SYNC_OBJECTS 1
         /// <summary>
         /// reads data for claymore miner
         /// </summary>
-        public class CCReader : OutputReaderBase
+        public class CGReader : OutputReaderBase
         {
-            public CCReader(string link,string port)
+            public CGReader(string link, string port)
                 : base(link,port)
             {
             }
-            CGMinerCommandOutputs GetResultsSection(string innerText)
-            {
-                try
-                {
-                    CGMinerCommandOutputs minerResult = (CGMinerCommandOutputs)new JavaScriptSerializer().Deserialize(innerText, typeof(CGMinerCommandOutputs));
-                    return minerResult;
-                }
-                catch (Exception e)
-                {
-                }
-                return null;
-            }
+
             public override void Read()
             {
                 try
@@ -148,13 +137,13 @@ setx GPU_USE_SYNC_OBJECTS 1
                     CGMinerCommandOutputs output = new CGMinerCommandOutputs();
                     string result = "";
                     TcpReaderUtil util = new TcpReaderUtil(StatsLink, StatsPort);
-                    result = util.GetData("summary");
+                    result = util.GetData("{\"command\":\"summary\"}");
                     output.Summary = result;
 
-                    result = util.GetData("devs");
+                    result = util.GetData("{\"command\":\"devs\"}");
                     output.Devs = result;
 
-                    result = util.GetData("devdetails");
+                    result = util.GetData("{\"command\":\"devdetails\"}");
                     output.Devdetails = result;
 
                     string str = new JavaScriptSerializer().Serialize(output);
@@ -164,7 +153,6 @@ setx GPU_USE_SYNC_OBJECTS 1
                 }
                 catch (Exception e)
                 {
-                    ReadWithBrowser();
                     throw;
                 }
 
@@ -213,8 +201,11 @@ setx GPU_USE_SYNC_OBJECTS 1
                         m_MinerResult.GPUs = new List<GpuData>();
                         try
                         {
-                            SummaryRoot minerResult = (SummaryRoot)new JavaScriptSerializer().Deserialize(m_CgminerData.Summary, typeof(SummaryRoot));
+                            string content = m_CgminerData.Summary.Replace(" ", "");
+                            content = content.Substring(0, content.Length - 1);
+                            SummaryRoot minerResult = (SummaryRoot)new JavaScriptSerializer().Deserialize(content, typeof(SummaryRoot));
                             m_MinerResult.TotalHashrate = (int)minerResult.SUMMARY[0].MHS5s;
+                            m_MinerResult.TotalHashrate *= 1000;
                             m_MinerResult.TotalShares = (int)minerResult.SUMMARY[0].Accepted;
                             m_MinerResult.Rejected = (int)minerResult.SUMMARY[0].Rejected;
 
@@ -225,12 +216,15 @@ setx GPU_USE_SYNC_OBJECTS 1
                         //now read gpus from dev
                         try
                         {
-                            DEVSROOT minerResult = (DEVSROOT)new JavaScriptSerializer().Deserialize(m_CgminerData.Devs, typeof(DEVSROOT));
-                            foreach (D1 item in minerResult.DEVS)
+                            string content = m_CgminerData.Devs.Replace(" ", "");
+                            content = content.Substring(0, content.Length - 1);
+
+                            RootObject minerResult = (RootObject)new JavaScriptSerializer().Deserialize(content, typeof(RootObject));
+                            foreach (DEV item in minerResult.DEVS)
 	                        {
-                                GpuData gpu = new GpuData(item.GPU.ToString());//Todo: finfing the name has proven difficult
+                                GpuData gpu = new GpuData("AMD GPU "+item.GPU.ToString());//Todo: finfing the name has proven difficult
                                 gpu.Make = CardMake.Amd;
-                                gpu.Hashrate = item.MHS_5s.ToString();
+                                gpu.Hashrate = (item.MHS5s*1000).ToString();//convert to Khs
                                 gpu.Temperature = item.Temperature.ToString()+"C";
                                 m_MinerResult.GPUs.Add(gpu);
 
@@ -254,7 +248,7 @@ setx GPU_USE_SYNC_OBJECTS 1
             }
         }
         #region DEVS_CALL_JSOn_STRUCTURE
-        public class S1
+        public class S
         {
             public string STATUS { get; set; }
             public int When { get; set; }
@@ -263,43 +257,43 @@ setx GPU_USE_SYNC_OBJECTS 1
             public string Description { get; set; }
         }
 
-        public class D1
+        public class DEV
         {
             public int GPU { get; set; }
             public string Enabled { get; set; }
             public string Status { get; set; }
             public double Temperature { get; set; }
-            public int Fan_Speed { get; set; }
-            public int Fan_Percent { get; set; }
-            public int GPU_Clock { get; set; }
-            public int Memory_Clock { get; set; }
-            public double GPU_Voltage { get; set; }
-            public int GPU_Activity { get; set; }
+            public int FanSpeed { get; set; }
+            public int FanPercent { get; set; }
+            public int GPUClock { get; set; }
+            public int MemoryClock { get; set; }
+            public double GPUVoltage { get; set; }
+            public int GPUActivity { get; set; }
             public int Powertune { get; set; }
-            public double MHS_av { get; set; }
-            public double MHS_5s { get; set; }
+            public double MHSav { get; set; }
+            public double MHS5s { get; set; }
             public int Accepted { get; set; }
             public int Rejected { get; set; }
-            public int Hardware_Errors { get; set; }
+            public int HardwareErrors { get; set; }
             public double Utility { get; set; }
             public string Intensity { get; set; }
-            public int Last_Share_Pool { get; set; }
-            public int Last_Share_Time { get; set; }
-            public double Total_MH { get; set; }
-            public int Diff1_Work { get; set; }
-            public double Difficulty_Accepted { get; set; }
-            public double Difficulty_Rejected { get; set; }
-            public double Last_Share_Difficulty { get; set; }
-            public int Last_Valid_Work { get; set; }
-            public double Device_Hardware { get; set; }
-            public double Device_Rejected { get; set; }
-            public int Device_Elapsed { get; set; }
+            public int LastSharePool { get; set; }
+            public int LastShareTime { get; set; }
+            public double TotalMH { get; set; }
+            public int Diff1Work { get; set; }
+            public double DifficultyAccepted { get; set; }
+            public double DifficultyRejected { get; set; }
+            public double LastShareDifficulty { get; set; }
+            public int LastValidWork { get; set; }
+            public double DeviceHardware { get; set; }
+            public double DeviceRejected { get; set; }
+            public int DeviceElapsed { get; set; }
         }
 
-        public class DEVSROOT
+        public class RootObject
         {
-            public List<S1> STATUS { get; set; }
-            public List<D1> DEVS { get; set; }
+            public List<S> STATUS { get; set; }
+            public List<DEV> DEVS { get; set; }
             public int id { get; set; }
         }
         #endregion
