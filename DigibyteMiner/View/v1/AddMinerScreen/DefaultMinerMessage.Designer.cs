@@ -89,10 +89,10 @@
             this.label2.Location = new System.Drawing.Point(40, 124);
             this.label2.MaximumSize = new System.Drawing.Size(500, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(492, 40);
+            this.label2.Size = new System.Drawing.Size(459, 40);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Also, You can right click on any miner and select \"Edit Miner\" to change the sett" +
-    "ings of the miner";
+            this.label2.Text = "Also, you could click the Edit link on the home screen to edit the miner configur" +
+    "ation";
             // 
             // DefaultMinerMessage
             // 
