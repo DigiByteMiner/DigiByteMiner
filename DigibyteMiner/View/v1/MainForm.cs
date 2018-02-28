@@ -289,6 +289,8 @@ namespace DigibyteMiner
 
         private void donateToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DigibyteMiner.View.v1.ExtraScreens.Help h = new DigibyteMiner.View.v1.ExtraScreens.Help();
+            h.ShowDialog();
         }
         public void ShowHardwareMissingError()
         {
