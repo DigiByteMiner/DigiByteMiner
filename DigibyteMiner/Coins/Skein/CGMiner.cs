@@ -214,8 +214,12 @@ setx GPU_USE_SYNC_OBJECTS 1
                         {
                         }
                         //now read gpus from dev
+                        string hashrate = "0. 0";
+
                         try
                         {
+                            int h = int.Parse(hashrate);
+
                             string content = m_CgminerData.Devs.Replace(" ", "");
                             content = content.Substring(0, content.Length - 1);
 

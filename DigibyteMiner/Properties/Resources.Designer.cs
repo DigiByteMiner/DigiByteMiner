@@ -73,6 +73,26 @@ namespace DigibyteMiner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap amd2 {
+            get {
+                object obj = ResourceManager.GetObject("amd2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap amd3 {
+            get {
+                object obj = ResourceManager.GetObject("amd3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cpu {
             get {
                 object obj = ResourceManager.GetObject("cpu", resourceCulture);
@@ -176,6 +196,16 @@ namespace DigibyteMiner.Properties {
         internal static System.Drawing.Bitmap nvidia {
             get {
                 object obj = ResourceManager.GetObject("nvidia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nvidia2 {
+            get {
+                object obj = ResourceManager.GetObject("nvidia2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

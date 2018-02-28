@@ -336,6 +336,9 @@
     <None Include="View\v1\Images\selected.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="View\v1\Images\amd3.jpg" />
+    <None Include="View\v1\Images\amd2.jpg" />
+    <None Include="View\v1\Images\nvidia2.jpg" />
     <None Include="View\v1\Images\edit2.png" />
     <None Include="View\v1\Images\edit.png" />
     <None Include="View\v1\Images\download.jpg" />

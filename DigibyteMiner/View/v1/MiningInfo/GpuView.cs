@@ -36,9 +36,9 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 if(GpuData!=null)
                 {
                     if (GpuData.Make == CardMake.Nvidia)
-                        pbCardType.Image = DigibyteMiner.Properties.Resources.nvidia;
+                        pbCardType.Image = DigibyteMiner.Properties.Resources.nvidia2;
                     else if (GpuData.Make == CardMake.Amd)
-                        pbCardType.Image = DigibyteMiner.Properties.Resources.amd;
+                        pbCardType.Image = DigibyteMiner.Properties.Resources.amd3;
                     else if (GpuData.Make == CardMake.CPU)
                         pbCardType.Image = DigibyteMiner.Properties.Resources.cpu;
                     else

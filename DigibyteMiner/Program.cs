@@ -36,10 +36,10 @@ namespace DigibyteMiner
             {
                 //Bring only a single instance
                 bool onlyInstance = false;
-                mutex = new Mutex(true, "DigibyteMiner1Click", out onlyInstance);
+                mutex = new Mutex(true, "DigibyteMiner1Click2", out onlyInstance);
                 if (!onlyInstance)
                 {
-                    IntPtr handle = WinApi.FindWindow(null, "Digibyte 1 Click Miner");
+                    IntPtr handle = WinApi.FindWindow(null, "DigiByte One Click Miner");
                     if (handle != IntPtr.Zero)
                         WinApi.PostMessage(handle, 3000, IntPtr.Zero, IntPtr.Zero);
                     return;
