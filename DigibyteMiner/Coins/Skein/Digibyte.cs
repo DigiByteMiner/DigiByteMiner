@@ -30,7 +30,7 @@ namespace DigibyteMiner.Skein
         }
         public  string Name
         {
-            get { return "Digibyte"; }
+            get { return "DigiByte"; }
         }
 
         public Bitmap Logo
