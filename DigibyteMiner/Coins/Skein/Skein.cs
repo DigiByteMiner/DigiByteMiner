@@ -127,7 +127,7 @@ namespace DigibyteMiner.Skein
             ICoin coin = null;
             switch (name)
             {
-                case "Digibyte":
+                case "DigiByte":
                     coin = m_CoinsHash[SkeinCoins.Digibyte] as ICoin;
                     break;
             }
