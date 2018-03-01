@@ -34,7 +34,7 @@
             // 
             // pnlGpus
             // 
-            this.pnlGpus.BackColor = System.Drawing.Color.White;
+            this.pnlGpus.BackColor = System.Drawing.Color.Transparent;
             this.pnlGpus.Location = new System.Drawing.Point(12, 0);
             this.pnlGpus.Name = "pnlGpus";
             this.pnlGpus.Size = new System.Drawing.Size(912, 302);

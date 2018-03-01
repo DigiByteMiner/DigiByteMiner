@@ -89,6 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg0;
             this.ClientSize = new System.Drawing.Size(1132, 346);
             this.Controls.Add(this.pnlMinerInfo);
             this.Controls.Add(this.btntabScript);

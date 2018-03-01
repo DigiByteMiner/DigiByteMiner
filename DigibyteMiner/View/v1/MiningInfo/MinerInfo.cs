@@ -151,5 +151,18 @@ namespace DigibyteMiner.View.v1
         {
 
         }
+        private Rectangle _backgroundRect;
+        private Bitmap _background;
+        public void Paint__(PaintEventArgs e)
+        {
+            OnPaintBackground(e);
+        }
+        protected override void OnPaintBackground(PaintEventArgs e)
+       {
+            _background = DigibyteMiner.Properties.Resources.bg0;
+            _backgroundRect = new Rectangle(0, 0, _background.Width, _background.Height);
+            Graphics g = e.Graphics;
+            g.DrawImage(_background, this.ClientRectangle,_backgroundRect, GraphicsUnit.Pixel);
+        }
     }
 }

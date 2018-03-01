@@ -26,6 +26,20 @@ namespace DigibyteMiner.View.v1.MiningInfo
         {
 
         }
+        private Rectangle _backgroundRect;
+        private Bitmap _background;
+        public void Paint__(PaintEventArgs e)
+        {
+            m_Parent.Paint__(e);
+
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics gfx = e.Graphics;
+            m_Parent.Paint__(e);
+      
+        }
         public void UpdateUIStatic()
         {
             try

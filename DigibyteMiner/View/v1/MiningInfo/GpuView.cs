@@ -38,7 +38,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
                     if (GpuData.Make == CardMake.Nvidia)
                         pbCardType.Image = DigibyteMiner.Properties.Resources.nvidia2;
                     else if (GpuData.Make == CardMake.Amd)
-                        pbCardType.Image = DigibyteMiner.Properties.Resources.amd3;
+                        pbCardType.Image = DigibyteMiner.Properties.Resources.amd;
                     else if (GpuData.Make == CardMake.CPU)
                         pbCardType.Image = DigibyteMiner.Properties.Resources.cpu;
                     else
@@ -74,6 +74,13 @@ namespace DigibyteMiner.View.v1.MiningInfo
             {
             }
             
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics gfx = e.Graphics;
+            m_Parent.Paint__(e);
+
         }
     }
 }
