@@ -111,6 +111,7 @@
             this.oneMinerNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("oneMinerNotifyIcon.Icon")));
             this.oneMinerNotifyIcon.Text = "DigibyteMiner";
             this.oneMinerNotifyIcon.Visible = true;
+            this.oneMinerNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.oneMinerNotifyIcon_MouseDoubleClick);
             // 
             // taskbarMenu
             // 

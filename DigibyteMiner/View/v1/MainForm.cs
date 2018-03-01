@@ -56,7 +56,11 @@ namespace DigibyteMiner
             Factory.Instance.ViewObject.RegisterForTimer(t_Tick);
             Factory.Instance.ViewObject.RegisterForTimer(UpDateMinerState);
 
+            oneMinerNotifyIcon.Click += oneMinerNotifyIcon_Click;
+
         }
+
+
 
         void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -302,7 +306,16 @@ namespace DigibyteMiner
         {
 
         }
-        
+
+        private void oneMinerNotifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            WindowState = FormWindowState.Normal;
+        }
+        void oneMinerNotifyIcon_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
 
