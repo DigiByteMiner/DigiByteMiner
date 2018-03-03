@@ -42,6 +42,7 @@
             this.pbSelectedMiner = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblWalletComment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectedMiner)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +97,7 @@
             // cmbPoolList
             // 
             this.cmbPoolList.FormattingEnabled = true;
-            this.cmbPoolList.Location = new System.Drawing.Point(529, 88);
+            this.cmbPoolList.Location = new System.Drawing.Point(518, 88);
             this.cmbPoolList.Name = "cmbPoolList";
             this.cmbPoolList.Size = new System.Drawing.Size(121, 21);
             this.cmbPoolList.TabIndex = 5;
@@ -147,7 +148,7 @@
             // 
             // btnFillDefaultAddress
             // 
-            this.btnFillDefaultAddress.Location = new System.Drawing.Point(529, 130);
+            this.btnFillDefaultAddress.Location = new System.Drawing.Point(575, 304);
             this.btnFillDefaultAddress.Name = "btnFillDefaultAddress";
             this.btnFillDefaultAddress.Size = new System.Drawing.Size(121, 23);
             this.btnFillDefaultAddress.TabIndex = 10;
@@ -185,12 +186,25 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Password";
             // 
+            // lblWalletComment
+            // 
+            this.lblWalletComment.AutoSize = true;
+            this.lblWalletComment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWalletComment.ForeColor = System.Drawing.Color.Crimson;
+            this.lblWalletComment.Location = new System.Drawing.Point(515, 131);
+            this.lblWalletComment.MaximumSize = new System.Drawing.Size(200, 0);
+            this.lblWalletComment.Name = "lblWalletComment";
+            this.lblWalletComment.Size = new System.Drawing.Size(194, 17);
+            this.lblWalletComment.TabIndex = 17;
+            this.lblWalletComment.Text = "Should be Username.workername";
+            // 
             // ConfigureMiner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(708, 394);
+            this.Controls.Add(this.lblWalletComment);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pbSelectedMiner);
@@ -230,5 +244,6 @@
         private System.Windows.Forms.PictureBox pbSelectedMiner;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblWalletComment;
     }
 }

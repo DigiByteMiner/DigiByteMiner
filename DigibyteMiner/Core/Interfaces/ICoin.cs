@@ -19,7 +19,15 @@ namespace DigibyteMiner.Core.Interfaces
             Link = link;
             WalletName = "Account.WorkerName";
             WalletAddress = "asatyarth.arun";
+            WrongWallet = "";
         }
+
+        public virtual bool ValidateAddress(string address)
+        {
+            return true;
+        }
+        public virtual string WrongWallet { get; set; }
+
         /// <summary>
         /// this generic implementation is not giarenteed to work with every pool
         /// </summary>
