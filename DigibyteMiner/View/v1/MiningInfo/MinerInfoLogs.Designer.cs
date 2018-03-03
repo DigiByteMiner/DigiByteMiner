@@ -77,7 +77,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1017, 523);
+            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg3;
+            this.ClientSize = new System.Drawing.Size(996, 287);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.logBrowser);
             this.Controls.Add(this.btnTemplate);

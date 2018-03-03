@@ -50,8 +50,9 @@
             // lblRunningTime
             // 
             this.lblRunningTime.AutoSize = true;
-            this.lblRunningTime.BackColor = System.Drawing.Color.White;
+            this.lblRunningTime.BackColor = System.Drawing.Color.Transparent;
             this.lblRunningTime.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRunningTime.ForeColor = System.Drawing.Color.White;
             this.lblRunningTime.Location = new System.Drawing.Point(149, 182);
             this.lblRunningTime.Name = "lblRunningTime";
             this.lblRunningTime.Size = new System.Drawing.Size(50, 17);
@@ -61,8 +62,9 @@
             // lblMineOnStartup
             // 
             this.lblMineOnStartup.AutoSize = true;
-            this.lblMineOnStartup.BackColor = System.Drawing.Color.White;
+            this.lblMineOnStartup.BackColor = System.Drawing.Color.Transparent;
             this.lblMineOnStartup.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMineOnStartup.ForeColor = System.Drawing.Color.White;
             this.lblMineOnStartup.Location = new System.Drawing.Point(149, 93);
             this.lblMineOnStartup.Name = "lblMineOnStartup";
             this.lblMineOnStartup.Size = new System.Drawing.Size(26, 17);
@@ -72,8 +74,9 @@
             // lblActiveMiner
             // 
             this.lblActiveMiner.AutoSize = true;
-            this.lblActiveMiner.BackColor = System.Drawing.Color.White;
+            this.lblActiveMiner.BackColor = System.Drawing.Color.Transparent;
             this.lblActiveMiner.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveMiner.ForeColor = System.Drawing.Color.White;
             this.lblActiveMiner.Location = new System.Drawing.Point(149, 59);
             this.lblActiveMiner.MaximumSize = new System.Drawing.Size(140, 0);
             this.lblActiveMiner.Name = "lblActiveMiner";
@@ -97,8 +100,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(130, 182);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(11, 17);
@@ -108,8 +112,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(130, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(11, 17);
@@ -119,8 +124,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(130, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(11, 17);
@@ -130,8 +136,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(10, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 17);
@@ -141,8 +148,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(10, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
@@ -152,8 +160,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(10, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 17);
@@ -163,8 +172,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 21);
@@ -174,8 +184,9 @@
             // lblMineonLaunch
             // 
             this.lblMineonLaunch.AutoSize = true;
-            this.lblMineonLaunch.BackColor = System.Drawing.Color.White;
+            this.lblMineonLaunch.BackColor = System.Drawing.Color.Transparent;
             this.lblMineonLaunch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMineonLaunch.ForeColor = System.Drawing.Color.White;
             this.lblMineonLaunch.Location = new System.Drawing.Point(149, 123);
             this.lblMineonLaunch.Name = "lblMineonLaunch";
             this.lblMineonLaunch.Size = new System.Drawing.Size(26, 17);
@@ -185,8 +196,9 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(130, 123);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(11, 17);
@@ -196,8 +208,9 @@
             // lblShowMinerUi
             // 
             this.lblShowMinerUi.AutoSize = true;
-            this.lblShowMinerUi.BackColor = System.Drawing.Color.White;
+            this.lblShowMinerUi.BackColor = System.Drawing.Color.Transparent;
             this.lblShowMinerUi.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowMinerUi.ForeColor = System.Drawing.Color.White;
             this.lblShowMinerUi.Location = new System.Drawing.Point(149, 152);
             this.lblShowMinerUi.Name = "lblShowMinerUi";
             this.lblShowMinerUi.Size = new System.Drawing.Size(26, 17);
@@ -207,8 +220,9 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(130, 152);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(11, 17);
@@ -218,8 +232,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(10, 153);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(99, 17);
@@ -229,8 +244,9 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(10, 123);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(105, 17);
@@ -242,6 +258,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg2;
             this.ClientSize = new System.Drawing.Size(390, 267);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label13);
