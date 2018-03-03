@@ -11,11 +11,23 @@ namespace DigibyteMiner.Core.Interfaces
     {
         public string Name { get; set; }
         public string Link { get; set; }
+        public string WalletName { get; set; }
+        public string WalletAddress { get; set; }
         public Pool(string name, string link)
         {
             Name = name;
             Link = link;
+            WalletName = "Account.WorkerName";
+            WalletAddress = "asatyarth.arun";
+            WrongWallet = "";
         }
+
+        public virtual bool ValidateAddress(string address)
+        {
+            return true;
+        }
+        public virtual string WrongWallet { get; set; }
+
         /// <summary>
         /// this generic implementation is not giarenteed to work with every pool
         /// </summary>

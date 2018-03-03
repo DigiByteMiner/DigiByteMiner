@@ -78,7 +78,14 @@ namespace DigibyteMiner.Skein
             public MiningField(string name, string url)
                 : base(name, url)
             {
+                WrongWallet = "Should be Account.Workername";
 
+            }
+            public override bool ValidateAddress(string address)
+            {
+                if (address.Contains('.') && address.IndexOf('.')!=address.Length-1)
+                    return true;
+                return false;
             }
             public override string GetAccountLink(string wallet)
             {
@@ -99,6 +106,9 @@ namespace DigibyteMiner.Skein
             public DigiHash(string name, string url)
                 : base(name, url)
             {
+                WalletName = "DigiByte Address";
+                WalletAddress = "DJrc7kG7jmBj5BKYMv7vf1AMNr4xCVdzvv";
+                WrongWallet = "Enter a valid Digibyte address";
 
             }
             public override string GetAccountLink(string wallet)
@@ -113,6 +123,14 @@ namespace DigibyteMiner.Skein
                 {
                 }
                 return acc;
+            }
+            public override bool ValidateAddress(string address)
+            {
+                if (address.Contains('.'))
+                    return false;
+                if(address.Length!=34)
+                    return false;
+                return true;
             }
         }
 

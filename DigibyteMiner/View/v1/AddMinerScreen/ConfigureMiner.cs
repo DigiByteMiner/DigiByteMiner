@@ -1,4 +1,5 @@
 ﻿using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.View.v1.AddMinerScreen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ namespace DigibyteMiner.View.v1
 {
     public partial class ConfigureMiner : Form, ICoinConfigurer
     {
-        private AddMinerContainer m_parent = null;
+        private IMinerContainer m_parent = null;
         private ICoin m_selected_coin = null;
 
         public string Pool { get; set; }
@@ -20,24 +21,46 @@ namespace DigibyteMiner.View.v1
         public string Password { get; set; }
 
         public string PoolAccount { get; set; }
-
+        public Pool m_CurrentPool = null;
         public ConfigureMiner()
         {
 
             InitializeComponent();
 #if DEBUG
-            btnFillDefaultAddress.Visible = true;
+            //btnFillDefaultAddress.Visible = true;
 #endif
         }
         public void AssignParent(object parent)
         {
             m_parent = parent as AddMinerContainer;
+            if(m_parent==null)
+                m_parent = parent as EditMinerContainer;
         }
         public void AssignCoin(ICoin coin)
         {
             m_selected_coin = coin;
         }
+        private void ShowWalletmessage(Pool pool)
+        {
+            if (pool == null)
+            {
+                lblWalletComment.Text = "";
+                m_parent.EnableNextButton();
+                return;
+            }
+            if (pool.ValidateAddress(txtWallet.Text) == false)
+            {
+                lblWalletComment.Text = pool.WrongWallet;
+                m_parent.DisableNextButton();
+            }
+            else
+            {
+                lblWalletComment.Text = "";
+                m_parent.EnableNextButton();
 
+            }
+
+        }
         private void ConfigureMiner_Load(object sender, EventArgs e)
         {
 
@@ -51,12 +74,21 @@ namespace DigibyteMiner.View.v1
                 txtWallet.Text = Wallet;
                 txtPassword.Text = Password;
                 txtPoolAccount.Text = PoolAccount;
+                m_CurrentPool = null;
+                ShowWalletmessage(m_CurrentPool);
 
                 cmbPoolList.SelectedIndexChanged += cmbPoolList_SelectedIndexChanged;
+                int i = 0;
                 foreach (Pool item in m_selected_coin.GetPools())
                 {
+                    if (i == 0)
+                    {
+                        lblWalletName.Text = item.WalletName;
+                        m_CurrentPool = item;
+                        ShowWalletmessage(m_CurrentPool);
+                    }
                     cmbPoolList.Items.Add(item.Name);
-
+                    i++;
                 }
 
             }
@@ -85,6 +117,10 @@ namespace DigibyteMiner.View.v1
                 {
                     txtPool.Text = pool.Link;
                     txtPoolAccount.Text = pool.GetAccountLink(txtWallet.Text);
+                    lblWalletName.Text = pool.WalletName;
+                    m_CurrentPool = pool;
+                    ShowWalletmessage(m_CurrentPool);
+
                 }
             }
             catch (Exception de)
@@ -118,12 +154,16 @@ namespace DigibyteMiner.View.v1
             //CalculatePoolAccount();
             //cmbPoolList.SelectedIndex = -1;
             cmbPoolList.Text = "Select Pool";
+            m_CurrentPool = null;
+            ShowWalletmessage(m_CurrentPool);
+
         }
 
         private void txtWallet_TextChanged(object sender, EventArgs e)
         {
             Wallet = txtWallet.Text.Trim();
             CalculatePoolAccount();
+            ShowWalletmessage(m_CurrentPool);
 
         }
 
