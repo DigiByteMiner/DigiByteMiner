@@ -60,9 +60,11 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
             this.linkLabel1.LinkArea = new System.Windows.Forms.LinkArea(0, 4);
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Crimson;
             this.linkLabel1.Location = new System.Drawing.Point(497, 17);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(212, 17);
@@ -70,6 +72,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Open in Browser. Logs are not Real Time";
             this.linkLabel1.UseCompatibleTextRendering = true;
+            this.linkLabel1.Visible = false;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // MinerInfoLogs

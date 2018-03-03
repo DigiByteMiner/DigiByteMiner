@@ -87,11 +87,13 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.SteelBlue;
+            this.linkLabel2.LinkColor = System.Drawing.Color.Crimson;
             this.linkLabel2.Location = new System.Drawing.Point(201, 29);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(25, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(28, 15);
             this.linkLabel2.TabIndex = 21;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Edit";

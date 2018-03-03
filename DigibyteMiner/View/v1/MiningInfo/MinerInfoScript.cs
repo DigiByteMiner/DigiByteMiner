@@ -69,6 +69,8 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 CheckBox chkBox = new CheckBox();
                 chkBox.Top = 10;
                 chkBox.Name = "chkBox" + i.ToString();
+                chkBox.BackColor = chkTemplate.BackColor;
+                chkBox.ForeColor = chkTemplate.ForeColor;
                 chkBox.Click += chkBox_Click;
                 chkBox.AutoSize = true;
                 chkBox.Text = item.Type;
@@ -183,6 +185,12 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 DisableEdit();
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Enabledit();
+
         }
 
 

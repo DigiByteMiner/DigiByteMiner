@@ -54,7 +54,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1072, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1057, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,14 +77,14 @@
             // donateToolStripMenuItem
             // 
             this.donateToolStripMenuItem.Name = "donateToolStripMenuItem";
-            this.donateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.donateToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.donateToolStripMenuItem.Text = "HELP";
             this.donateToolStripMenuItem.Click += new System.EventHandler(this.donateToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
             this.aboutToolStripMenuItem1.Text = "ABOUT";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
@@ -92,16 +92,16 @@
             // 
             this.pnlMinerInfo.BackColor = System.Drawing.Color.White;
             this.pnlMinerInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMinerInfo.Location = new System.Drawing.Point(12, 326);
+            this.pnlMinerInfo.Location = new System.Drawing.Point(8, 311);
             this.pnlMinerInfo.Name = "pnlMinerInfo";
-            this.pnlMinerInfo.Size = new System.Drawing.Size(1045, 358);
+            this.pnlMinerInfo.Size = new System.Drawing.Size(1040, 358);
             this.pnlMinerInfo.TabIndex = 2;
             this.pnlMinerInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMinerInfo_Paint);
             // 
             // pnlCarousal
             // 
             this.pnlCarousal.BackColor = System.Drawing.Color.White;
-            this.pnlCarousal.Location = new System.Drawing.Point(755, 36);
+            this.pnlCarousal.Location = new System.Drawing.Point(746, 33);
             this.pnlCarousal.Name = "pnlCarousal";
             this.pnlCarousal.Size = new System.Drawing.Size(302, 264);
             this.pnlCarousal.TabIndex = 0;
@@ -138,7 +138,7 @@
             // pnlMainInfo
             // 
             this.pnlMainInfo.BackColor = System.Drawing.Color.White;
-            this.pnlMainInfo.Location = new System.Drawing.Point(12, 36);
+            this.pnlMainInfo.Location = new System.Drawing.Point(9, 33);
             this.pnlMainInfo.Name = "pnlMainInfo";
             this.pnlMainInfo.Size = new System.Drawing.Size(724, 264);
             this.pnlMainInfo.TabIndex = 1;
@@ -147,9 +147,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.digibyte_bg;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1072, 696);
+            this.ClientSize = new System.Drawing.Size(1057, 676);
             this.Controls.Add(this.pnlMainInfo);
             this.Controls.Add(this.pnlCarousal);
             this.Controls.Add(this.pnlMinerInfo);
