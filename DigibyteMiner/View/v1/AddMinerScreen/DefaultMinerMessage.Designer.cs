@@ -44,7 +44,7 @@
             this.label1.Location = new System.Drawing.Point(40, 18);
             this.label1.MaximumSize = new System.Drawing.Size(500, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(497, 80);
+            this.label1.Size = new System.Drawing.Size(497, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
@@ -86,7 +86,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(40, 124);
+            this.label2.Location = new System.Drawing.Point(40, 111);
             this.label2.MaximumSize = new System.Drawing.Size(500, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(459, 40);

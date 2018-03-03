@@ -47,9 +47,8 @@
             this.lblGpuInfoStatic.ForeColor = System.Drawing.Color.DarkGray;
             this.lblGpuInfoStatic.Location = new System.Drawing.Point(250, 137);
             this.lblGpuInfoStatic.Name = "lblGpuInfoStatic";
-            this.lblGpuInfoStatic.Size = new System.Drawing.Size(282, 25);
+            this.lblGpuInfoStatic.Size = new System.Drawing.Size(0, 25);
             this.lblGpuInfoStatic.TabIndex = 20;
-            this.lblGpuInfoStatic.Text = "Gpu Info will be populated here";
             // 
             // MinerInfoSummary
             // 

@@ -70,7 +70,7 @@
             this.btntabInfo.Name = "btntabInfo";
             this.btntabInfo.Size = new System.Drawing.Size(75, 23);
             this.btntabInfo.TabIndex = 8;
-            this.btntabInfo.Text = "Summary";
+            this.btntabInfo.Text = "GPU Info";
             this.btntabInfo.UseVisualStyleBackColor = false;
             this.btntabInfo.Click += new System.EventHandler(this.btntabInfo_Click);
             // 
