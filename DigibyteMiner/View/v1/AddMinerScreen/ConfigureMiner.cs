@@ -53,10 +53,13 @@ namespace DigibyteMiner.View.v1
                 txtPoolAccount.Text = PoolAccount;
 
                 cmbPoolList.SelectedIndexChanged += cmbPoolList_SelectedIndexChanged;
+                int i = 0;
                 foreach (Pool item in m_selected_coin.GetPools())
                 {
+                    if (i == 0)
+                        lblWalletName.Text = item.WalletName;
                     cmbPoolList.Items.Add(item.Name);
-
+                    i++;
                 }
 
             }
@@ -85,6 +88,8 @@ namespace DigibyteMiner.View.v1
                 {
                     txtPool.Text = pool.Link;
                     txtPoolAccount.Text = pool.GetAccountLink(txtWallet.Text);
+                    lblWalletName.Text = pool.WalletName;
+
                 }
             }
             catch (Exception de)

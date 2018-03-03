@@ -78,7 +78,6 @@ namespace DigibyteMiner.Skein
             public MiningField(string name, string url)
                 : base(name, url)
             {
-
             }
             public override string GetAccountLink(string wallet)
             {
@@ -99,6 +98,8 @@ namespace DigibyteMiner.Skein
             public DigiHash(string name, string url)
                 : base(name, url)
             {
+                WalletName = "DigiByte Address";
+                WalletAddress = "DJrc7kG7jmBj5BKYMv7vf1AMNr4xCVdzvv";
 
             }
             public override string GetAccountLink(string wallet)
