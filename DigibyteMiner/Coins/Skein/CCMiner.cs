@@ -233,10 +233,8 @@ namespace DigibyteMiner.Coins.Skein
                         {
                         }
                         //now read gpus from dev
-                        string hashrate = "0. 0";
                         try
                         {
-                            int h = int.Parse(hashrate);
                             string content = m_CCMinerData.Threads;
                             string[] b = content.Split(new string[] { "|" }, StringSplitOptions.None);
 

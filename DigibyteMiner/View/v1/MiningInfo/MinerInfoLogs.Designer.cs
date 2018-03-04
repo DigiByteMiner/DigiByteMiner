@@ -60,9 +60,11 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
             this.linkLabel1.LinkArea = new System.Windows.Forms.LinkArea(0, 4);
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Crimson;
             this.linkLabel1.Location = new System.Drawing.Point(497, 17);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(212, 17);
@@ -70,6 +72,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Open in Browser. Logs are not Real Time";
             this.linkLabel1.UseCompatibleTextRendering = true;
+            this.linkLabel1.Visible = false;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // MinerInfoLogs
@@ -77,7 +80,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1017, 523);
+            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg3;
+            this.ClientSize = new System.Drawing.Size(996, 287);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.logBrowser);
             this.Controls.Add(this.btnTemplate);

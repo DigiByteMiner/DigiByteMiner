@@ -35,6 +35,7 @@
             this.btnDefault = new System.Windows.Forms.Button();
             this.chkTemplate = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTemplate
@@ -75,12 +76,13 @@
             this.lnkEdit.AutoSize = true;
             this.lnkEdit.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkEdit.LinkColor = System.Drawing.Color.SteelBlue;
-            this.lnkEdit.Location = new System.Drawing.Point(855, 86);
+            this.lnkEdit.Location = new System.Drawing.Point(1067, 196);
             this.lnkEdit.Name = "lnkEdit";
             this.lnkEdit.Size = new System.Drawing.Size(25, 13);
             this.lnkEdit.TabIndex = 22;
             this.lnkEdit.TabStop = true;
             this.lnkEdit.Text = "Edit";
+            this.lnkEdit.Visible = false;
             this.lnkEdit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEdit_LinkClicked);
             // 
             // btnDefault
@@ -96,29 +98,46 @@
             // chkTemplate
             // 
             this.chkTemplate.AutoSize = true;
+            this.chkTemplate.BackColor = System.Drawing.Color.Transparent;
+            this.chkTemplate.ForeColor = System.Drawing.Color.White;
             this.chkTemplate.Location = new System.Drawing.Point(329, 12);
             this.chkTemplate.Name = "chkTemplate";
             this.chkTemplate.Size = new System.Drawing.Size(60, 17);
             this.chkTemplate.TabIndex = 24;
             this.chkTemplate.Text = "Default";
-            this.chkTemplate.UseVisualStyleBackColor = true;
+            this.chkTemplate.UseVisualStyleBackColor = false;
             this.chkTemplate.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(299, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 25;
             this.label1.Text = "Selected Miners: ";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(858, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(59, 20);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MinerInfoScript
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1137, 344);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkTemplate);
             this.Controls.Add(this.btnDefault);
@@ -143,5 +162,6 @@
         private System.Windows.Forms.Button btnDefault;
         private System.Windows.Forms.CheckBox chkTemplate;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
