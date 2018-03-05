@@ -105,6 +105,7 @@
             this.Controls.Add(this.lblGpuhashrate);
             this.Controls.Add(this.pbCardType);
             this.Name = "GpuView";
+            this.Load += new System.EventHandler(this.GpuData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCardType)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
