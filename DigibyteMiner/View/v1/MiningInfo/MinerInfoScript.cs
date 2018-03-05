@@ -8,10 +8,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
 namespace DigibyteMiner.View.v1.MiningInfo
 {
-    public partial class MinerInfoScript : Form,IMinerInfoTab
+    public partial class MinerInfoScript : UserControl
     {
         public IMiner Miner { get; set; }
         MinerInfo m_Parent = null;
@@ -32,12 +31,12 @@ namespace DigibyteMiner.View.v1.MiningInfo
         {
             List<IMinerProgram> programs = Miner.MinerPrograms;
             Button leftbutton = btnTemplate;
-            int i=0;
+            int i = 0;
             foreach (IMinerProgram item in programs)
             {
                 Button btn = new Button();
                 btn.Top = 10;
-                btn.Name = "button"+i.ToString();
+                btn.Name = "button" + i.ToString();
                 btn.Click += btn_Click;
                 btn.Text = item.Type;
                 btn.Left = leftbutton.Left + btnTemplate.Width;
@@ -59,7 +58,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
             AddCheckboxes();
 
         }
-        
+
         public void AddCheckboxes()
         {
             CheckBox leftCheckBox = chkTemplate;
@@ -95,7 +94,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 if (chk != null)
                 {
                     IMinerProgram prog = m_CheckBoxToMiner[chk.Name] as IMinerProgram;
-                    if(prog!=null)
+                    if (prog != null)
                     {
                         Miner.ChangeGPUType(prog);
                     }

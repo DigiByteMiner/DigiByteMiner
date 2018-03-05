@@ -26,7 +26,7 @@ namespace DigibyteMiner.View.v1
         
 
         Control m_Summary = null;
-        Form m_Script =null;
+        Control m_Script = null;
         Form m_Logs = null;
         public MinerInfo(IMiner miner, MainForm parent)
         {
