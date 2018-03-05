@@ -81,7 +81,7 @@
             this.pnlMinerInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMinerInfo.Location = new System.Drawing.Point(19, 45);
             this.pnlMinerInfo.Name = "pnlMinerInfo";
-            this.pnlMinerInfo.Size = new System.Drawing.Size(994, 293);
+            this.pnlMinerInfo.Size = new System.Drawing.Size(1021, 293);
             this.pnlMinerInfo.TabIndex = 14;
             // 
             // MinerInfo
@@ -89,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg3;
+            this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg4;
             this.ClientSize = new System.Drawing.Size(1132, 346);
             this.Controls.Add(this.pnlMinerInfo);
             this.Controls.Add(this.btntabScript);
