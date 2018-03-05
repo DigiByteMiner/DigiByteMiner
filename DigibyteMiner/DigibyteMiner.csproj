@@ -227,7 +227,7 @@
       <DependentUpon>MinerInfoScript.cs</DependentUpon>
     </Compile>
     <Compile Include="View\v1\MiningInfo\MinerInfoSummary.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\v1\MiningInfo\MinerInfoSummary.Designer.cs">
       <DependentUpon>MinerInfoSummary.cs</DependentUpon>

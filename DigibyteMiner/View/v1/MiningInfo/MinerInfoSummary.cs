@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DigibyteMiner.View.v1.MiningInfo
 {
-    public partial class MinerInfoSummary : Form,IMinerInfoTab
+    public partial class MinerInfoSummary : UserControl, IMinerInfoTab
     {
         public IMiner Miner { get; set; }
         MinerInfo m_Parent = null;
@@ -39,7 +39,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
                     GpuView gpu = new GpuView(gpuData, this);
                     pnlGpus.Controls.Add(gpu);
                     gpu.UpdateState(false);
-                   // gpu.Show();
+                    // gpu.Show();
                 }
             }
             catch (Exception e)
@@ -81,6 +81,5 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 Logger.Instance.LogError(e.Message);
             }
         }
-
     }
 }

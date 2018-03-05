@@ -77,7 +77,7 @@
             // pnlMinerInfo
             // 
             this.pnlMinerInfo.AutoScroll = true;
-            this.pnlMinerInfo.BackColor = System.Drawing.Color.White;
+            this.pnlMinerInfo.BackColor = System.Drawing.Color.Transparent;
             this.pnlMinerInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMinerInfo.Location = new System.Drawing.Point(19, 45);
             this.pnlMinerInfo.Name = "pnlMinerInfo";

@@ -25,7 +25,7 @@ namespace DigibyteMiner.View.v1
 
         
 
-        Form m_Summary = null;
+        Control m_Summary = null;
         Form m_Script =null;
         Form m_Logs = null;
         public MinerInfo(IMiner miner, MainForm parent)
@@ -69,12 +69,10 @@ namespace DigibyteMiner.View.v1
             SelectView(btntabInfo);
             ShowTabInfo(m_Summary);
         }
-        public void ShowTabInfo(Form form)
+        public void ShowTabInfo(Control form)
         {
-            form.TopLevel = false;
             pnlMinerInfo.Controls.Clear();
             pnlMinerInfo.Controls.Add(form);
-            form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             IMinerInfoTab tab = form as IMinerInfoTab;
             if (tab != null)
