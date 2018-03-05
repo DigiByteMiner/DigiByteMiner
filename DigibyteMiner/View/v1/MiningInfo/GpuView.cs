@@ -7,10 +7,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
 namespace DigibyteMiner.View.v1.MiningInfo
 {
-    public partial class GpuView : Form
+    public partial class GpuView : UserControl
     {
         public GpuData GpuData { get; set; }
         MinerInfoSummary m_Parent = null;
@@ -24,7 +23,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
         private void GpuData_Load(object sender, EventArgs e)
         {
             Size s = new Size();
-            s.Width=pbCardType.Width+40;
+            s.Width = pbCardType.Width + 40;
             s.Height = 100;
             lblGpuname.MaximumSize = s;
         }
@@ -33,7 +32,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
             try
             {
                 string hashrate = "H: ", shares = "T: ";
-                if(GpuData!=null)
+                if (GpuData != null)
                 {
                     if (GpuData.Make == CardMake.Nvidia)
                         pbCardType.Image = DigibyteMiner.Properties.Resources.nvidia3;
@@ -73,7 +72,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
             catch (Exception e)
             {
             }
-            
+
         }
     }
 }

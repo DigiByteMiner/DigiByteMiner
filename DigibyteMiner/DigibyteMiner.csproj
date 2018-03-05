@@ -196,7 +196,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\v1\MiningInfo\GpuView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\v1\MiningInfo\GpuView.Designer.cs">
       <DependentUpon>GpuView.cs</DependentUpon>

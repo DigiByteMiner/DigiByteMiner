@@ -37,11 +37,9 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 foreach (GpuData gpuData in gpus)
                 {
                     GpuView gpu = new GpuView(gpuData, this);
-                    gpu.TopLevel = false;
                     pnlGpus.Controls.Add(gpu);
-                    gpu.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                     gpu.UpdateState(false);
-                    gpu.Show();
+                   // gpu.Show();
                 }
             }
             catch (Exception e)
@@ -66,11 +64,9 @@ namespace DigibyteMiner.View.v1.MiningInfo
                         foreach (GpuData gpuData in result.GPUs)
                         {
                             GpuView gpu = new GpuView(gpuData, this);
-                            gpu.TopLevel = false;
                             pnlGpus.Controls.Add(gpu);
-                            gpu.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                             gpu.UpdateState(true);
-                            gpu.Show();
+                            //gpu.Show();
                         }
                     }
                 }
