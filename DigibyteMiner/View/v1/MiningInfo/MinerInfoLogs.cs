@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace DigibyteMiner.View.v1.MiningInfo
 {
-    public partial class MinerInfoLogs : Form, IMinerInfoTab
+    public partial class MinerInfoLogs : UserControl, IMinerInfoTab
     {
         public IMiner Miner { get; set; }
         MinerInfo m_Parent = null;
@@ -99,7 +99,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
             catch (Exception e)
             {
             }
-       
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -117,5 +117,9 @@ namespace DigibyteMiner.View.v1.MiningInfo
             {
             }
         }
+
+
+
+
     }
 }

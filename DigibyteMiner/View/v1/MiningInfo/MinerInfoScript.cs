@@ -10,7 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 namespace DigibyteMiner.View.v1.MiningInfo
 {
-    public partial class MinerInfoScript : UserControl
+    public partial class MinerInfoScript : UserControl, IMinerInfoTab
     {
         public IMiner Miner { get; set; }
         MinerInfo m_Parent = null;
