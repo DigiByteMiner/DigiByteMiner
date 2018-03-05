@@ -19,6 +19,7 @@ namespace DigibyteMiner.View.v1.ExtraScreens
 
         private void Help_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
 
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
