@@ -10,7 +10,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+///Use below link if needed to show ui in transparent way
+///https://www.codeproject.com/Articles/42933/Creating-Transparent-Controls-in-NET-Compact-Frame
 namespace DigibyteMiner.View.v1
 {
     public partial class MinerInfo : Form
