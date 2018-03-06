@@ -103,6 +103,7 @@
             // 
             // pbTemplate
             // 
+            this.pbTemplate.BackColor = System.Drawing.Color.Transparent;
             this.pbTemplate.Image = global::DigibyteMiner.Properties.Resources.digibyte;
             this.pbTemplate.Location = new System.Drawing.Point(23, 25);
             this.pbTemplate.Name = "pbTemplate";

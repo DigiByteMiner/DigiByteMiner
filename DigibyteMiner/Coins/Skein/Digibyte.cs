@@ -57,9 +57,13 @@ namespace DigibyteMiner.Skein
             try
             {
                 Pool pool1 = new MiningField("MiningField", "stratum+tcp://us.miningfield.com:3397");
-                Pool pool2 = new DigiHash("DigiHash", "stratum+tcp://digihash.co:3009");
+                Pool pool2 = new Blocksfactory("Blocksfactory", "stratum+tcp://stratum.dgb.theblocksfactory.com:9002");
+                Pool pool3 = new SuperNova("SuperNova", "stratum+tcp://dgbs.suprnova.cc:5226");
+                Pool pool4 = new DigiHash("DigiHash", "stratum+tcp://digihash.co:3009");
                 pools.Add(pool1);
                 pools.Add(pool2);
+                pools.Add(pool3);
+                pools.Add(pool4);
 
                 return pools;
             }
@@ -94,6 +98,62 @@ namespace DigibyteMiner.Skein
                 {
                     acc = "https://dgbskein.miningfield.com/index.php?page=dashboard";
                     
+                }
+                catch (Exception)
+                {
+                }
+                return acc;
+            }
+        }
+        class Blocksfactory : Pool
+        {
+            public Blocksfactory(string name, string url)
+                : base(name, url)
+            {
+                WrongWallet = "Should be Account.Workername";
+
+            }
+            public override bool ValidateAddress(string address)
+            {
+                if (address.Contains('.') && address.IndexOf('.') != address.Length - 1)
+                    return true;
+                return false;
+            }
+            public override string GetAccountLink(string wallet)
+            {
+                string acc = "";
+                try
+                {
+                    acc = "https://dgb-skein.theblocksfactory.com/accountdetails";
+
+                }
+                catch (Exception)
+                {
+                }
+                return acc;
+            }
+        }
+        class SuperNova : Pool
+        {
+            public SuperNova(string name, string url)
+                : base(name, url)
+            {
+                WrongWallet = "Should be Account.Workername";
+
+            }
+            public override bool ValidateAddress(string address)
+            {
+                if (address.Contains('.') && address.IndexOf('.') != address.Length - 1)
+                    return true;
+                return false;
+            }
+            public override string GetAccountLink(string wallet)
+            {
+                string acc = "";
+                try
+                {
+                    acc = "https://dgbs.suprnova.cc/index.php?page=dashboard";
+
                 }
                 catch (Exception)
                 {
