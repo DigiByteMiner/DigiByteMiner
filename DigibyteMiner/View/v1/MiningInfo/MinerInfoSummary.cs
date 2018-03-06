@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DigibyteMiner.View.v1.MiningInfo
 {
-    public partial class MinerInfoSummary : Form,IMinerInfoTab
+    public partial class MinerInfoSummary : UserControl, IMinerInfoTab
     {
         public IMiner Miner { get; set; }
         MinerInfo m_Parent = null;
@@ -37,12 +37,22 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 foreach (GpuData gpuData in gpus)
                 {
                     GpuView gpu = new GpuView(gpuData, this);
-                    gpu.TopLevel = false;
                     pnlGpus.Controls.Add(gpu);
-                    gpu.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                     gpu.UpdateState(false);
-                    gpu.Show();
+                    // gpu.Show();
                 }
+                /*
+                for (int i = 0; i < 5; i++)
+                {
+                    GpuData d = new GpuData("DD");
+                    d.FanSpeed = "45";
+                    d.Hashrate = "35";
+                    d.Temperature = "3";
+                    GpuView gpu = new GpuView(d, this);
+                    pnlGpus.Controls.Add(gpu);
+                    gpu.UpdateState(true);
+                }
+                 */
             }
             catch (Exception e)
             {
@@ -66,11 +76,9 @@ namespace DigibyteMiner.View.v1.MiningInfo
                         foreach (GpuData gpuData in result.GPUs)
                         {
                             GpuView gpu = new GpuView(gpuData, this);
-                            gpu.TopLevel = false;
                             pnlGpus.Controls.Add(gpu);
-                            gpu.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                             gpu.UpdateState(true);
-                            gpu.Show();
+                            //gpu.Show();
                         }
                     }
                 }
@@ -85,6 +93,5 @@ namespace DigibyteMiner.View.v1.MiningInfo
                 Logger.Instance.LogError(e.Message);
             }
         }
-
     }
 }

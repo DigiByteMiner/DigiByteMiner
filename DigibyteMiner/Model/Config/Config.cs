@@ -185,14 +185,12 @@ namespace DigibyteMiner.Model.Config
                 RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
                 if(set)
                 {
-                    if (rkApp.GetValue(regKeystr) == null)
+                    if (rkApp.GetValue(regKeystr) != null)
                     {
-                        rkApp.SetValue(regKeystr, Application.ExecutablePath);
+                        rkApp.DeleteValue(regKeystr);
                     }
-                    else
-                    {
-                        Logger.Instance.LogInfo("Item is alredy there in startup");
-                    }
+                    rkApp.SetValue(regKeystr, Application.ExecutablePath);
+
                 }
                 else
                 {
@@ -209,6 +207,8 @@ namespace DigibyteMiner.Model.Config
             }
             catch (Exception e)
             {
+                Logger.Instance.LogInfo(e.ToString());
+
             }
      
         }

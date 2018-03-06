@@ -196,7 +196,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\v1\MiningInfo\GpuView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\v1\MiningInfo\GpuView.Designer.cs">
       <DependentUpon>GpuView.cs</DependentUpon>
@@ -215,19 +215,19 @@
       <DependentUpon>MinerView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\v1\MiningInfo\MinerInfoLogs.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\v1\MiningInfo\MinerInfoLogs.Designer.cs">
       <DependentUpon>MinerInfoLogs.cs</DependentUpon>
     </Compile>
     <Compile Include="View\v1\MiningInfo\MinerInfoScript.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\v1\MiningInfo\MinerInfoScript.Designer.cs">
       <DependentUpon>MinerInfoScript.cs</DependentUpon>
     </Compile>
     <Compile Include="View\v1\MiningInfo\MinerInfoSummary.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\v1\MiningInfo\MinerInfoSummary.Designer.cs">
       <DependentUpon>MinerInfoSummary.cs</DependentUpon>
@@ -336,6 +336,7 @@
     <None Include="View\v1\Images\selected.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="View\v1\Images\bg4.jpg" />
     <None Include="View\v1\Images\nvidia3.jpg" />
     <None Include="View\v1\Images\amd5.jpg" />
     <None Include="View\v1\Images\bg1.jpg" />

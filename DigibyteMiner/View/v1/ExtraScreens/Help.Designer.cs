@@ -72,17 +72,17 @@
             // 
             this.linkLabel5.AutoSize = true;
             this.linkLabel5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel5.LinkArea = new System.Windows.Forms.LinkArea(59, 13);
+            this.linkLabel5.LinkArea = new System.Windows.Forms.LinkArea(64, 18);
             this.linkLabel5.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel5.LinkColor = System.Drawing.Color.Crimson;
             this.linkLabel5.Location = new System.Drawing.Point(32, 190);
             this.linkLabel5.MaximumSize = new System.Drawing.Size(800, 0);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(678, 22);
+            this.linkLabel5.Size = new System.Drawing.Size(730, 22);
             this.linkLabel5.TabIndex = 23;
             this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Find OneMiner folder and either copy entire folder or just oneminer.json to the s" +
-    "ame location in the new machine ";
+            this.linkLabel5.Text = "Find DigiByteMiner folder and either copy entire folder or just DigiByteminer.jso" +
+    "n to the same location in the new machine ";
             this.linkLabel5.UseCompatibleTextRendering = true;
             // 
             // linkLabel6
@@ -104,7 +104,7 @@
             // 
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel4.LinkArea = new System.Windows.Forms.LinkArea(40, 10);
+            this.linkLabel4.LinkArea = new System.Windows.Forms.LinkArea(115, 0);
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel4.LinkColor = System.Drawing.Color.Crimson;
             this.linkLabel4.Location = new System.Drawing.Point(32, 52);
@@ -112,7 +112,6 @@
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(721, 22);
             this.linkLabel4.TabIndex = 21;
-            this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Click Edit link on the home screen to edit the configuration of the  miner.  It i" +
     "s preconfigured to quickly test out the miner";
             this.linkLabel4.UseCompatibleTextRendering = true;
@@ -136,6 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 331);
             this.Controls.Add(this.linkLabel8);
             this.Controls.Add(this.linkLabel7);

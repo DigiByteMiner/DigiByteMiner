@@ -55,7 +55,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "DigibyteMiner";
+            this.label3.Text = "DigiByteMiner";
             // 
             // label4
             // 
@@ -88,11 +88,11 @@
             this.linkLabel2.Location = new System.Drawing.Point(375, 49);
             this.linkLabel2.MaximumSize = new System.Drawing.Size(500, 0);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(500, 40);
+            this.linkLabel2.Size = new System.Drawing.Size(459, 40);
             this.linkLabel2.TabIndex = 6;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "The code is open source and can be found here. It is distributed  under MIT Licen" +
-    "se  without warrenty.";
+            this.linkLabel2.Text = "The code is open source and can be found here. It is distributed  under LGPL Lice" +
+    "nse  without warrenty.";
             this.linkLabel2.UseCompatibleTextRendering = true;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 

@@ -10,7 +10,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+///Use below link if needed to show ui in transparent way
+///https://www.codeproject.com/Articles/42933/Creating-Transparent-Controls-in-NET-Compact-Frame
 namespace DigibyteMiner.View.v1
 {
     public partial class MinerInfo : Form
@@ -24,9 +25,9 @@ namespace DigibyteMiner.View.v1
 
         
 
-        Form m_Summary = null;
-        Form m_Script =null;
-        Form m_Logs = null;
+        Control m_Summary = null;
+        Control m_Script = null;
+        Control m_Logs = null;
         public MinerInfo(IMiner miner, MainForm parent)
         {
             Miner = miner;
@@ -68,12 +69,10 @@ namespace DigibyteMiner.View.v1
             SelectView(btntabInfo);
             ShowTabInfo(m_Summary);
         }
-        public void ShowTabInfo(Form form)
+        public void ShowTabInfo(Control form)
         {
-            form.TopLevel = false;
             pnlMinerInfo.Controls.Clear();
             pnlMinerInfo.Controls.Add(form);
-            form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             IMinerInfoTab tab = form as IMinerInfoTab;
             if (tab != null)
