@@ -94,7 +94,7 @@ namespace DigibyteMiner.Skein
                     ICoinConfigurer mainCoinConfigurer = mainCoin.SettingsScreen;
                     List<Pool> pools = mainCoin.GetPools();
                     mainCoinConfigurer.Wallet = "asatyarth.arun";
-                    mainCoinConfigurer.Password = "useless007";
+                    mainCoinConfigurer.Password = "xxxx";
                     if(pools.Count>0)
                     {
                         Pool pool = pools[0];
