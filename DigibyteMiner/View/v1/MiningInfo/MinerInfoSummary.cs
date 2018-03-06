@@ -41,6 +41,18 @@ namespace DigibyteMiner.View.v1.MiningInfo
                     gpu.UpdateState(false);
                     // gpu.Show();
                 }
+                /*
+                for (int i = 0; i < 5; i++)
+                {
+                    GpuData d = new GpuData("DD");
+                    d.FanSpeed = "45";
+                    d.Hashrate = "35";
+                    d.Temperature = "3";
+                    GpuView gpu = new GpuView(d, this);
+                    pnlGpus.Controls.Add(gpu);
+                    gpu.UpdateState(true);
+                }
+                 */
             }
             catch (Exception e)
             {

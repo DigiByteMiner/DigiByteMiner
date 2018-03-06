@@ -42,7 +42,7 @@
             this.lblFanSpeed.BackColor = System.Drawing.Color.Transparent;
             this.lblFanSpeed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFanSpeed.ForeColor = System.Drawing.Color.White;
-            this.lblFanSpeed.Location = new System.Drawing.Point(82, 124);
+            this.lblFanSpeed.Location = new System.Drawing.Point(82, 119);
             this.lblFanSpeed.Name = "lblFanSpeed";
             this.lblFanSpeed.Size = new System.Drawing.Size(26, 15);
             this.lblFanSpeed.TabIndex = 17;
@@ -66,7 +66,7 @@
             this.lbltemp.BackColor = System.Drawing.Color.Transparent;
             this.lbltemp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltemp.ForeColor = System.Drawing.Color.White;
-            this.lbltemp.Location = new System.Drawing.Point(18, 124);
+            this.lbltemp.Location = new System.Drawing.Point(18, 119);
             this.lbltemp.Name = "lbltemp";
             this.lbltemp.Size = new System.Drawing.Size(39, 15);
             this.lbltemp.TabIndex = 15;
@@ -78,7 +78,7 @@
             this.lblGpuhashrate.BackColor = System.Drawing.Color.Transparent;
             this.lblGpuhashrate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGpuhashrate.ForeColor = System.Drawing.Color.White;
-            this.lblGpuhashrate.Location = new System.Drawing.Point(18, 106);
+            this.lblGpuhashrate.Location = new System.Drawing.Point(18, 101);
             this.lblGpuhashrate.Name = "lblGpuhashrate";
             this.lblGpuhashrate.Size = new System.Drawing.Size(57, 15);
             this.lblGpuhashrate.TabIndex = 14;
@@ -105,6 +105,7 @@
             this.Controls.Add(this.lblGpuhashrate);
             this.Controls.Add(this.pbCardType);
             this.Name = "GpuView";
+            this.Size = new System.Drawing.Size(150, 141);
             this.Load += new System.EventHandler(this.GpuData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCardType)).EndInit();
             this.ResumeLayout(false);
