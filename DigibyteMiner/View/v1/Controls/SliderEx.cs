@@ -34,8 +34,23 @@ namespace DigibyteMiner.View.v1.Controls
             float distance = m_end - m_start;
             m_control.Location = new Point((int)(pbLine.Location.X+distance*percent), pbLine.Location.Y - m_control.Height / 2);
             lblValue.Text = Value.ToString();
+            color(percent);
 
-
+        }
+        void color(float covered_percent)
+        {
+            if (covered_percent > 0.8)
+            {
+                m_control.BackColor = Color.Maroon;
+            }
+            else if (covered_percent > 0.4)
+            {
+                m_control.BackColor = Color.Gold;
+            }
+            else
+            {
+                m_control.BackColor = Color.SeaGreen;
+            }
         }
         void calculate()
         {
@@ -49,6 +64,8 @@ namespace DigibyteMiner.View.v1.Controls
             if (Value > High)
                 Value = High;
             lblValue.Text = Value.ToString();
+            color(covered_percent);
+   
         }
         private void SliderEx_Load(object sender, EventArgs e)
         {
