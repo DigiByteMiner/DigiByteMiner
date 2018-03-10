@@ -19,13 +19,23 @@ namespace DigibyteMiner.View.v1.Controls
 
         private void SliderEx_Load(object sender, EventArgs e)
         {
+            this.Paint += SliderEx_Paint;
+            Control control = button1;
             //var textbox = new TextBox();
-            pbcaret.Location = new Point(pbLine.Location.X, pbLine.Location.Y-pbcaret.Height/2);
-            pbcaret.MouseDown += new MouseEventHandler(textbox_MouseDown);
-            pbcaret.MouseMove += new MouseEventHandler(textbox_MouseMove);
-            pbcaret.MouseUp += new MouseEventHandler(textbox_MouseUp);
+            control.Location = new Point(pbLine.Location.X, pbLine.Location.Y - control.Height / 2);
+            control.MouseDown += new MouseEventHandler(textbox_MouseDown);
+            control.MouseMove += new MouseEventHandler(textbox_MouseMove);
+            control.MouseUp += new MouseEventHandler(textbox_MouseUp);
 
             //this.Controls.Add(textbox);
+        }
+
+        void SliderEx_Paint(object sender, PaintEventArgs e)
+        {
+            Pen redPen = new Pen(Color.Red, 1);
+
+            // Draw line using float coordinates
+            e.Graphics.DrawLine(redPen, pbLine.Location.X, pbLine.Location.Y, pbLine.Location.X+100, pbLine.Location.Y);
         }
         private Control activeControl;
         private Point previousLocation;
@@ -60,13 +70,13 @@ namespace DigibyteMiner.View.v1.Controls
             activeControl.Location = location;
              */
             var location = activeControl.Location;
-            location.X = pbcaret.Location.X + e.X - previousLocation.X;
+            location.X = activeControl.Location.X + e.X - previousLocation.X;
             if ((location.X < pbLine.Location.X)
-                || ((location.X+pbcaret.Width)> (pbLine.Location.X+pbLine.Width)))
+                || ((location.X + activeControl.Width) > (pbLine.Location.X + pbLine.Width)))
             {
                 return;
             }
-            pbcaret.Location = location;
+            activeControl.Location = location;
 
 
         }
@@ -75,6 +85,11 @@ namespace DigibyteMiner.View.v1.Controls
         {
             activeControl = null;
             Cursor = Cursors.Default;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
