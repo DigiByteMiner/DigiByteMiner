@@ -74,6 +74,9 @@ namespace DigibyteMiner.Coins
         public string MinerEXE { get; set; }
         public string BATFILE { get; set; }
         public bool BATCopied { get; set; }
+        public int MiningIntensityLow { get; set; }
+        public int MiningIntensityHigh { get; set; }
+        public int MiningIntensity { get; set; }
 
         public bool AutomaticScriptGeneration { get; set; }
 

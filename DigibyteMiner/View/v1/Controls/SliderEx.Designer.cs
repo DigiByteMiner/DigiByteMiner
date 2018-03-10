@@ -32,6 +32,7 @@
             this.pbcaret = new System.Windows.Forms.PictureBox();
             this.pbLine = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbcaret)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLine)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +42,7 @@
             this.lblValue.AutoSize = true;
             this.lblValue.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValue.ForeColor = System.Drawing.Color.White;
-            this.lblValue.Location = new System.Drawing.Point(3, 3);
+            this.lblValue.Location = new System.Drawing.Point(3, 1);
             this.lblValue.Name = "lblValue";
             this.lblValue.Size = new System.Drawing.Size(27, 17);
             this.lblValue.TabIndex = 3;
@@ -62,7 +63,7 @@
             // pbLine
             // 
             this.pbLine.BackColor = System.Drawing.Color.Black;
-            this.pbLine.Location = new System.Drawing.Point(33, 11);
+            this.pbLine.Location = new System.Drawing.Point(33, 9);
             this.pbLine.Name = "pbLine";
             this.pbLine.Size = new System.Drawing.Size(160, 4);
             this.pbLine.TabIndex = 1;
@@ -71,24 +72,36 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(51, 1);
+            this.button1.Location = new System.Drawing.Point(51, -1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(24, 23);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(209, 1);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(27, 17);
+            this.lblName.TabIndex = 5;
+            this.lblName.Text = "NA";
+            // 
             // SliderEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblValue);
             this.Controls.Add(this.pbcaret);
             this.Controls.Add(this.pbLine);
             this.Name = "SliderEx";
-            this.Size = new System.Drawing.Size(193, 34);
+            this.Size = new System.Drawing.Size(332, 23);
             this.Load += new System.EventHandler(this.SliderEx_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbcaret)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLine)).EndInit();
@@ -103,5 +116,6 @@
         private System.Windows.Forms.PictureBox pbcaret;
         private System.Windows.Forms.Label lblValue;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblName;
     }
 }

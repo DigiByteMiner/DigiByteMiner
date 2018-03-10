@@ -84,6 +84,9 @@ namespace DigibyteMiner.Coins.Skein
             Type = "AMD";
             GPUType = CardMake.Amd;
             OutputReader = new CGReader(STATS_LINK, STATS_LINK_PORT);
+            MiningIntensityLow = 2;
+            MiningIntensityHigh = 19;
+            MiningIntensity = 7;
         }
 
         public override string GenerateScript()

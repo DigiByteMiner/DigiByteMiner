@@ -27,6 +27,9 @@ namespace DigibyteMiner.Core.Interfaces
         bool Enabled { get; set; }
         IOutputReader OutputReader { get; set; }
 
+        int MiningIntensityLow { get; set; }
+        int MiningIntensityHigh { get; set; }
+        int MiningIntensity { get; set; }
 
 
         //if script HashSet been changed manually, WeakReference CannotUnloadAppDomainException generate script automatically anymore

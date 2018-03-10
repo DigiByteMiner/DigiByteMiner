@@ -50,9 +50,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblSliderLocation = new System.Windows.Forms.Label();
+            this.lblSliderLocation1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.lblSliderLocation2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +73,7 @@
             // btnStartMining
             // 
             this.btnStartMining.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartMining.Location = new System.Drawing.Point(531, 181);
+            this.btnStartMining.Location = new System.Drawing.Point(531, 219);
             this.btnStartMining.Name = "btnStartMining";
             this.btnStartMining.Size = new System.Drawing.Size(79, 28);
             this.btnStartMining.TabIndex = 32;
@@ -319,7 +320,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(142, 212);
+            this.button1.Location = new System.Drawing.Point(140, 219);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 28);
             this.button1.TabIndex = 50;
@@ -327,18 +328,18 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblSliderLocation
+            // lblSliderLocation1
             // 
-            this.lblSliderLocation.AutoSize = true;
-            this.lblSliderLocation.BackColor = System.Drawing.Color.Transparent;
-            this.lblSliderLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSliderLocation.ForeColor = System.Drawing.Color.White;
-            this.lblSliderLocation.Location = new System.Drawing.Point(242, 168);
-            this.lblSliderLocation.Name = "lblSliderLocation";
-            this.lblSliderLocation.Size = new System.Drawing.Size(85, 17);
-            this.lblSliderLocation.TabIndex = 53;
-            this.lblSliderLocation.Text = "Defaultname";
-            this.lblSliderLocation.Visible = false;
+            this.lblSliderLocation1.AutoSize = true;
+            this.lblSliderLocation1.BackColor = System.Drawing.Color.Transparent;
+            this.lblSliderLocation1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSliderLocation1.ForeColor = System.Drawing.Color.White;
+            this.lblSliderLocation1.Location = new System.Drawing.Point(242, 168);
+            this.lblSliderLocation1.Name = "lblSliderLocation1";
+            this.lblSliderLocation1.Size = new System.Drawing.Size(85, 17);
+            this.lblSliderLocation1.TabIndex = 53;
+            this.lblSliderLocation1.Text = "Defaultname";
+            this.lblSliderLocation1.Visible = false;
             // 
             // label11
             // 
@@ -364,6 +365,19 @@
             this.label12.TabIndex = 51;
             this.label12.Text = "Intensity";
             // 
+            // lblSliderLocation2
+            // 
+            this.lblSliderLocation2.AutoSize = true;
+            this.lblSliderLocation2.BackColor = System.Drawing.Color.Transparent;
+            this.lblSliderLocation2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSliderLocation2.ForeColor = System.Drawing.Color.White;
+            this.lblSliderLocation2.Location = new System.Drawing.Point(242, 192);
+            this.lblSliderLocation2.Name = "lblSliderLocation2";
+            this.lblSliderLocation2.Size = new System.Drawing.Size(85, 17);
+            this.lblSliderLocation2.TabIndex = 54;
+            this.lblSliderLocation2.Text = "Defaultname";
+            this.lblSliderLocation2.Visible = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,7 +385,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg1;
             this.ClientSize = new System.Drawing.Size(1129, 465);
-            this.Controls.Add(this.lblSliderLocation);
+            this.Controls.Add(this.lblSliderLocation2);
+            this.Controls.Add(this.lblSliderLocation1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button1);
@@ -430,8 +445,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblSliderLocation;
+        private System.Windows.Forms.Label lblSliderLocation1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblSliderLocation2;
     }
 }

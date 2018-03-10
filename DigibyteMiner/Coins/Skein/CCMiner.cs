@@ -85,6 +85,9 @@ namespace DigibyteMiner.Coins.Skein
             Type = "Nvidia";
             GPUType = CardMake.Nvidia;
             OutputReader = new CCReader(STATS_LINK, STATS_LINK_PORT);
+            MiningIntensityLow = 6;
+            MiningIntensityHigh = 28;
+            MiningIntensity = 19;
         }
 
         public override string GenerateScript()

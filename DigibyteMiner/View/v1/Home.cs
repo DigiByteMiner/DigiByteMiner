@@ -42,12 +42,23 @@ namespace DigibyteMiner.View.v1
         }
         private void Home_Load(object sender, EventArgs e)
         {
-            SliderEx ex = new SliderEx();
-            ex.Location = lblSliderLocation.Location;
-            ex.Low = 2;
-            ex.Value = 5;
-            ex.High = 19;
-            this.Controls.Add(ex);
+            List<Label> placeHolders = new List<Label>();
+            placeHolders.Add(lblSliderLocation1);
+            placeHolders.Add(lblSliderLocation2);
+            int i = 0;
+            foreach (IMinerProgram item in Miner.ActualMinerPrograms)
+            {
+                SliderEx ex = new SliderEx();
+                ex.Location = placeHolders[i].Location;
+                ex.Low = item.MiningIntensityLow;
+                ex.Value = item.MiningIntensity;
+                ex.High = item.MiningIntensityHigh;
+                ex.Name = item.Type;
+                ex.Program = item;
+                this.Controls.Add(ex);
+                i++;
+            }
+     
 
             Setlabels();
             /*

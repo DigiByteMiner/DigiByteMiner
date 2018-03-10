@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DigibyteMiner.Core.Interfaces;
 
 namespace DigibyteMiner.View.v1.Controls
 {
@@ -16,8 +17,11 @@ namespace DigibyteMiner.View.v1.Controls
         int m_end = 0;
         public int Low { get; set; }
         public int High { get; set; }
+        public IMinerProgram Program { get; set; }
+        public string NAME { get; set; }
         public int Value { get; set; }
         Control m_control = null;//slider
+
 
         public SliderEx()
         {
@@ -39,11 +43,11 @@ namespace DigibyteMiner.View.v1.Controls
         }
         void color(float covered_percent)
         {
-            if (covered_percent > 0.8)
+            if (covered_percent > 0.83)
             {
                 m_control.BackColor = Color.Maroon;
             }
-            else if (covered_percent > 0.4)
+            else if (covered_percent > 0.6)
             {
                 m_control.BackColor = Color.Gold;
             }
@@ -69,7 +73,7 @@ namespace DigibyteMiner.View.v1.Controls
         }
         private void SliderEx_Load(object sender, EventArgs e)
         {
-
+            lblName.Text = Name;
             this.Paint += SliderEx_Paint;
             m_control = button1;
             //var textbox = new TextBox();
