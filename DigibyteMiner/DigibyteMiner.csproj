@@ -120,6 +120,12 @@
       <DependentUpon>EditMinerContainer.cs</DependentUpon>
     </Compile>
     <Compile Include="View\v1\AddMinerScreen\IMinerContainer.cs" />
+    <Compile Include="View\v1\Controls\SliderEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\v1\Controls\SliderEx.Designer.cs">
+      <DependentUpon>SliderEx.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\v1\Corousal\ProfitabilitySummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     <EmbeddedResource Include="View\v1\AddMinerScreen\EditMinerContainer.resx">
       <DependentUpon>EditMinerContainer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\Controls\SliderEx.resx">
+      <DependentUpon>SliderEx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\v1\Corousal\ProfitabilitySummary.resx">
       <DependentUpon>ProfitabilitySummary.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +345,7 @@
     <None Include="View\v1\Images\selected.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="View\v1\Images\slider1.png" />
     <None Include="View\v1\Images\bg4.jpg" />
     <None Include="View\v1\Images\nvidia3.jpg" />
     <None Include="View\v1\Images\amd5.jpg" />
