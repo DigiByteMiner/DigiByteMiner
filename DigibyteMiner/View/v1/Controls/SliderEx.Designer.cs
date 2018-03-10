@@ -39,9 +39,11 @@
             // lblValue
             // 
             this.lblValue.AutoSize = true;
-            this.lblValue.Location = new System.Drawing.Point(6, 17);
+            this.lblValue.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValue.ForeColor = System.Drawing.Color.White;
+            this.lblValue.Location = new System.Drawing.Point(3, 3);
             this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(22, 13);
+            this.lblValue.Size = new System.Drawing.Size(27, 17);
             this.lblValue.TabIndex = 3;
             this.lblValue.Text = "NA";
             // 
@@ -60,16 +62,16 @@
             // pbLine
             // 
             this.pbLine.BackColor = System.Drawing.Color.Black;
-            this.pbLine.Location = new System.Drawing.Point(34, 23);
+            this.pbLine.Location = new System.Drawing.Point(33, 11);
             this.pbLine.Name = "pbLine";
-            this.pbLine.Size = new System.Drawing.Size(100, 4);
+            this.pbLine.Size = new System.Drawing.Size(160, 4);
             this.pbLine.TabIndex = 1;
             this.pbLine.TabStop = false;
             this.pbLine.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(52, 13);
+            this.button1.Location = new System.Drawing.Point(51, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(24, 23);
             this.button1.TabIndex = 4;
@@ -86,7 +88,7 @@
             this.Controls.Add(this.pbcaret);
             this.Controls.Add(this.pbLine);
             this.Name = "SliderEx";
-            this.Size = new System.Drawing.Size(442, 172);
+            this.Size = new System.Drawing.Size(193, 34);
             this.Load += new System.EventHandler(this.SliderEx_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbcaret)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLine)).EndInit();

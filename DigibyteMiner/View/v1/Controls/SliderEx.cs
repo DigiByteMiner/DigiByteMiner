@@ -12,20 +12,59 @@ namespace DigibyteMiner.View.v1.Controls
 {
     public partial class SliderEx : UserControl
     {
+        int m_start = 0;
+        int m_end = 0;
+        public int Low { get; set; }
+        public int High { get; set; }
+        public int Value { get; set; }
+        Control m_control = null;//slider
+
         public SliderEx()
         {
+            Low = 0;
+            High = 100;
             InitializeComponent();
         }
+        void init()
+        {
+            float actual = Value - Low;
+            float range = High - Low;
+            float percent = actual / range;
 
+            float distance = m_end - m_start;
+            m_control.Location = new Point((int)(pbLine.Location.X+distance*percent), pbLine.Location.Y - m_control.Height / 2);
+            lblValue.Text = Value.ToString();
+
+
+        }
+        void calculate()
+        {
+            float distance = m_end - m_start;
+            float covered = m_control.Location.X - m_start;
+            float covered_percent = covered / distance;
+            //Value = Low + (int)((High - Low) * covered_percent);
+            Value = Low + (int)((High - Low-Low) * covered_percent);
+            if (Value < Low)
+                Value = Low;
+            if (Value > High)
+                Value = High;
+            lblValue.Text = Value.ToString();
+        }
         private void SliderEx_Load(object sender, EventArgs e)
         {
+
             this.Paint += SliderEx_Paint;
-            Control control = button1;
+            m_control = button1;
             //var textbox = new TextBox();
-            control.Location = new Point(pbLine.Location.X, pbLine.Location.Y - control.Height / 2);
-            control.MouseDown += new MouseEventHandler(textbox_MouseDown);
-            control.MouseMove += new MouseEventHandler(textbox_MouseMove);
-            control.MouseUp += new MouseEventHandler(textbox_MouseUp);
+            m_control.Location = new Point(pbLine.Location.X, pbLine.Location.Y - m_control.Height / 2);
+
+            m_start = pbLine.Location.X;
+            m_end = pbLine.Location.X + pbLine.Width - pbcaret.Width;
+
+            m_control.MouseDown += new MouseEventHandler(textbox_MouseDown);
+            m_control.MouseMove += new MouseEventHandler(textbox_MouseMove);
+            m_control.MouseUp += new MouseEventHandler(textbox_MouseUp);
+            init();
 
             //this.Controls.Add(textbox);
         }
@@ -35,7 +74,7 @@ namespace DigibyteMiner.View.v1.Controls
             Pen redPen = new Pen(Color.Red, 1);
 
             // Draw line using float coordinates
-            e.Graphics.DrawLine(redPen, pbLine.Location.X, pbLine.Location.Y, pbLine.Location.X+100, pbLine.Location.Y);
+            e.Graphics.DrawLine(redPen, pbLine.Location.X, pbLine.Location.Y, pbLine.Location.X+pbLine.Width, pbLine.Location.Y);
         }
         private Control activeControl;
         private Point previousLocation;
@@ -56,19 +95,6 @@ namespace DigibyteMiner.View.v1.Controls
         {
             if (activeControl == null || activeControl != sender)
                 return;
-            /*
-            var location = activeControl.Location;
-           // location.Offset(e.Location.X - previousLocation.X, e.Location.Y - previousLocation.Y);
-            int actual_x = pbcaret.Location.X +e.Location.X;
-            lblValue.Text = actual_x.ToString();
-
-            if (pbcaret.Location.X < pbLine.Location.X ||
-                actual_x > (pbLine.Location.X + pbLine.Width))
-                return;
-
-            location.Offset(e.Location.X - previousLocation.X, 0);
-            activeControl.Location = location;
-             */
             var location = activeControl.Location;
             location.X = activeControl.Location.X + e.X - previousLocation.X;
             if ((location.X < pbLine.Location.X)
@@ -77,7 +103,7 @@ namespace DigibyteMiner.View.v1.Controls
                 return;
             }
             activeControl.Location = location;
-
+            calculate();
 
         }
 

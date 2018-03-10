@@ -1,6 +1,7 @@
 ﻿using DigibyteMiner.Core;
 using DigibyteMiner.Core.Interfaces;
 using DigibyteMiner.View.v1.AddMinerScreen;
+using DigibyteMiner.View.v1.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +42,13 @@ namespace DigibyteMiner.View.v1
         }
         private void Home_Load(object sender, EventArgs e)
         {
+            SliderEx ex = new SliderEx();
+            ex.Location = lblSliderLocation.Location;
+            ex.Low = 2;
+            ex.Value = 5;
+            ex.High = 19;
+            this.Controls.Add(ex);
+
             Setlabels();
             /*
             this.ContextMenuStrip = optionsMenu;
