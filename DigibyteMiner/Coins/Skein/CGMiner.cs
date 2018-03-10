@@ -100,6 +100,7 @@ namespace DigibyteMiner.Coins.Skein
                 if (pwd.Length == 0)
                     pwd = " x ";
                 command += " -p " + pwd;
+                command += " -I " + MiningIntensity.ToString();
 
                 command += " --api-listen ";
 

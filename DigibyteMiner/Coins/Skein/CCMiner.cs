@@ -101,6 +101,7 @@ namespace DigibyteMiner.Coins.Skein
                 if (pwd.Length == 0)
                     pwd = " x ";
                 command += " -p " + pwd;
+                command += " -i " + MiningIntensity.ToString();
 
                 command += " --api-bind " + STATS_LINK + ":" + STATS_LINK_PORT;
 

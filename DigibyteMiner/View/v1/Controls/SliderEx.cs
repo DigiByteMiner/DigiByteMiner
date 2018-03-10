@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DigibyteMiner.Core.Interfaces;
+using DigibyteMiner.Coins;
 
 namespace DigibyteMiner.View.v1.Controls
 {
@@ -132,6 +133,8 @@ namespace DigibyteMiner.View.v1.Controls
         {
             activeControl = null;
             Cursor = Cursors.Default;
+            Program.MiningIntensity = Value;
+            ((MinerProgramBase) Program).ConfigureMiner();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
