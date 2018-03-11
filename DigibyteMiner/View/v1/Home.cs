@@ -39,9 +39,19 @@ namespace DigibyteMiner.View.v1
             lblAlgorithm.Text = Miner.MainCoin.Algorithm.Name;
             lblPool.Text = Miner.MainCoin.SettingsScreen.Pool;
             lblWallet.Text = Miner.MainCoin.SettingsScreen.Wallet;
+
         }
-        private void Home_Load(object sender, EventArgs e)
+        public void SetIntensityControl()
         {
+            //if (!Miner.DefaultMiner)
+            //{
+            foreach (Control item in this.Controls)
+            {
+                if (item.GetType() == typeof(SliderEx))
+                {
+                    this.Controls.Remove(item);
+                }
+            }
             List<Label> placeHolders = new List<Label>();
             placeHolders.Add(lblSliderLocation1);
             placeHolders.Add(lblSliderLocation2);
@@ -58,9 +68,13 @@ namespace DigibyteMiner.View.v1
                 this.Controls.Add(ex);
                 i++;
             }
-     
-
+            // }
+        }
+        private void Home_Load(object sender, EventArgs e)
+        {
+            SetIntensityControl();
             Setlabels();
+
             /*
             this.ContextMenuStrip = optionsMenu;
             pbTemplate.Click += FormFocus_handler_Click;
@@ -76,11 +90,12 @@ namespace DigibyteMiner.View.v1
         {
             //m_Parent.ChangeMiningView(this);
         }
-        public void UpdateState()
+        public void UpdateState(bool reDrawAll)
         {
             CalculateTotalHashrate();
             Setlabels();
-
+            if (reDrawAll)
+                SetIntensityControl();                
             UiStateUtil.UpdateState(Miner,lblMinerState, btnStartMining,null);
         }
         public void CalculateTotalHashrate()

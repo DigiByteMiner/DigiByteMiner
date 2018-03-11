@@ -109,7 +109,7 @@ namespace DigibyteMiner
                         Home home = item as Home;
                         if (home != null)
                         {
-                            home.UpdateState();
+                            home.UpdateState(false);
                         }
                         //Todo: this seems to be a duplicate call as timer invokes this separately. analyze
                         //MinerInfo.UpdateState();
@@ -224,7 +224,7 @@ namespace DigibyteMiner
                 view.Miner = miner;
                 if(view!=null)
                 {
-                    view.UpdateState();
+                    view.UpdateState(true);
                 }
             }
             else
@@ -233,7 +233,7 @@ namespace DigibyteMiner
                 view.TopLevel = false;
                 pnlMainInfo.Controls.Add(view);
                 view.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                view.UpdateState();
+                view.UpdateState(false);
                 view.Show();
             }
 
