@@ -48,6 +48,7 @@
             this.lblDgbMonthly = new System.Windows.Forms.Label();
             this.lblDigDaily = new System.Windows.Forms.Label();
             this.lblWarning = new System.Windows.Forms.Label();
+            this.btnRotate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHeading
@@ -291,6 +292,18 @@
             this.lblWarning.TabIndex = 77;
             this.lblWarning.Text = "Profitability calculation will be done after you run miner for the first time!";
             // 
+            // btnRotate
+            // 
+            this.btnRotate.BackColor = System.Drawing.Color.Transparent;
+            this.btnRotate.BackgroundImage = global::DigibyteMiner.Properties.Resources.rotate;
+            this.btnRotate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRotate.Location = new System.Drawing.Point(251, 10);
+            this.btnRotate.Name = "btnRotate";
+            this.btnRotate.Size = new System.Drawing.Size(33, 33);
+            this.btnRotate.TabIndex = 80;
+            this.btnRotate.UseVisualStyleBackColor = false;
+            this.btnRotate.Click += new System.EventHandler(this.btnRotate_Click_1);
+            // 
             // ProfitabilitySummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +311,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg2;
             this.ClientSize = new System.Drawing.Size(354, 278);
+            this.Controls.Add(this.btnRotate);
             this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.lblDgbWeekly);
             this.Controls.Add(this.lblDgbYear);
@@ -349,5 +363,6 @@
         private System.Windows.Forms.Label lblDgbMonthly;
         private System.Windows.Forms.Label lblDigDaily;
         private System.Windows.Forms.Label lblWarning;
+        private System.Windows.Forms.Button btnRotate;
     }
 }

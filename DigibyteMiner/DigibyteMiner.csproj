@@ -354,6 +354,7 @@
     <None Include="View\v1\Images\selected.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="View\v1\Images\rotate.png" />
     <None Include="View\v1\Images\slider1.png" />
     <None Include="View\v1\Images\bg4.jpg" />
     <None Include="View\v1\Images\nvidia3.jpg" />

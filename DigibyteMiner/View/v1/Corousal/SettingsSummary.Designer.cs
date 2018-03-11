@@ -45,6 +45,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnRotate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblRunningTime
@@ -255,6 +256,18 @@
             this.label13.TabIndex = 39;
             this.label13.Text = "Mine on Launch";
             // 
+            // btnRotate
+            // 
+            this.btnRotate.BackColor = System.Drawing.Color.Transparent;
+            this.btnRotate.BackgroundImage = global::DigibyteMiner.Properties.Resources.rotate;
+            this.btnRotate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRotate.Location = new System.Drawing.Point(251, 11);
+            this.btnRotate.Name = "btnRotate";
+            this.btnRotate.Size = new System.Drawing.Size(33, 33);
+            this.btnRotate.TabIndex = 79;
+            this.btnRotate.UseVisualStyleBackColor = false;
+            this.btnRotate.Click += new System.EventHandler(this.btnRotate_Click);
+            // 
             // SettingsSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +275,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundImage = global::DigibyteMiner.Properties.Resources.bg2;
             this.ClientSize = new System.Drawing.Size(390, 267);
+            this.Controls.Add(this.btnRotate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblShowMinerUi);
@@ -307,5 +321,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnRotate;
     }
 }

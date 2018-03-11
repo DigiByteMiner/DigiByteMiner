@@ -15,6 +15,8 @@ namespace DigibyteMiner.View.v1.Corousal
 {
     public partial class SettingsSummary : Form
     {
+        public Form Creator { get; set; }
+
         public SettingsSummary()
         {
             InitializeComponent();
@@ -94,6 +96,12 @@ namespace DigibyteMiner.View.v1.Corousal
         {
             Settings settings = new Settings();
             settings.ShowDialog();
+        }
+
+        private void btnRotate_Click(object sender, EventArgs e)
+        {
+            ((MainForm)Creator).Rotateimage();
+
         }
     }
 }

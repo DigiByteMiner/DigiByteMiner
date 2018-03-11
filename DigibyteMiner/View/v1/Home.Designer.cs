@@ -109,9 +109,9 @@
             // 
             this.pbTemplate.BackColor = System.Drawing.Color.Transparent;
             this.pbTemplate.Image = global::DigibyteMiner.Properties.Resources.digibyte;
-            this.pbTemplate.Location = new System.Drawing.Point(13, 19);
+            this.pbTemplate.Location = new System.Drawing.Point(12, 15);
             this.pbTemplate.Name = "pbTemplate";
-            this.pbTemplate.Size = new System.Drawing.Size(91, 94);
+            this.pbTemplate.Size = new System.Drawing.Size(110, 110);
             this.pbTemplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTemplate.TabIndex = 28;
             this.pbTemplate.TabStop = false;
