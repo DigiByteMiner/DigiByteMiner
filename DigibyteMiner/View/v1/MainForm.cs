@@ -58,6 +58,8 @@ namespace DigibyteMiner
 
             oneMinerNotifyIcon.Click += oneMinerNotifyIcon_Click;
             m_ProfitabilitySummary.Init();
+            m_SettingsSummary.Creator = this;
+            m_ProfitabilitySummary.Creator = this;
         }
 
 
@@ -161,12 +163,8 @@ namespace DigibyteMiner
 
             base.WndProc(ref m);
         }
-        void t_Tick()
+        public void Rotateimage()
         {
-            TimeSpan elapsedTime = DateTime.Now - m_LastCarousalTurn;
-            if (elapsedTime.Seconds < CAROUSAL_WAIT)
-                return;
-            m_LastCarousalTurn = DateTime.Now;
             Form previous = m_Corousals.ElementAt<Form>(m_CurrentCarousal);
             m_CurrentCarousal++;
             if (m_CurrentCarousal >= m_Corousals.Count)
@@ -176,6 +174,14 @@ namespace DigibyteMiner
 
             RemoveFromView(previous);
             BringToView(next);
+        }
+        void t_Tick()
+        {
+            TimeSpan elapsedTime = DateTime.Now - m_LastCarousalTurn;
+            if (elapsedTime.Seconds < CAROUSAL_WAIT)
+                return;
+            m_LastCarousalTurn = DateTime.Now;
+            Rotateimage();
         }
 
         private Panel ClonePanel(Panel p)

@@ -15,6 +15,7 @@ namespace DigibyteMiner.View.v1.Corousal
     public partial class ProfitabilitySummary : Form
     {
         DateTime lastTime = DateTime.Now;
+        public Form Creator { get; set; }
         public ProfitabilitySummary()
         {
             InitializeComponent();
@@ -76,6 +77,12 @@ namespace DigibyteMiner.View.v1.Corousal
             }
      
 
+        }
+
+
+        private void btnRotate_Click_1(object sender, EventArgs e)
+        {
+            ((MainForm)Creator).Rotateimage();
         }
     }
 }
