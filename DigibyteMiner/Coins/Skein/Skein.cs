@@ -162,6 +162,7 @@ namespace DigibyteMiner.Skein
                     }
                 }
                 miner = CreateMiner(minerData.Id, mainCoin, minerData.DualMining, dualCoin, minerData.Name,minerData);
+                miner.HashRate = minerData.HashRate;
                // miner.MinerGpuType = minerData.MinerGpuType;
                 miner.InitializePrograms();
 

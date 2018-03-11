@@ -26,7 +26,7 @@ namespace DigibyteMiner
         List<Form> m_Corousals = new List<Form>();
         int m_CurrentCarousal = 0;
         DateTime m_LastCarousalTurn = DateTime.Now;
-        private const int CAROUSAL_WAIT=60;
+        private const int CAROUSAL_WAIT=45;
         public MinerView MinerView { get; set; }//the selected minerview. not the activated one. this is the one which was clicked. 
         public MinerInfo MinerInfo { get; set; }//the selected minerInfo. not the activated one. this is the one which was clicked. We need this object to show the logs etc
         WebBrowserEx m_DownloaderBrowser = new WebBrowserEx();
@@ -57,7 +57,7 @@ namespace DigibyteMiner
             Factory.Instance.ViewObject.RegisterForTimer(UpDateMinerState);
 
             oneMinerNotifyIcon.Click += oneMinerNotifyIcon_Click;
-
+            m_ProfitabilitySummary.Init();
         }
 
 
@@ -79,7 +79,6 @@ namespace DigibyteMiner
         {
             m_Corousals.Add(m_SettingsSummary);
             m_Corousals.Add(m_ProfitabilitySummary);
-
             Form next = m_Corousals.ElementAt<Form>(m_CurrentCarousal);
             BringToView(next);
 
@@ -109,7 +108,7 @@ namespace DigibyteMiner
                         Home home = item as Home;
                         if (home != null)
                         {
-                            home.UpdateState();
+                            home.UpdateState(false);
                         }
                         //Todo: this seems to be a duplicate call as timer invokes this separately. analyze
                         //MinerInfo.UpdateState();
@@ -164,7 +163,6 @@ namespace DigibyteMiner
         }
         void t_Tick()
         {
-            return;//Enable this after profitability is implemented
             TimeSpan elapsedTime = DateTime.Now - m_LastCarousalTurn;
             if (elapsedTime.Seconds < CAROUSAL_WAIT)
                 return;
@@ -224,7 +222,7 @@ namespace DigibyteMiner
                 view.Miner = miner;
                 if(view!=null)
                 {
-                    view.UpdateState();
+                    view.UpdateState(true);
                 }
             }
             else
@@ -233,7 +231,7 @@ namespace DigibyteMiner
                 view.TopLevel = false;
                 pnlMainInfo.Controls.Add(view);
                 view.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                view.UpdateState();
+                view.UpdateState(false);
                 view.Show();
             }
 
@@ -315,6 +313,12 @@ namespace DigibyteMiner
         void oneMinerNotifyIcon_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void profitabilityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Profitability s = new Profitability();
+            s.ShowDialog();
         }
 
 

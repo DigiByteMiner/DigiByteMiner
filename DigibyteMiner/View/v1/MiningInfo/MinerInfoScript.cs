@@ -179,7 +179,7 @@ namespace DigibyteMiner.View.v1.MiningInfo
             if (m_currentButton != null)
             {
                 IMinerProgram prog = m_ButtonToMiner[m_currentButton.Name] as IMinerProgram;
-                string script = prog.GenerateScript();
+                string script = prog.GenerateScript(true);
                 txtScriptArea.Text = script;
                 DisableEdit();
 

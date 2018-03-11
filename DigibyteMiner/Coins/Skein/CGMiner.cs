@@ -84,9 +84,12 @@ namespace DigibyteMiner.Coins.Skein
             Type = "AMD";
             GPUType = CardMake.Amd;
             OutputReader = new CGReader(STATS_LINK, STATS_LINK_PORT);
+            MiningIntensityLow = 2;
+            MiningIntensityHigh = 19;
+            MiningIntensity = 7;
         }
 
-        public override string GenerateScript()
+        public override string GenerateScript(bool saveScript)
         {
             try
             {
@@ -97,13 +100,15 @@ namespace DigibyteMiner.Coins.Skein
                 if (pwd.Length == 0)
                     pwd = " x ";
                 command += " -p " + pwd;
+                command += " -I " + MiningIntensity.ToString();
 
                 command += " --api-listen ";
 
 
                 Script = SCRIPT1 + command;
                 AutomaticScriptGeneration = true;
-                SaveScriptToDB();
+                if(saveScript)
+                    SaveScriptToDB();
                 return Script;
             }
             catch (Exception e)

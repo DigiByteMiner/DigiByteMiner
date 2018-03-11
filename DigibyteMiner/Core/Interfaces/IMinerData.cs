@@ -31,6 +31,7 @@ namespace DigibyteMiner.Core.Interfaces
         string DualCoinPoolAccount { get; set; }
         List<MinerScript> MinerScripts { get; set; }
         int MinerGpuType { get; set; }
+        string HashRate { get; set; }
 
 
     }

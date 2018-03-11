@@ -12,6 +12,7 @@ namespace DigibyteMiner.Core
         private const int CORE_ALARM_INTERVAL = 10000;
         private const int CORE_ALARM_DELAY_START = 5000;
         static event OneMinerTimerEvent m_Events;
+        static event OneMinerTimerEvent m_EventsPermanent;
         static Timer m_timer = null;
         static Alarm()
         {
@@ -27,6 +28,12 @@ namespace DigibyteMiner.Core
                     if (delegates.Length > 0)
                         m_Events.Invoke();
                 }
+                if (m_EventsPermanent != null)
+                {
+                    Delegate[] delegates = m_EventsPermanent.GetInvocationList();
+                    if (delegates.Length > 0)
+                        m_EventsPermanent.Invoke();
+                }
             }
             catch (Exception e)
             {
@@ -36,6 +43,10 @@ namespace DigibyteMiner.Core
         public static void RegisterForTimer(OneMinerTimerEvent fun)
         {
             m_Events += fun;
+        }
+        public static void RegisterForTimerPermanent(OneMinerTimerEvent fun)
+        {
+            m_EventsPermanent += fun;
         }
         public static void Clear()
         {

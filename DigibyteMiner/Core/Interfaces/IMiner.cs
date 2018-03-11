@@ -12,6 +12,7 @@ namespace DigibyteMiner.Core.Interfaces
         string Name { get; set; }
         bool DualMining { get; set; }
         string Id { get; set; }
+        string HashRate { get; set; }
         List<IMinerProgram> MinerPrograms { get; set; }
         List<IMinerProgram> ActualMinerPrograms { get; set; }
 

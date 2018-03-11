@@ -120,6 +120,12 @@
       <DependentUpon>EditMinerContainer.cs</DependentUpon>
     </Compile>
     <Compile Include="View\v1\AddMinerScreen\IMinerContainer.cs" />
+    <Compile Include="View\v1\Controls\SliderEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\v1\Controls\SliderEx.Designer.cs">
+      <DependentUpon>SliderEx.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\v1\Corousal\ProfitabilitySummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,12 @@
     </Compile>
     <Compile Include="View\v1\ExtraScreens\Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\v1\ExtraScreens\Profitability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\ExtraScreens\Profitability.Designer.cs">
+      <DependentUpon>Profitability.cs</DependentUpon>
     </Compile>
     <Compile Include="View\v1\ExtraScreens\Settings.cs">
       <SubType>Form</SubType>
@@ -248,6 +260,9 @@
     <EmbeddedResource Include="View\v1\AddMinerScreen\EditMinerContainer.resx">
       <DependentUpon>EditMinerContainer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\Controls\SliderEx.resx">
+      <DependentUpon>SliderEx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\v1\Corousal\ProfitabilitySummary.resx">
       <DependentUpon>ProfitabilitySummary.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\v1\ExtraScreens\Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\ExtraScreens\Profitability.resx">
+      <DependentUpon>Profitability.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\v1\ExtraScreens\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -336,6 +354,7 @@
     <None Include="View\v1\Images\selected.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="View\v1\Images\slider1.png" />
     <None Include="View\v1\Images\bg4.jpg" />
     <None Include="View\v1\Images\nvidia3.jpg" />
     <None Include="View\v1\Images\amd5.jpg" />
