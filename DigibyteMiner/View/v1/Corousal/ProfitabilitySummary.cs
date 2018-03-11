@@ -43,7 +43,7 @@ namespace DigibyteMiner.View.v1.Corousal
         {
             try
             {
-                int TimetoWait = 10;
+                int TimetoWait = 30;
                 TimeSpan time = DateTime.Now - lastTime;
                 if (time.TotalSeconds < TimetoWait)
                     return;
@@ -53,16 +53,16 @@ namespace DigibyteMiner.View.v1.Corousal
                 if (profits != null)
                 {
                     lblWarning.Visible = false;
-
+                    //lblHeading.Text = "Profitability(" + miner.HashRate + ")";
                     lblDolDaily.Text = profits.revenue;
                     lblDigDaily.Text = profits.estimated_rewards;
 
                     float dailyDol = float.Parse(profits.revenue.Substring(1));
                     float dailyDig = float.Parse(profits.estimated_rewards);
 
-                    lblDolWeekly.Text = (dailyDol * 7).ToString("F2");
-                    lblDolMonth.Text = (dailyDol * 30).ToString("F2");
-                    lblDolYear.Text = (dailyDol * 365).ToString("F2");
+                    lblDolWeekly.Text = "$"+(dailyDol * 7).ToString("F2");
+                    lblDolMonth.Text = "$" + (dailyDol * 30).ToString("F2");
+                    lblDolYear.Text = "$" + (dailyDol * 365).ToString("F2");
 
                     lblDgbWeekly.Text = (dailyDig * 7).ToString("F2");
                     lblDgbMonthly.Text = (dailyDig * 30).ToString("F2");

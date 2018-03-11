@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblHeading = new System.Windows.Forms.Label();
             this.lblDolMonth = new System.Windows.Forms.Label();
             this.lblDolDaily = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,17 +50,17 @@
             this.lblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label2
+            // lblHeading
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 21);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Profitability";
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeading.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.ForeColor = System.Drawing.Color.White;
+            this.lblHeading.Location = new System.Drawing.Point(28, 22);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(102, 21);
+            this.lblHeading.TabIndex = 15;
+            this.lblHeading.Text = "Profitability";
             // 
             // lblDolMonth
             // 
@@ -142,9 +142,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(115, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 65;
-            this.label3.Text = "Profit $";
+            this.label3.Text = "Rev ($)";
             // 
             // label6
             // 
@@ -154,9 +154,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(191, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.Size = new System.Drawing.Size(78, 20);
             this.label6.TabIndex = 66;
-            this.label6.Text = "Profit DGB";
+            this.label6.Text = "Rev (DGB)";
             // 
             // label8
             // 
@@ -317,7 +317,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblHeading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProfitabilitySummary";
             this.Text = "ProfitabilitySummary";
@@ -329,7 +329,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblDolMonth;
         private System.Windows.Forms.Label lblDolDaily;
         private System.Windows.Forms.Label label7;

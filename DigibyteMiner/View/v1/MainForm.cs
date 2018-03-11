@@ -26,7 +26,7 @@ namespace DigibyteMiner
         List<Form> m_Corousals = new List<Form>();
         int m_CurrentCarousal = 0;
         DateTime m_LastCarousalTurn = DateTime.Now;
-        private const int CAROUSAL_WAIT=6;
+        private const int CAROUSAL_WAIT=45;
         public MinerView MinerView { get; set; }//the selected minerview. not the activated one. this is the one which was clicked. 
         public MinerInfo MinerInfo { get; set; }//the selected minerInfo. not the activated one. this is the one which was clicked. We need this object to show the logs etc
         WebBrowserEx m_DownloaderBrowser = new WebBrowserEx();
