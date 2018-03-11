@@ -15,5 +15,12 @@ https://github.com/DigiByteMiner/DigiByteMiner/releases
   * Allows only single instance of app. Minimizable to trey.
   * Detects system without gpus and handles with message.
   * Can switch between different Algorithms although Skein is the only profitable one currently. Future support for Equihash etc.
+  
+## Screenshots
+![Running View](https://github.com/DigiByteMiner/DigiByteMiner/blob/master/Screenshots/a1.PNG)
+
+![Running View](https://github.com/DigiByteMiner/DigiByteMiner/blob/master/Screenshots/a2.PNG)
+
+
 
 
