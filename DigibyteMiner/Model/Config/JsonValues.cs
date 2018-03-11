@@ -133,6 +133,8 @@ namespace DigibyteMiner.Model.Config
         public string DualCoinPoolAccount { get; set; }
         public List<MinerScript> MinerScripts { get; set; }
         public int MinerGpuType { get; set; }
+        public string HashRate { get; set; }
+        
 
         public MinerData()
         {
@@ -150,6 +152,7 @@ namespace DigibyteMiner.Model.Config
             DualCoinWallet ="";
             MinerScripts = new List<MinerScript>();
             MinerGpuType = 0;
+            HashRate = "";
         }
 
     }
@@ -199,6 +202,7 @@ namespace DigibyteMiner.Model.Config
             return toSave;
 
         }
+       
         public bool AddMinerProgram(IMinerProgram program)
         {
             bool toSave = false;
@@ -300,6 +304,8 @@ namespace DigibyteMiner.Model.Config
             newMiner.MainCoinPoolAccount = mainCoinConfigurer.PoolAccount;
             newMiner.DualMining =miner.DualMining;
             newMiner.MinerGpuType = miner.MinerGpuType;
+            newMiner.HashRate = miner.HashRate;
+            
             if (miner.DualMining)
             {
                 newMiner.DualCoin = miner.DualCoin.Name;

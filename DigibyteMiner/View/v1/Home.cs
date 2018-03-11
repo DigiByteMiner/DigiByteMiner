@@ -120,6 +120,9 @@ namespace DigibyteMiner.View.v1
                     {
                         float conversion = totalHashrate / 1000;// 1024;
                         hashrate = conversion.ToString() + " MH/s";
+                        Miner.HashRate = (totalHashrate * 1000).ToString("F1");
+                        
+                        Factory.Instance.Model.AddMiner(Miner);
 
                     }
                     else
