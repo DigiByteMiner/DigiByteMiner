@@ -63,9 +63,8 @@ namespace DigibyteMiner.Skein
                 }
             }
         }
-        public override ProfitInfo CalculateProfitability()
+        public override void CalculateProfitability()
         {
-            string s = "";
             try
             {
                 float hr = float.Parse(HashRate);
@@ -85,8 +84,7 @@ namespace DigibyteMiner.Skein
                     using (StreamReader reader = new StreamReader(stream))
                     {
                         string sss = reader.ReadToEnd();
-                        ProfitInfo d = (ProfitInfo)new JavaScriptSerializer().Deserialize(sss, typeof(ProfitInfo));
-                        return d;
+                        Profit = (ProfitInfo)new JavaScriptSerializer().Deserialize(sss, typeof(ProfitInfo));
                     }
                 }
                 catch (Exception e)
@@ -97,8 +95,6 @@ namespace DigibyteMiner.Skein
             {
 
             }
-            return null;
-
         }
         
 

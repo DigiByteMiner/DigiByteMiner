@@ -57,7 +57,7 @@ namespace DigibyteMiner
             Factory.Instance.ViewObject.RegisterForTimer(UpDateMinerState);
 
             oneMinerNotifyIcon.Click += oneMinerNotifyIcon_Click;
-
+            m_ProfitabilitySummary.Init();
         }
 
 
@@ -313,6 +313,12 @@ namespace DigibyteMiner
         void oneMinerNotifyIcon_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void profitabilityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Profitability s = new Profitability();
+            s.ShowDialog();
         }
 
 

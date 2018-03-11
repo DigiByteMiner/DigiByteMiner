@@ -27,6 +27,11 @@ namespace DigibyteMiner.View.v1.Corousal
 
 
         }
+        public void Init()
+        {
+            IMiner miner = Factory.Instance.CoreObject.SelectedMiner;
+            ((MinerBase)miner).InitProfitability();
+        }
         public void ShowWarning(string str)
         {
             if(str=="")
@@ -38,15 +43,17 @@ namespace DigibyteMiner.View.v1.Corousal
         {
             try
             {
-                int TimetoWait = 30;
+                int TimetoWait = 10;
                 TimeSpan time = DateTime.Now - lastTime;
                 if (time.TotalSeconds < TimetoWait)
                     return;
                 IMiner miner = Factory.Instance.CoreObject.SelectedMiner;
                 ShowWarning(miner.HashRate);
-                ProfitInfo profits = ((MinerBase)miner).CalculateProfitability();
+                ProfitInfo profits = ((MinerBase)miner).Profit;
                 if (profits != null)
                 {
+                    lblWarning.Visible = false;
+
                     lblDolDaily.Text = profits.revenue;
                     lblDigDaily.Text = profits.estimated_rewards;
 
@@ -60,9 +67,6 @@ namespace DigibyteMiner.View.v1.Corousal
                     lblDgbWeekly.Text = (dailyDig * 7).ToString("F2");
                     lblDgbMonthly.Text = (dailyDig * 30).ToString("F2");
                     lblDgbYear.Text = (dailyDig * 365).ToString("F2");
-
-
-
 
                 }
                 lastTime = DateTime.Now;

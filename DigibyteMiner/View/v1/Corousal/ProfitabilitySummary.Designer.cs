@@ -290,7 +290,6 @@
             this.lblWarning.Size = new System.Drawing.Size(285, 34);
             this.lblWarning.TabIndex = 77;
             this.lblWarning.Text = "Profitability calculation will be done after you run miner for the first time!";
-            this.lblWarning.Visible = false;
             // 
             // ProfitabilitySummary
             // 

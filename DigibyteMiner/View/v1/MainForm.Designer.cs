@@ -42,6 +42,7 @@
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMainInfo = new System.Windows.Forms.Panel();
+            this.profitabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.taskbarMenu.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.advancedToolStripMenuItem,
+            this.profitabilityToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -77,14 +79,14 @@
             // donateToolStripMenuItem
             // 
             this.donateToolStripMenuItem.Name = "donateToolStripMenuItem";
-            this.donateToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.donateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.donateToolStripMenuItem.Text = "HELP";
             this.donateToolStripMenuItem.Click += new System.EventHandler(this.donateToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem1.Text = "ABOUT";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
@@ -143,6 +145,13 @@
             this.pnlMainInfo.Size = new System.Drawing.Size(724, 264);
             this.pnlMainInfo.TabIndex = 1;
             // 
+            // profitabilityToolStripMenuItem
+            // 
+            this.profitabilityToolStripMenuItem.Name = "profitabilityToolStripMenuItem";
+            this.profitabilityToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.profitabilityToolStripMenuItem.Text = "PROFITABILITY";
+            this.profitabilityToolStripMenuItem.Click += new System.EventHandler(this.profitabilityToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +193,7 @@
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Panel pnlMainInfo;
+        private System.Windows.Forms.ToolStripMenuItem profitabilityToolStripMenuItem;
     }
 }
 

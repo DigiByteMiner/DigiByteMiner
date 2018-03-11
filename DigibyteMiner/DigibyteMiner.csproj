@@ -180,6 +180,12 @@
     <Compile Include="View\v1\ExtraScreens\Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\v1\ExtraScreens\Profitability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\v1\ExtraScreens\Profitability.Designer.cs">
+      <DependentUpon>Profitability.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\v1\ExtraScreens\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\v1\ExtraScreens\Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\v1\ExtraScreens\Profitability.resx">
+      <DependentUpon>Profitability.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\v1\ExtraScreens\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>

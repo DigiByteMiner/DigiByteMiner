@@ -54,6 +54,7 @@ namespace DigibyteMiner.Coins
             DefaultMiner = false;
             DownloadPercentage = 0;
             HashRate = "";
+            Profit = null;
         }
         public void IdentifyGpuTypes()
         {
@@ -238,10 +239,25 @@ namespace DigibyteMiner.Coins
             }
             return null;
         }
-
-        public virtual ProfitInfo CalculateProfitability()
+        public ProfitInfo Profit { get; set; }
+        static bool registered = false;
+        static object synch = new object();
+        public virtual void InitProfitability()
         {
-            return null;
+            if (registered)
+                return;
+            lock(synch)
+            {
+                if (registered)
+                    return;
+                Alarm.RegisterForTimerPermanent(CalculateProfitability);
+                registered = true;
+            }
+        }
+        public virtual void CalculateProfitability()
+        {
+            return ;
+
         }
 
     }
