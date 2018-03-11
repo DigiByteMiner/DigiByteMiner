@@ -116,7 +116,7 @@ namespace DigibyteMiner.Coins
             AutomaticScriptGeneration = true;
             m_downloader = new MinerDownloader(MINERURL, EXENAME,Miner);
             Enabled = false;
-            GenerateScript();
+            GenerateScript(false);
 
         }
 
@@ -155,12 +155,12 @@ namespace DigibyteMiner.Coins
         }
         public virtual void SaveScriptToDB()
         {
-            if (MiningScriptsPresent())
-            {
+            //if (MiningScriptsPresent())
+            //{
                 Config model = Factory.Instance.Model;
                 model.AddMinerScript(this, Miner);
 
-            }
+            //}
         }
 
         public virtual string FormBatFileName(string folder)
@@ -322,7 +322,7 @@ namespace DigibyteMiner.Coins
 
 
 
-        public virtual string GenerateScript()
+        public virtual string GenerateScript(bool saveScript)
         {
             throw new NotImplementedException();
         }
@@ -352,7 +352,7 @@ namespace DigibyteMiner.Coins
                 if (AutomaticScriptGeneration == false)
                     return;
 
-                GenerateScript();
+                GenerateScript(true);
                 SaveToBAtFile();
 
             }
@@ -382,7 +382,7 @@ namespace DigibyteMiner.Coins
             {
                 if (AutomaticScriptGeneration)
                 {
-                    GenerateScript();
+                    GenerateScript(false);
                 }
                 else
                 {

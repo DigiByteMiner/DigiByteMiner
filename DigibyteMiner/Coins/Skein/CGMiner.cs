@@ -89,7 +89,7 @@ namespace DigibyteMiner.Coins.Skein
             MiningIntensity = 7;
         }
 
-        public override string GenerateScript()
+        public override string GenerateScript(bool saveScript)
         {
             try
             {
@@ -107,7 +107,8 @@ namespace DigibyteMiner.Coins.Skein
 
                 Script = SCRIPT1 + command;
                 AutomaticScriptGeneration = true;
-                SaveScriptToDB();
+                if(saveScript)
+                    SaveScriptToDB();
                 return Script;
             }
             catch (Exception e)

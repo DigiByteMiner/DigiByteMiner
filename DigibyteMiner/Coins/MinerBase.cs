@@ -130,6 +130,8 @@ namespace DigibyteMiner.Coins
                             item.BATFILE = scr.BATfile;
                             item.BATCopied = scr.BATCopied;
                             item.AutomaticScriptGeneration = scr.AutomaticScriptGeneration;
+                            if(scr.MiningIntensity!=0)
+                                item.MiningIntensity = scr.MiningIntensity;
                             item.LoadScript();
 
                         }
@@ -138,7 +140,7 @@ namespace DigibyteMiner.Coins
 
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
             }
         }

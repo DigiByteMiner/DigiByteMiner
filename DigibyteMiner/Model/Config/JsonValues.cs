@@ -101,6 +101,7 @@ namespace DigibyteMiner.Model.Config
         public string ProgramType { get; set; }//eg:mvidia or AMD
         public string BATfile { get; set; }
         public bool BATCopied { get; set; }//bat file has been copied inside miner folder. true generally means its ready to mine
+        public int MiningIntensity { get; set; }
 
         public bool AutomaticScriptGeneration { get; set; }
         public MinerScript()
@@ -255,6 +256,7 @@ namespace DigibyteMiner.Model.Config
                             script.BATfile = program.BATFILE;
                             script.BATCopied = program.BATCopied;
                             script.AutomaticScriptGeneration = program.AutomaticScriptGeneration;
+                            script.MiningIntensity = program.MiningIntensity;
                             toSave = true;
                         }
                     }
@@ -265,6 +267,8 @@ namespace DigibyteMiner.Model.Config
                         script.BATfile = program.BATFILE;
                         script.BATCopied = program.BATCopied;
                         script.AutomaticScriptGeneration = program.AutomaticScriptGeneration;
+                        script.MiningIntensity = program.MiningIntensity;
+
                         item.MinerScripts.Add(script);
                         toSave = true;
                     }
@@ -310,6 +314,8 @@ namespace DigibyteMiner.Model.Config
                 script.BATfile = item.BATFILE;
                 script.ProgramType = item.Type;
                 script.AutomaticScriptGeneration = item.AutomaticScriptGeneration;
+                script.MiningIntensity = item.MiningIntensity;
+
                 newMiner.MinerScripts.Add(script);
                 
             }

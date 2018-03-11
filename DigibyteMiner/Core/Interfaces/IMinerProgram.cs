@@ -38,7 +38,7 @@ namespace DigibyteMiner.Core.Interfaces
 
         string MinerFolder { get; set; }
         string MinerEXE { get; set; }
-        string GenerateScript();
+        string GenerateScript(bool saveScript);
         void LoadScript();
         void ModifyScript(string script);
         string Script { get; set; }
