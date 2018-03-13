@@ -86,14 +86,15 @@ namespace DigibyteMiner.Coins.Skein
             OutputReader = new CGReader(STATS_LINK, STATS_LINK_PORT);
             MiningIntensityLow = 2;
             MiningIntensityHigh = 19;
-            MiningIntensity = 7;
+            MiningIntensity = 13;
         }
 
         public override string GenerateScript(bool saveScript)
         {
             try
             {
-
+                if(MiningIntensity==0)
+                    MiningIntensity = 13;                    
                 string command = EXENAME + " --skein -o " + MainCoinConfigurer.Pool;
                 command += " -u " + MainCoinConfigurer.Wallet;
                 string pwd = MainCoinConfigurer.Password.Trim();
@@ -101,8 +102,9 @@ namespace DigibyteMiner.Coins.Skein
                     pwd = " x ";
                 command += " -p " + pwd;
                 command += " -I " + MiningIntensity.ToString();
-
                 command += " --api-listen ";
+
+                command += " --gpu-threads 1 --scan-time 2 --queue 0 --expiry 1 --no-submit-stale ";
 
 
                 Script = SCRIPT1 + command;

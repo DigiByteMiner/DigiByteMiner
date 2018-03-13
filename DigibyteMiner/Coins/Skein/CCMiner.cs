@@ -94,7 +94,8 @@ namespace DigibyteMiner.Coins.Skein
         {
             try
             {
-
+                if (MiningIntensity == 0)
+                    MiningIntensity = 23;  
                 string command = EXENAME + " --algo=skein -o " + MainCoinConfigurer.Pool;
                 command += " -u " + MainCoinConfigurer.Wallet;
                 string pwd = MainCoinConfigurer.Password.Trim();
