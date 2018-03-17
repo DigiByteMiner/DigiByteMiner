@@ -31,7 +31,19 @@ namespace DigibyteMiner.Coins
         public string Logo { get; set; }//not sure if needed
         public MinerProgramState MinerState { get; set; }
         public int DownloadPercentage { get; set; }
-        public string HashRate { get; set; }
+        private volatile string m_Hashrate = "";
+
+        public string HashRate
+        {
+            get
+            {
+                return m_Hashrate;
+            }
+            set
+            {
+                m_Hashrate = value;
+            }
+        }
 
         public bool DefaultMiner { get; set; }
 
