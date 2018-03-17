@@ -125,8 +125,15 @@ namespace DigibyteMiner.Core
                         IMinerProgram miner = MiningQueue.Dequeue();
                         if (miner.ReadyForMining())
                         {
-                            miner.StartMining();
-                            RunningMiners.Add(miner);
+                            try
+                            {
+                                miner.StartMining();
+                                RunningMiners.Add(miner);
+                            }
+                            catch (Exception e)
+                            {
+                                Logger.Instance.LogError(e.Message);
+                            }
                         }
                         else
                             DownloadingQueue.Enqueue(miner);

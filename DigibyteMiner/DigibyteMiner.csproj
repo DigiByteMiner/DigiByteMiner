@@ -57,6 +57,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -106,6 +107,7 @@
     <Compile Include="Model\UnZip\UnZipRarLocal.cs" />
     <Compile Include="Model\UnZip\UnZipRarSystem.cs" />
     <Compile Include="Model\UnZip\UnZipZipFile.cs" />
+    <Compile Include="Model\Utils.cs" />
     <Compile Include="View\IView.cs" />
     <Compile Include="View\v1\AddMinerScreen\DefaultMinerMessage.cs">
       <SubType>Form</SubType>

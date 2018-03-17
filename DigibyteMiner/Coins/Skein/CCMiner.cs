@@ -88,6 +88,7 @@ namespace DigibyteMiner.Coins.Skein
             MiningIntensityLow = 6;
             MiningIntensityHigh = 35;
             MiningIntensity = 23;
+            MinerExehash = "84CFA420A3C210535FF991900B9E191F";
         }
 
         public override string GenerateScript(bool saveScript)
