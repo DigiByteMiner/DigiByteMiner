@@ -122,6 +122,7 @@ namespace DigibyteMiner.View.v1
                         hashrate = conversion.ToString() + " MH/s";
                         Miner.HashRate = (totalHashrate * 1000).ToString("F1");
                         
+                        //Todo: this will write to file always. change this
                         Factory.Instance.Model.AddMiner(Miner);
 
                     }
