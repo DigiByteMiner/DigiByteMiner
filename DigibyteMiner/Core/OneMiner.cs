@@ -232,6 +232,8 @@ namespace DigibyteMiner.Core
         }
         public void StartMining(IMiner miner)
         {
+            if (ActiveMiner == null)
+                ActiveMiner = miner;
             StopMining();
             MiningCommand = MinerProgramCommand.Run;
             ActiveMiner = miner;
