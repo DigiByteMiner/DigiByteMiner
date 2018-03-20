@@ -108,10 +108,13 @@ namespace DigibyteMiner.View.v1
                     int totalHashrate = 0;
                     int totalShares = 0;
                     int totalSharesRejected = 0;
-                    List<IMinerProgram> programs = Miner.MinerPrograms;
+                    List<IMinerProgram> programs = Miner.ActualMinerPrograms;
+                    
                     foreach (IMinerProgram item in programs)
                     {
                         MinerDataResult result = item.OutputReader.MinerResult;
+                        Logger.Instance.LogInfo("Miner.Totalhashrate: " + result.TotalHashrate.ToString());
+
                         totalHashrate += result.TotalHashrate;
                         totalShares += result.TotalShares;
                         totalSharesRejected += result.Rejected;
@@ -133,6 +136,8 @@ namespace DigibyteMiner.View.v1
                     shares += " A: " + totalShares.ToString() + "   R: " + totalSharesRejected.ToString();
                     lblShares.Text = shares;
                     lblTotalHashrate.Text = hashrate;
+                    Logger.Instance.LogInfo("Hashrate printed: " + lblTotalHashrate.Text);
+
 
                 }
                 else

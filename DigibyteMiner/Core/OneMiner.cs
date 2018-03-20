@@ -294,12 +294,7 @@ namespace DigibyteMiner.Core
                         if (gpuData.Make == CardMake.Nvidia || gpuData.Make == CardMake.Amd)
                             atLeast1GPu = true;
                     }
-                    if(!atLeast1GPu)
-                    {
-                        //add a cpu monero miner
-                        //IHashAlgorithm cryptonight = new DigibyteMiner
-                        //miner = cryptonight.DefaultMiner();
-                    }
+
                     Miners.Add(miner);
                     SelectedMiner = miner;
 

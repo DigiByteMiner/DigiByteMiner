@@ -205,6 +205,7 @@ namespace DigibyteMiner.Coins.Skein
                         try
                         {
                             string content = m_CCMinerData.Summary;
+                            Logger.Instance.LogInfo("CCMiner summary: " + content);
                             string[] a = content.Split(new string[] { ";" }, StringSplitOptions.None);
                             foreach (string item in a)
                             {
@@ -215,6 +216,8 @@ namespace DigibyteMiner.Coins.Skein
                                     double kh_d = double.Parse(kh);
                                     //kh_d /= 1024;
                                     m_MinerResult.TotalHashrate = (int)kh_d;
+                                    Logger.Instance.LogInfo("CCMiner Hashrate: " + m_MinerResult.TotalHashrate.ToString());
+
 
                                 }
                                 else if (item.Contains("ACC"))
@@ -243,6 +246,8 @@ namespace DigibyteMiner.Coins.Skein
                         try
                         {
                             string content = m_CCMinerData.Threads;
+                            Logger.Instance.LogInfo("CCMiner Threads: " + content);
+
                             string[] b = content.Split(new string[] { "|" }, StringSplitOptions.None);
 
                             foreach (var ice in b)
@@ -277,6 +282,8 @@ namespace DigibyteMiner.Coins.Skein
                                         //kh_d /= 1024;
                                         gpu.Hashrate = kh_d.ToString();
                                         add = true;
+                                        Logger.Instance.LogInfo("CCMiner Hashrate: " + gpu.Hashrate.ToString());
+
                                     }
                                 }
                                 if (add)

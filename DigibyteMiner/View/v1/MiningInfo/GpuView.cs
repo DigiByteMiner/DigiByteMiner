@@ -1,4 +1,5 @@
-﻿using DigibyteMiner.Core.Interfaces;
+﻿using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,10 @@ namespace DigibyteMiner.View.v1.MiningInfo
                     if (showRunningData)
                     {
                         lblGpuhashrate.Text = hashrate;
+                        Logger.Instance.LogInfo("GPUHashrate : " + GpuData.Hashrate.ToString());
+
+                        Logger.Instance.LogInfo("GPUHashrate printed: " + hashrate);
+                        
                         lbltemp.Text = shares + GpuData.Temperature;
                         lblFanSpeed.Text = "F: " + GpuData.FanSpeed;
                     }
