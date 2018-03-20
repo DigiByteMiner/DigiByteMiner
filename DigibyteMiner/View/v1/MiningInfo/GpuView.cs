@@ -1,4 +1,5 @@
-﻿using DigibyteMiner.Core.Interfaces;
+﻿using DigibyteMiner.Core;
+using DigibyteMiner.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +47,8 @@ namespace DigibyteMiner.View.v1.MiningInfo
                     if (totalHashrate > 10 * 1024)
                     {
                         double conversion = totalHashrate / 1000;// 1024;
+                        if (conversion > 10000)//quick fix for increased hashrate issue
+                            conversion /= 1000;
                         hashrate += conversion.ToString("F1") + " MH/s";
 
                     }
@@ -56,6 +59,10 @@ namespace DigibyteMiner.View.v1.MiningInfo
                     if (showRunningData)
                     {
                         lblGpuhashrate.Text = hashrate;
+                        Logger.Instance.LogInfo("GPUHashrate : " + GpuData.Hashrate.ToString());
+
+                        Logger.Instance.LogInfo("GPUHashrate printed: " + hashrate);
+                        
                         lbltemp.Text = shares + GpuData.Temperature;
                         lblFanSpeed.Text = "F: " + GpuData.FanSpeed;
                     }

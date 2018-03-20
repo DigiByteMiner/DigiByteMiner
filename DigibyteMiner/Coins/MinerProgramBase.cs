@@ -97,6 +97,7 @@ namespace DigibyteMiner.Coins
         private Process m_Process = null;
         private object m_accesssynch = new object();
         public virtual IOutputReader OutputReader { get; set; }
+        public string  MinerExehash { get; set; }
 
 
 
@@ -220,8 +221,10 @@ namespace DigibyteMiner.Coins
                     {
                         throw new Exception("Process object is not null while starting");
                     }
-                    if (file.Exists)
+                    if (file.Exists )
                     {
+                        if (Factory.Instance.Model.Data.Option.VerifyMinerEXE && !(MinerExehash == Utils.MD5File(MinerEXE)))
+                            throw new Exception("EXE md5 hash mismatch");
                         MinerState = MinerProgramState.Running;
                         ProcessStartInfo info = new ProcessStartInfo();
                         info.UseShellExecute = false;
@@ -247,6 +250,7 @@ namespace DigibyteMiner.Coins
                 catch (Exception e)
                 {
                     Logger.Instance.LogError(e.ToString());
+                    throw;
                 }
                 finally
                 {

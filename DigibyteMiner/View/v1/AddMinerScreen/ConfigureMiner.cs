@@ -83,9 +83,16 @@ namespace DigibyteMiner.View.v1
                 {
                     if (i == 0)
                     {
-                        lblWalletName.Text = item.WalletName;
-                        m_CurrentPool = item;
-                        ShowWalletmessage(m_CurrentPool);
+                        if (((EditMinerContainer)m_parent).Miner.DefaultMiner)
+                        {
+                            lblWalletName.Text = item.WalletName;
+                            txtWallet.Text = item.WalletAddress;
+                            m_CurrentPool = item;
+                            ShowWalletmessage(m_CurrentPool);
+
+                        }
+
+           
                     }
                     cmbPoolList.Items.Add(item.Name);
                     i++;

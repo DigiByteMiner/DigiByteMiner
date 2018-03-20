@@ -33,11 +33,12 @@ namespace DigibyteMiner.Core.Interfaces
             {
                 try
                 {
+
                     return Queue.Dequeue();
                 }
                 catch (Exception e)
                 {
-                    Logger.Instance.LogError(e.ToString());
+                    //Logger.Instance.LogError(e.ToString());
                 }
                 return default(T);
             }

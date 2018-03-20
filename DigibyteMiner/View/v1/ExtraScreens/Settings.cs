@@ -46,6 +46,7 @@ namespace DigibyteMiner.View.v1.ExtraScreens
                 SetCheckBoxData(chkLaunchStartup, data.Option.Startup);
                 SetCheckBoxData(chkMineLaunch, data.Option.MineOnStartup);
                 SetCheckBoxData(chkShowMinerUI, data.Option.ShowMinerWindows);
+                SetCheckBoxData(chkVerifyMiner, data.Option.VerifyMinerEXE);
 
             }
 
@@ -93,6 +94,18 @@ namespace DigibyteMiner.View.v1.ExtraScreens
             if (data != null)
             {
                 data.Option.ShowMinerWindows = chkShowMinerUI.Checked;
+                Factory.Instance.Model.Save();
+                Factory.Instance.ViewObject.UpdateSettingsCarousal();
+            }
+        }
+
+        private void chkVerifyMiner_CheckedChanged(object sender, EventArgs e)
+        {
+            SetCheckBoxData(chkVerifyMiner, chkVerifyMiner.Checked);
+            DB data = Factory.Instance.Model.Data;
+            if (data != null)
+            {
+                data.Option.VerifyMinerEXE = chkVerifyMiner.Checked;
                 Factory.Instance.Model.Save();
                 Factory.Instance.ViewObject.UpdateSettingsCarousal();
             }

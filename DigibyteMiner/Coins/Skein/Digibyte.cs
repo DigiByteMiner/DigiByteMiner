@@ -59,11 +59,11 @@ namespace DigibyteMiner.Skein
                 Pool pool1 = new MiningField("MiningField", "stratum+tcp://us.miningfield.com:3397");
                 Pool pool2 = new Blocksfactory("Blocksfactory", "stratum+tcp://stratum.dgb.theblocksfactory.com:9002");
                 Pool pool3 = new SuperNova("SuperNova", "stratum+tcp://dgbs.suprnova.cc:5226");
-                Pool pool4 = new DigiHash("DigiHash", "stratum+tcp://digihash.co:3009");
+                Pool pool4 = new DigiHash("DigiHash", "stratum+tcp://digihash.co:3011");
+                pools.Add(pool4);
                 pools.Add(pool1);
                 pools.Add(pool2);
                 pools.Add(pool3);
-                pools.Add(pool4);
 
                 return pools;
             }
@@ -167,7 +167,7 @@ namespace DigibyteMiner.Skein
                 : base(name, url)
             {
                 WalletName = "DigiByte Address";
-                WalletAddress = "DJrc7kG7jmBj5BKYMv7vf1AMNr4xCVdzvv";
+                WalletAddress = "DFVsFBiKuaL5HM9NWZgdHTQecLNit6tX5Y";
                 WrongWallet = "Enter a valid Digibyte address";
 
             }

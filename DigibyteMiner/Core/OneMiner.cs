@@ -125,8 +125,15 @@ namespace DigibyteMiner.Core
                         IMinerProgram miner = MiningQueue.Dequeue();
                         if (miner.ReadyForMining())
                         {
-                            miner.StartMining();
-                            RunningMiners.Add(miner);
+                            try
+                            {
+                                miner.StartMining();
+                                RunningMiners.Add(miner);
+                            }
+                            catch (Exception e)
+                            {
+                                Logger.Instance.LogError(e.Message);
+                            }
                         }
                         else
                             DownloadingQueue.Enqueue(miner);
@@ -232,6 +239,8 @@ namespace DigibyteMiner.Core
         }
         public void StartMining(IMiner miner)
         {
+            if (ActiveMiner == null)
+                ActiveMiner = miner;
             StopMining();
             MiningCommand = MinerProgramCommand.Run;
             ActiveMiner = miner;
@@ -285,12 +294,7 @@ namespace DigibyteMiner.Core
                         if (gpuData.Make == CardMake.Nvidia || gpuData.Make == CardMake.Amd)
                             atLeast1GPu = true;
                     }
-                    if(!atLeast1GPu)
-                    {
-                        //add a cpu monero miner
-                        //IHashAlgorithm cryptonight = new DigibyteMiner
-                        //miner = cryptonight.DefaultMiner();
-                    }
+
                     Miners.Add(miner);
                     SelectedMiner = miner;
 
