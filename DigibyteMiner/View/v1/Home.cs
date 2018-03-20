@@ -122,6 +122,8 @@ namespace DigibyteMiner.View.v1
                     if (totalHashrate > 10 * 1024)
                     {
                         float conversion = totalHashrate / 1000;// 1024;
+                        if (conversion > 10000)//quick fix for increased hashrate issue
+                            conversion /= 1000;
                         hashrate = conversion.ToString() + " MH/s";
                         Miner.HashRate = (totalHashrate * 1000).ToString("F1");
                         

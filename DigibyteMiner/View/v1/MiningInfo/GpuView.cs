@@ -47,6 +47,8 @@ namespace DigibyteMiner.View.v1.MiningInfo
                     if (totalHashrate > 10 * 1024)
                     {
                         double conversion = totalHashrate / 1000;// 1024;
+                        if (conversion > 10000)//quick fix for increased hashrate issue
+                            conversion /= 1000;
                         hashrate += conversion.ToString("F1") + " MH/s";
 
                     }
