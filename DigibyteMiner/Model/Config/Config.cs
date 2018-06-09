@@ -196,7 +196,7 @@ namespace DigibyteMiner.Model.Config
                 {
                     if (rkApp.GetValue(regKeystr) == null)
                     {
-                        //Logger.Instance.LogInfo("Item is not there in  startup anyway");
+                        Logger.Instance.LogInfo("Item is not there in  startup anyway");
                     }
                     else
                     {
