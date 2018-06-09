@@ -35,8 +35,6 @@ namespace DigibyteMiner.Core
         }
         public void LogInfo(string error)
         {
-            if (Factory.Instance.Model.Data.Option.EnableLogs == false)
-                return;
             lock (s_accesssynch)
             {
                 try
@@ -55,8 +53,6 @@ namespace DigibyteMiner.Core
 
         public void LogError(string error)
         {
-            if (Factory.Instance.Model.Data.Option.EnableLogs == false)
-                return;
             lock (s_accesssynch)
             {
                 try

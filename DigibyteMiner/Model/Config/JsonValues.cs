@@ -70,14 +70,12 @@ namespace DigibyteMiner.Model.Config
         public Boolean MineOnStartup { get; set; }
         public Boolean ShowMinerWindows { get; set; }
         public Boolean VerifyMinerEXE { get; set; }
-        public Boolean EnableLogs { get; set; }
         public Options()
         {
             Startup = true;
             MineOnStartup = false;
             ShowMinerWindows = true;
             VerifyMinerEXE = true;
-            EnableLogs = false;
         }
     }
     /// <summary>
